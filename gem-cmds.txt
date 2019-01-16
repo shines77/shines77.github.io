@@ -1,0 +1,14 @@
+
+bundle install
+
+bundle update
+
+bundle exec jekyll build
+
+bundle exec jekyll build --incremental
+
+bundle exec jekyll serve
+
+bundle exec jekyll serve -P 8000
+
+bundle exec jekyll serve -H 0.0.0.0 -P 8080

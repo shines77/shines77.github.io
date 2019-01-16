@@ -1,0 +1,41 @@
+{
+  "name": "jekyll-theme-text",
+  "version": "2.2.4",
+  "description": "A super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc.",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve -H 0.0.0.0",
+    "default": "bundle exec jekyll serve -H 0.0.0.0 -t",
+    "dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.dev.yml",
+    "demo-dev": "bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
+    "demo-beta": "JEKYLL_ENV=beta bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
+    "demo-production": "JEKYLL_ENV=production bundle exec jekyll serve -H 0.0.0.0 -t --config ./docs/_config.yml",
+    "css-lint": "stylelint --syntax scss \"_sass/**/*.scss\"",
+    "css-fix": "stylelint --syntax scss \"_sass/**/*.scss\" --fix",
+    "gem-build": "rm -fv jekyll-theme-text-*.gem && gem build jekyll-theme-text.gemspec",
+    "gem-push": "gem push jekyll-theme-text-*.gem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shines77/jekyll-theme-text.git"
+  },
+  "keywords": [
+    "jekyll",
+    "jekyll-theme",
+    "jekyll-template"
+  ],
+  "author": "Tian Qi | shines77 (modified)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shines77/jekyll-theme-text/issues"
+  },
+  "homepage": "https://github.com/shines77/jekyll-theme-text",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.3.0"
+  }
+}

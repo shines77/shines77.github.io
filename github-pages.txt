@@ -1,0 +1,139 @@
+
+C:\Project\Ruby\Jekyll\shines77.github.io>bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Fetching gem metadata from https://rubygems.org/.
+Resolving dependencies...
+Using concurrent-ruby 1.1.4
+Using i18n 0.9.5
+Using multi_json 1.13.1
+Using activesupport 3.2.22.5
+Fetching addressable 2.4.0 (was 2.5.2)
+Installing addressable 2.4.0 (was 2.5.2)
+Using bundler 2.0.1
+Fetching coffee-script-source 1.12.2
+Installing coffee-script-source 1.12.2
+Using execjs 2.7.0
+Using coffee-script 2.4.1
+Fetching colorator 0.1 (was 1.1.0)
+Installing colorator 0.1 (was 1.1.0)
+Using ffi 1.10.0 (x64-mingw32)
+Using ethon 0.12.0
+Using multipart-post 2.0.0
+Using faraday 0.15.4
+Fetching gemoji 2.1.0 (was 3.0.0)
+Installing gemoji 2.1.0 (was 3.0.0)
+Fetching net-dns 0.9.0
+Installing net-dns 0.9.0
+Using sawyer 0.8.1
+Using octokit 4.13.0
+Fetching public_suffix 1.5.3 (was 3.0.3)
+Installing public_suffix 1.5.3 (was 3.0.3)
+Fetching typhoeus 0.8.0
+Installing typhoeus 0.8.0
+Fetching github-pages-health-check 1.1.0
+Installing github-pages-health-check 1.1.0
+Using rb-fsevent 0.10.3
+Using rb-inotify 0.10.0
+Using sass-listen 4.0.0
+Using sass 3.7.3
+Fetching jekyll-sass-converter 1.3.0 (was 1.5.2)
+Installing jekyll-sass-converter 1.3.0 (was 1.5.2)
+Fetching listen 3.0.6 (was 3.1.5)
+Installing listen 3.0.6 (was 3.1.5)
+Fetching jekyll-watch 1.5.1 (was 2.1.2)
+Installing jekyll-watch 1.5.1 (was 2.1.2)
+Fetching kramdown 1.11.1 (was 1.17.0)
+Installing kramdown 1.11.1 (was 1.17.0)
+Fetching liquid 3.0.6 (was 4.0.1)
+Installing liquid 3.0.6 (was 4.0.1)
+Using mercenary 0.3.6
+Fetching rouge 1.11.1 (was 3.3.0)
+Installing rouge 1.11.1 (was 3.3.0)
+Using safe_yaml 1.0.4
+Fetching jekyll 3.1.6 (was 3.8.5)
+Installing jekyll 3.1.6 (was 3.8.5)
+Fetching jekyll-coffeescript 1.0.1
+Installing jekyll-coffeescript 1.0.1
+Fetching jekyll-feed 0.5.1 (was 0.9.3)
+Installing jekyll-feed 0.5.1 (was 0.9.3)
+Fetching jekyll-gist 1.4.0
+Installing jekyll-gist 1.4.0
+Fetching jekyll-github-metadata 2.0.2
+Installing jekyll-github-metadata 2.0.2
+Using mini_portile2 2.4.0
+Using nokogiri 1.10.1 (x64-mingw32)
+Using html-pipeline 2.10.0
+Fetching jekyll-mentions 1.1.3
+Installing jekyll-mentions 1.1.3
+Using jekyll-paginate 1.1.0
+Fetching jekyll-redirect-from 0.11.0
+Installing jekyll-redirect-from 0.11.0
+Fetching jekyll-seo-tag 2.0.0
+Installing jekyll-seo-tag 2.0.0
+Fetching jekyll-sitemap 0.10.0 (was 1.2.0)
+Installing jekyll-sitemap 0.10.0 (was 1.2.0)
+Fetching jemoji 0.6.2 (was 0.10.1)
+Installing jemoji 0.6.2 (was 0.10.1)
+Using unicode-display_width 1.4.1
+Using terminal-table 1.8.0
+Fetching github-pages 87
+Installing github-pages 87
+Using tzinfo 2.0.0
+Using tzinfo-data 1.2018.9
+Using wdm 0.1.1
+Bundle complete! 3 Gemfile dependencies, 53 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+Post-install message from github-pages:
+---------------------------------------------------
+Thank you for installing github-pages!
+GitHub Pages recently upgraded to Jekyll 3.0, which
+includes some breaking changes. More information:
+https://github.com/blog/2100-github-pages-jekyll-3
+---------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+jekyll-3.7.4
+
+github-pages-193 depends on jekyll (= 3.7.4)
+jekyll-avatar-0.6.0 depends on jekyll (~> 3.0)
+jekyll-coffeescript-1.1.1 depends on jekyll (>= 2.0, development)
+jekyll-commonmark-1.2.0 depends on jekyll (>= 3.0, < 4.0)
+jekyll-default-layout-0.1.4 depends on jekyll (~> 3.0)
+jekyll-feed-0.11.0 depends on jekyll (~> 3.3)
+jekyll-gist-1.5.0 depends on jekyll (>= 3.0, development)
+jekyll-github-metadata-2.9.4 depends on jekyll (~> 3.1)
+jekyll-mentions-1.4.1 depends on jekyll (~> 3.0)
+jekyll-optional-front-matter-0.3.0 depends on jekyll (~> 3.0)
+jekyll-readme-index-0.2.0 depends on jekyll (~> 3.0)
+jekyll-redirect-from-0.14.0 depends on jekyll (~> 3.3)
+jekyll-relative-links-0.5.3 depends on jekyll (~> 3.3)
+jekyll-remote-theme-0.3.1 depends on jekyll (~> 3.5)
+jekyll-sass-converter-1.5.2 depends on jekyll (>= 2.0, development)
+jekyll-seo-tag-2.5.0 depends on jekyll (~> 3.3)
+jekyll-sitemap-1.2.0 depends on jekyll (~> 3.3)
+jekyll-swiss-0.4.0 depends on jekyll (~> 3.2, development)
+jekyll-theme-architect-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-cayman-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-dinky-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-hacker-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-leap-day-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-merlot-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-midnight-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-minimal-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-modernist-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-primer-0.5.3 depends on jekyll (~> 3.5)
+jekyll-theme-slate-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-tactile-0.1.1 depends on jekyll (~> 3.5)
+jekyll-theme-time-machine-0.1.1 depends on jekyll (~> 3.5)
+jekyll-titles-from-headings-0.5.1 depends on jekyll (~> 3.3)
+jekyll-watch-2.1.2 depends on jekyll (~> 3.6, development)
+jemoji-0.10.1 depends on jekyll (~> 3.0)
+minima-2.5.0 depends on jekyll (~> 3.5)
+
+--------------------------------------------------------------------------------
+
+gitalk:
+
+https://github.com/settings/applications/968878
+
