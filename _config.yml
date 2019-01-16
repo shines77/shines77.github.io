@@ -211,7 +211,7 @@ exclude:
   - LICENSE
   - README-*.md
   - README.md
-  - robots.txt
+# - robots.txt
   - github-pages.txt
   - gem-cmds.txt
   - gulpfile.js
@@ -224,6 +224,6 @@ exclude:
   - /screenshots
   - /test
   - /vendor
-  - /bin
+# - /bin
   - /tools
   - /_release
