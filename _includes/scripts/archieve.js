@@ -111,7 +111,6 @@
 
       hasInit || ($result.removeClass('d-none'), hasInit = true);
 
-
       if (target) {
         buttonFocus(target);
         _tag = target.attr('data-encode');

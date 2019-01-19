@@ -4,7 +4,8 @@
     "indent_size": 2
   },
   "files.associations": {
-    "*.html": "jekyll"
-  }
+    "*.html": "html",
+    "*.htm": "htm"
+  },
+  "html.format.indentInnerHtml": true
 }
-

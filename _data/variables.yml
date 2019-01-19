@@ -5,11 +5,11 @@ default:
   paths:
     root: /
     home: /
-    category:  /category.html
-    archive:  /archive.html
+    category: /category.html
+    archive: /archive.html
     tags:  /tags.html
-    about:  /about.html
-    gtihub:  /gtihub.html
+    about: /about.html
+    gtihub: /gtihub.html
     rss:  /feed.xml
   mathjax: true
   mathjax_autoNumber: true

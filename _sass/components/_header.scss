@@ -102,26 +102,30 @@
   }
 }
 
-.navigation__item {
+.navigation_item {
   &::after {
     display: block;
-    margin-bottom: -4px;
+    margin-bottom: -5px;
     content: "";
-    @include split-line(bottom, 4px, transparent);
+    @include split-line(bottom, 5px, transparent);
   }
 }
-.navigation__item--active {
+.navigation_item--active {
   a {
     @include link-colors($main-color-1, $main-color-1);
   }
   &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+    @include split-line(bottom, 2px, $main-color-1);
   }
 }
 
-.navigation__spacing {
+.navigation_icon {
+  color: $main-color-2;
+}
+
+.navigation_spacing {
   margin: 2px 8px 0px -8px;
-  padding: 1px 1px 0px 1px;
+  padding: 1px 1px 0px -1px;
   float: left;
   border: 1px;
   width: 1px;

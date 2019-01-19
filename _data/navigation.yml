@@ -5,7 +5,7 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  首　页
+      zh-Hans : &ZH_HANS  首页
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
@@ -15,6 +15,7 @@ header:
       ko      : &KO       페이지2
       ko-KR   : *KO
     url: /
+    class: "fa fa-home"
 
   - titles:
       en      : &EN       Category
@@ -22,7 +23,7 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  分　类
+      zh-Hans : &ZH_HANS  分类
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
@@ -32,6 +33,7 @@ header:
       ko      : &KO       분류
       ko-KR   : *KO
     url: /category.html
+    class: "fa fa-calendar-alt"
 
   - titles:
       en      : &EN       Archive
@@ -39,7 +41,7 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  归　档
+      zh-Hans : &ZH_HANS  归档
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
@@ -49,6 +51,7 @@ header:
       ko      : &KO       아카이브
       ko-KR   : *KO
     url: /archive.html
+    class: "fa fa-archive"
 
   - titles:
       en      : &EN       Tags
@@ -66,6 +69,7 @@ header:
       ko      : &KO       Tags
       ko-KR   : *KO
     url: /tags.html
+    class: "fa fa-tags"
 
   - titles:
       en      : &EN       About
@@ -73,7 +77,7 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  关　于
+      zh-Hans : &ZH_HANS  关于
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
@@ -83,7 +87,9 @@ header:
       ko      : &KO       소개
       ko-KR   : *KO
     url: /about.html
+    class: "fa fa-thumbtack"
 
   - title:      GitHub
     url:        https://github.com/shines77/jekyll-theme-text
     target:     _blank
+    class: "fa fa-cat"
