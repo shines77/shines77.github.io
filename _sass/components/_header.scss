@@ -15,7 +15,7 @@
 
 .header--dark {
   @extend .text--dark;
-  background: rgba(#000, .15);
+  background: $header-background;
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
@@ -25,7 +25,7 @@
 
 .header--light {
   @extend .text--light;
-  background: rgba(#fff, .15);
+  background: rgba(#fff, 1.0);
   .navigation__item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
@@ -79,6 +79,33 @@
   }
 }
 
+.nav-bar-fixed {
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: map-get($layout, header-height);
+  opacity: 1.0;
+  z-index: 65535;
+  //animation: fade-in .3s;
+  position: fixed !important;
+}
+
+.nav-bar-sticky {
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: map-get($layout, header-height);
+  opacity: 1.0;
+  z-index: 65535;
+  position: -webkit-sticky !important;
+  position: -moz-sticky !important;
+  position: -ms-sticky !important;
+  position: -o-sticky !important;
+  position: sticky !important;
+}
+
 .navigation_logo {
   fill: $main-color-2;
 }
@@ -111,7 +138,7 @@
     display: block;
     margin-bottom: -5px;
     content: "";
-    @include split-line(bottom, 5px, transparent);
+    @include split-line(bottom, 2px, transparent);
   }
 }
 .navigation_item--active {

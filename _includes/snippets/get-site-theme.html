@@ -1,0 +1,9 @@
+{%- if page.header.theme == nil -%}
+  {%- if layout.header.theme == nil -%}
+    {%- assign __return = site.site_theme -%}
+  {%- else -%}
+    {%- assign __return = page.header.theme -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign __return = page.header.theme -%}
+{%- endif -%}

@@ -1,5 +1,5 @@
 default:
-  text_skin: default
+  jekyll_theme: default
   highlight_theme: tomorrow-night
   lang: zh-CN
   paths:

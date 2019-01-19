@@ -33,6 +33,7 @@
           cbs[i]();
         }
       }
+      //createAutoScroll();
     });
     return {
       then: function(cb) {

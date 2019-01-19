@@ -1,12 +1,12 @@
-{%- if include.theme == 'dark' -%}
-<header class="header header--dark" {%- if include.background -%} style="background: {{ include.background }};" {%-
-  endif -%}>
-  {%- elsif include.theme == 'light' -%}
-  <header class="header header--light" {%- if include.background -%} style="background: {{ include.background }};" {%-
-    endif -%}>
-    {%- else -%}
-    <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
-      {%- endif -%}
+  {%- include snippets/get-site-theme.html -%}
+  {%- assign _site_theme = __return -%}
+  {%- if _site_theme == 'dark' -%}
+    <header id="nav-bar" class="header header--dark nav-bar-fixed"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+  {%- elsif _site_theme == 'light' -%}
+    <header id="nav-bar" class="header header--light nav-bar-fixed"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+  {%- else -%}
+    <header id="nav-bar" class="header nav-bar-fixed"{% if include.background %} style="background: {{ include.background }};" {% endif %}>
+  {%- endif -%}
       <div class="main">
         <div class="header__title">
           <div class="header__brand">
@@ -21,16 +21,7 @@
           <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
           {%- endif -%}
         </div>
-        <!--
         {%- if site.data.navigation.header -%}
-        <p>site.navigation.icon = "{{site.navigation.icon}}"</p>
-        <p>site.navigation.spacing_line = "{{site.navigation.spacing_line}}"</p>
-        {%- if site.navigation.icon -%}
-          <p>site.navigation.icon = "true2"</p>
-        {%- else -%}
-          <p>site.navigation.icon = "false2"</p>
-        {%- endif -%}
-        -->
         <nav class="navigation">
           <ul>
             {%- for _item in site.data.navigation.header -%}

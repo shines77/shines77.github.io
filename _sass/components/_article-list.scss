@@ -1,4 +1,5 @@
 .article-list {
+  min-height: 80%;
   .item__meta {
     padding: 0 map-get($spacers, 3) 0 0;
     font-family: map-get($base, font-family-code);

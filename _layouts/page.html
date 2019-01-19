@@ -5,26 +5,20 @@ layout: base
 {%- assign _page_type = page.type | default: layout.type | default: site.data.variables.default.page.type -%}
 {%- assign _article_header_type = page.article_header.type | default: layout.article_header.type -%}
 
-{%- include snippets/assign.html
-  target=layout.header source0=page.header -%}
+{%- include snippets/assign.html target=layout.header source0=page.header -%}
 {%- assign _header = __return -%}
 
 {%- include snippets/assign.html
   target=layout.footer source0=page.footer -%}
 {%- assign _footer = __return -%}
 
-{%- include snippets/assign.html
-  target=layout.lightbox source0=page.lightbox -%}
+{%- include snippets/assign.html target=layout.lightbox source0=page.lightbox -%}
 {%- assign _lightbox = __return -%}
 
-{%- include snippets/assign.html
-  target = site.data.variables.default.page.full_width
-  source0=layout.full_width source1=page.full_width -%}
+{%- include snippets/assign.html target = site.data.variables.default.page.full_width source0=layout.full_width source1=page.full_width -%}
 {%- assign _full_width = __return -%}
 
-{%- include snippets/assign.html
-  target = site.data.variables.default.page.comment
-  source0=layout.comment source1=page.comment -%}
+{%- include snippets/assign.html target = site.data.variables.default.page.comment source0=layout.comment source1=page.comment -%}
 {%- assign _comment = __return -%}
 
 {%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
@@ -61,18 +55,22 @@ layout: base
     {%- endif -%}
     {%- if page.aside -%}
       {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
-    {%- elsif _full_width -%}
-      {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
+    {%- else -%}
+      {%- if _full_width -%}
+        {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
+      {%- endif -%}
     {%- endif -%}
     <div class="{{ _page_main_class }} cell cell--auto">
 
       <div class="page__main-inner">
+
       {%- if _header != false -%}
         <div class="page__header d-print-none">
-        {%- assign _header_theme = page.header.theme | default: layout.header.theme -%}
-        {%- if _header_theme == 'dark'-%}
+        {%- include snippets/get-site-theme.html -%}
+        {%- assign _site_theme = __return -%}
+        {%- if _site_theme == 'dark' -%}
           {%- include header.html theme='dark' background=page.header.background -%}
-        {%- elsif _header_theme == 'light' -%}
+        {%- elsif _site_theme == 'light' -%}
           {%- include header.html theme='light' background=page.header.background -%}
         {%- else -%}
           {%- include header.html -%}
