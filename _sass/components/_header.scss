@@ -79,6 +79,10 @@
   }
 }
 
+.navigation_logo {
+  fill: $main-color-2;
+}
+
 .navigation {
   @include overflow(auto, "x");
   & > ul {

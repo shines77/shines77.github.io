@@ -9,13 +9,13 @@ header:
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  首　頁
+      zh-Hant : &ZH_HANT  首頁
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       페이지2
+      ko      : &KO       홈페이지
       ko-KR   : *KO
-    url: /
-    class: "fa fa-home"
+    url:      /
+    class:    "fa fa-home"
 
   - titles:
       en      : &EN       Category
@@ -27,13 +27,13 @@ header:
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  分　類
+      zh-Hant : &ZH_HANT  類別
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       분류
+      ko      : &KO       범주
       ko-KR   : *KO
-    url: /category.html
-    class: "fa fa-calendar-alt"
+    url:      /category.html
+    class:    "fa fa-calendar-alt"
 
   - titles:
       en      : &EN       Archive
@@ -45,13 +45,13 @@ header:
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸　檔
+      zh-Hant : &ZH_HANT  檔案
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
       ko-KR   : *KO
-    url: /archive.html
-    class: "fa fa-archive"
+    url:      /archive.html
+    class:    "fa fa-archive"
 
   - titles:
       en      : &EN       Tags
@@ -68,8 +68,8 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       Tags
       ko-KR   : *KO
-    url: /tags.html
-    class: "fa fa-tags"
+    url:      /tags.html
+    class:    "fa fa-tags"
 
   - titles:
       en      : &EN       About
@@ -81,15 +81,15 @@ header:
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關　於
+      zh-Hant : &ZH_HANT  關於
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-    url: /about.html
-    class: "fa fa-thumbtack"
+    url:      /about.html
+    class:    "fa fa-thumbtack"
 
-  - title:      GitHub
-    url:        https://github.com/shines77/jekyll-theme-text
-    target:     _blank
-    class: "fa fa-cat"
+  - title:    GitHub
+    url:      https://github.com/shines77/jekyll-theme-text
+    target:   _blank
+    class:    "fa fa-cat"
