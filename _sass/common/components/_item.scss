@@ -25,12 +25,45 @@
   min-width: 0;
 }
 
+.item__meta {
+  color: $text-color-l;
+  font-size: map-get($base, font-size-h4);
+}
+
+.item__meta_brief {
+  color: $text-color-l;
+  font-size: map-get($base, font-size-h4);
+}
+
 a > .item__header, a.item__header, .item__header > a {
   @include link-colors($text-color-d, $main-color-1);
 }
 
-.item__meta {
-  color: $text-color-l;
+.item__table {
+  margin: 0;
+  padding: 0;
+  border: none;
+  tbody, tr, td {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+  }
+
+  a > .item__header_brief_td, a.item__header_brief_td, .item__header_brief_td > a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: map-get($base, font-size-h4);
+    @include link-colors($text-color-d, $main-color-1);
+  }
+  
+  .item__meta_brief_td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: map-get($base, font-size-h4);
+  }
 }
 
 .item__description {

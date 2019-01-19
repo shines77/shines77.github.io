@@ -79,7 +79,6 @@
         </div>
       </article>
 
-
     {%- elsif include.type == 'brief' -%}
       {%- assign _tags = '' -%}
       {%- for _tag in _article.tags -%}
@@ -94,17 +93,23 @@
         {%- assign _currentdate = _article.date | date: '%Y' -%}
         {%- if _currentdate != _date -%}
           {%- unless forloop.first -%}</ul></section>{%- endunless -%}
-          <section><h2 class="article-list__group-header">{{ _currentdate }}</h2><ul class="items">
+          {%- include snippets/get-locale-string.html key='YEAR' -%}
+          <section><h2 class="article-list__group-header">{{ _currentdate }} {{ __return }}</h2><ul class="items">
           {%- assign _date = _currentdate -%}
         {%- endif -%}
       {%- endif -%}
       {%- include snippets/get-locale-string.html key='ARTICLE_LIST_DATE_FORMAT' -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-        <div class="item__content">
+        <table class="item__content item__table">
+        <tbody>
+          <tr>
           {%- if include.show_info -%}
-            <span class="item__meta">{{ _article.date | date: __return }}</span>
+            <td class="item__meta_brief_td" width="80px;5rem;"><span class="item__meta_brief">{{ _article.date | date: __return }}</span></td>
           {%- endif -%}
-          <a itemprop="headline" class="item__header" href="{{ _article_url }}">{{ _article.title }}</a></div>
+          <td class="item__header_brief_td" witdh="auto"><a itemprop="headline" class="item__header_brief" href="{{ _article_url }}">{{ _article.title }}</a></td>
+          </tr>
+        </tbody>
+        </table>
       </li>
 
     {%- elsif include.type == 'grid' -%}
@@ -124,7 +129,6 @@
             </div>
         </div>
       {%- else -%}
-
         <div class="cell cell--12 cell--md-6 cell--lg-4">
           <div class="card card--flat">
             {%- if _article.cover -%}
