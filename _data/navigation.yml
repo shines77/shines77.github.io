@@ -18,7 +18,7 @@ header:
     class:    "fa fa-home"
 
   - titles:
-      en      : &EN       Category
+      en      : &EN       Categories
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -32,7 +32,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       범주
       ko-KR   : *KO
-    url:      /category.html
+    url:      /categories.html
     class:    "fa fa-calendar-alt"
 
   - titles:

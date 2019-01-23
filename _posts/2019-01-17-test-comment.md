@@ -1,7 +1,7 @@
 ---
 title: Test for comment
 tags: comment
-categories: test
+categories: ['test']
 key: page-comment
 ---
 
