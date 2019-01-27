@@ -13,7 +13,7 @@
   }
 }
 
-.search__header {
+.search_header {
   margin-top: map-get($spacers, 4);
   font-size: map-get($base, font-size-h1);
   font-weight: map-get($base, font-weight-bold);
@@ -116,7 +116,7 @@
   }
 }
 
-.search__cancel {
+.search_cancel {
   margin-left: map-get($spacers, 2);
   font-weight: map-get($base, font-weight-bold);
   white-space: nowrap;

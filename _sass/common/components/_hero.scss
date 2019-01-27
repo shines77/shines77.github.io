@@ -47,7 +47,7 @@
   @extend .text--dark;
 }
 
-.hero__content {
+.hero_content {
   margin: map-get($spacers, 5);
   @include media-breakpoint-down(lg) {
     margin: map-get($spacers, 5) map-get($spacers, 4);

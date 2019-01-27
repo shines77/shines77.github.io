@@ -4,12 +4,12 @@
   @include media-breakpoint-down(md) {
     margin-top: map-get($spacers, 4);
   }
-  .card__header {
+  .card_header {
     font-size: map-get($base, font-size);
   }
-  .card__image {
+  .card_image {
     & > .overlay {
-      &, .card__header {
+      &, .card_header {
         font-size: map-get($base, font-size-sm);
       }
     }

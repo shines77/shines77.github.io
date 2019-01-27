@@ -3,7 +3,7 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $pageGalleryModal = $('.js-page-gallery-modal');
-    var $images = $('.page__content').find('img:not(.lightbox-ignore)');
+    var $images = $('.page_content').find('img:not(.lightbox-ignore)');
     window.imagesLoad($images).then(function() {
       /* global Gallery */
       var pageGalleryModal = $pageGalleryModal.modal({ onChange: handleModalChange });

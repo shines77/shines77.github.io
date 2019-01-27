@@ -8,8 +8,8 @@
     <header id="nav-bar" class="header nav-bar-fixed"{% if include.background %} style="background: {{ include.background }};" {% endif %}>
   {%- endif -%}
       <div class="main">
-        <div class="header__title">
-          <div class="header__brand">
+        <div class="header_title">
+          <div class="header_brand">
             {%- include svg/logo.svg -%}
             {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root -%}
             {%- include snippets/get-nav-url.html path=_paths_root -%}

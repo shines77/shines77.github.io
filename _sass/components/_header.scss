@@ -16,7 +16,7 @@
 .header--dark {
   @extend .text--dark;
   background: $header-background;
-  .navigation__item--active {
+  .navigation_item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
     }
@@ -26,14 +26,14 @@
 .header--light {
   @extend .text--light;
   background: rgba(#fff, 1.0);
-  .navigation__item--active {
+  .navigation_item--active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
     }
   }
 }
 
-.header__title {
+.header_title {
   @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
@@ -45,7 +45,7 @@
     height: map-get($layout, header-height-sm);
     margin-right: 0;
   }
-  & > .header__brand {
+  & > .header_brand {
     @include flex(1);
   }
   & > .search-button {
@@ -57,7 +57,7 @@
   }
 }
 
-.header__brand {
+.header_brand {
   @include flexbox();
   @include align-items(center);
   & > svg {

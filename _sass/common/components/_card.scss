@@ -20,15 +20,15 @@
   }
 }
 
-.card__content {
+.card_content {
   padding: map-get($spacers, 2) map-get($spacers, 3);
 }
 
-.card__header, .card__header > a {
+.card_header, .card_header > a {
   @include link-colors($text-color-d, $main-color-1);
 }
 
-.card__image {
+.card_image {
   position: relative;
   width: 100%;
   & > img {
@@ -80,7 +80,7 @@
   cursor: pointer;
   @include hover() {
     @include box-shadow(2);
-    .card__image {
+    .card_image {
       & > img {
         height: inherit;
       }
@@ -91,12 +91,12 @@
 
 .card--flat {
   @include box-shadow(0);
-  .card__image {
+  .card_image {
     & > img {
       border-radius: map-get($base, border-radius);
     }
   }
-  .card__content {
+  .card_content {
     padding-top: 0;
     padding-left: 0;
   }

@@ -25,7 +25,7 @@ article_header:
         style="background-image: url({{ _url }});">
     {%- endif -%}
 
-        <div class="hero__content">
+        <div class="hero_content">
           <div class="mb-5">
 
             <h3>{{ _section.title }}</h3>
@@ -127,7 +127,7 @@ article_header:
           {%- endif -%}
 
       {%- if _section.image.full_width == true -%}
-        </div> {% comment %} end hero__content {% endcomment %}
+        </div> {% comment %} end hero_content {% endcomment %}
       {%- endif -%}
 
           {%- if _section.image and _section.image.src -%}
@@ -150,9 +150,9 @@ article_header:
                   <a href="{{ _section_image_url }}">
             {%- endif -%}
                     {%- if _section.image.full_width == true -%}
-                      <img class="hero__cover hero__cover--full-width" src="{{ _section_image_src }}"/>
+                      <img class="hero_cover hero_cover--full-width" src="{{ _section_image_src }}"/>
                     {%- else -%}
-                      <img class="hero__cover" src="{{ _section_image_src }}"/>
+                      <img class="hero_cover" src="{{ _section_image_src }}"/>
                     {%- endif -%}
             {%- if _section_image_url -%}
                   </a>
@@ -164,7 +164,7 @@ article_header:
           {%- endif -%}
 
       {%- if _section.image.full_width != true -%}
-        </div> {% comment %} end hero__content {% endcomment %}
+        </div> {% comment %} end hero_content {% endcomment %}
       {%- endif -%}
 
       {%- if _section.content-%}

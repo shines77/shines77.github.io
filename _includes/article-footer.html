@@ -13,7 +13,7 @@
   source0=layout.license source1=page.license -%}
 {%- assign _license = __return -%}
 
-<footer class="article__footer">
+<footer class="article_footer">
   {%- if page.modify_date -%}
     {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
     {%- assign _locale_date_format = __return -%}
@@ -39,7 +39,7 @@
   {%- endif -%}
 
   {%- if _show_subscribe -%}
-    <div class="article__subscribe">{%- include article/footer/subscribe.html -%}</div>
+    <div class="article_subscribe">{%- include article/footer/subscribe.html -%}</div>
   {%- endif -%}
 
   {%- if _license != false -%}
@@ -50,6 +50,6 @@
     {%- if _license != true -%}
       {%- assign _license_data = _data_license[_license] -%}
     {%- endif -%}
-    <div class="article__license">{%- include article/footer/license.html license=_license_data -%}</div>
+    <div class="article_license">{%- include article/footer/license.html license=_license_data -%}</div>
   {%- endif -%}
 </footer>

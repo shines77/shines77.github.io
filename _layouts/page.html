@@ -25,17 +25,17 @@ layout: base
 
 {%- if page.sidebar -%}
 <div class="layout--page layout--page--sidebar clearfix js-page-root">
-  <div class="page__mask d-print-none js-page-mask js-sidebar-hide"></div>
-  <div class="page__viewport">
-    <div class="page__actions d-print-none">
+  <div class="page_mask d-print-none js-page-mask js-sidebar-hide"></div>
+  <div class="page_viewport">
+    <div class="page_actions d-print-none">
       <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
         <i class="fas fa-bars icon--show"></i>
       </div>
     </div>
 
-    <div class="grid page__grid">
+    <div class="grid page_grid">
 
-      <div class="page__sidebar d-print-none">
+      <div class="page_sidebar d-print-none">
         {%- include sidebar/toc.html -%}
       </div>
 
@@ -43,12 +43,12 @@ layout: base
 <div class="layout--page js-page-root">
 {%- endif -%}
 
-    {%- assign _page_main_class = 'page__main js-page-main' -%}
+    {%- assign _page_main_class = 'page_main js-page-main' -%}
     {%- if _page_mode == 'immersive' -%}
-      {%- assign _page_main_class = _page_main_class | append: ' page__main--immersive' -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page_main--immersive' -%}
     {%- endif -%}
     {%- unless page.sidebar -%}
-      {%- assign _page_main_class = _page_main_class | append: ' page__viewport' -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page_viewport' -%}
     {%- endunless -%}
     {%- if _footer == false -%}
       {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
@@ -62,10 +62,10 @@ layout: base
     {%- endif -%}
     <div class="{{ _page_main_class }} cell cell--auto">
 
-      <div class="page__main-inner">
+      <div class="page_main-inner">
 
       {%- if _header != false -%}
-        <div class="page__header d-print-none">
+        <div class="page_header d-print-none">
         {%- include snippets/get-site-theme.html -%}
         {%- assign _site_theme = __return -%}
         {%- if _site_theme == 'dark' -%}
@@ -78,7 +78,7 @@ layout: base
         </div>
       {%- endif -%}
 
-        <div class="page__content">
+        <div class="page_content">
         {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
 
           {%- if _article_header_type == 'overlay' -%}
@@ -117,7 +117,7 @@ layout: base
               {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
             {%- endif -%}
 
-            <div class="article__header--overlay">
+            <div class="article_header--overlay">
 
             {%- if _article_header_theme == 'light' -%}
               {%- if _article_header_align == 'center' -%}
@@ -138,14 +138,14 @@ layout: base
                 <div class="hero overlay" style="{{ _header_style }}">
               {%- endif -%}
             {%- endif -%}
-                <div class="hero__content">
+                <div class="hero_content">
                   {%- if _full_width == false -%}
                     <div class ="main">
                   {%- endif -%}
                     {%- include article-info.html article=page semantic=false -%}
                     {%- include article-header.html article=page semantic=false -%}
                     {%- if page.excerpt -%}
-                      <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
+                      <p class="overlay_excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
                     {%- endif -%}
                     {%- if page.article_header.actions -%}
                       <ul class="menu">
@@ -167,7 +167,7 @@ layout: base
             {%- if page.article_header.image.src -%}
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
               {%- assign _header_image_src = __return -%}
-              <img class="article__header--cover" src="{{ _header_image_src }}"></img>
+              <img class="article_header--cover" src="{{ _header_image_src }}"></img>
             {%- endif -%}
           {%- endif -%}
 
@@ -180,7 +180,7 @@ layout: base
 
               <div class="col-aside d-print-none js-col-aside">
                 {%- if page.aside -%}
-                  <aside class="page__aside js-page-aside">
+                  <aside class="page_aside js-page-aside">
                     {%- include aside/toc.html -%}
                   </aside>
                 {%- endif -%}
@@ -206,7 +206,7 @@ layout: base
 
                     <div class="js-article-content">{{ content }}</div>
                     {%- if _comment != false -%}
-                      <section class="page__comments d-print-none">{%- include comments.html -%}</section>
+                      <section class="page_comments d-print-none">{%- include comments.html -%}</section>
                     {%- endif -%}
                 </article>
                 {%- include main/bottom/custom.html -%}
@@ -219,13 +219,13 @@ layout: base
         </div>
 
         {%- if _footer != false -%}
-          <div class="page__footer d-print-none">{%- include footer.html -%}</div>
+          <div class="page_footer d-print-none">{%- include footer.html -%}</div>
         {%- endif -%}
       </div>
-    </div> {%- comment -%} end page__main {%- endcomment -%}
+    </div> {%- comment -%} end page_main {%- endcomment -%}
 {%- if page.sidebar -%}
     </div> {%- comment -%} end grid {%- endcomment -%}
-  </div> {%- comment -%} end page__viewport {%- endcomment -%}
+  </div> {%- comment -%} end page_viewport {%- endcomment -%}
 {%- endif -%}
 
 <script>{%- include scripts/lib/modal.js -%}</script>
@@ -233,7 +233,7 @@ layout: base
   <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
 {%- endif -%}
 {%- if _header != false -%}
-  <div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
+  <div class="modal modal--overflow page_search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
 {%- endif -%}
 </div>
 

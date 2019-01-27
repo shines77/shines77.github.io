@@ -47,7 +47,7 @@
         this.$items.push($(
           '<div class="swiper__slide">' +
             '<div class="gallery-item">' +
-              '<div class="gallery-item__content">' +
+              '<div class="gallery-item_content">' +
                 '<img src="' + item.src + '" style="width:' + size.w + 'px;height:' + size.h +  'px"/>' +
               '</div>' +
             '</div>' +
@@ -175,8 +175,8 @@
       this.lastZoomRect = null; this.lastZoomRect = null;
       this.lastTranslate = this.translate = { x: 0, y:0 };
       this.lastZoom = this.preZoom = this.zoom = 1;
-      this.$activeItem = $dom.find('.gallery-item__content');
-      setState($preDom.find('.gallery-item__content'), this.zoom, this.translate);
+      this.$activeItem = $dom.find('.gallery-item_content');
+      setState($preDom.find('.gallery-item_content'), this.zoom, this.translate);
     };
 
     Gallery.prototype.refresh = function() {

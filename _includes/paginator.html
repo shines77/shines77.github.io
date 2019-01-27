@@ -7,7 +7,7 @@
     {%- assign _post_count = site.posts | size -%}
     {%- assign _page_count = paginator.total_pages -%}
     <p>{{ _locale_statistics | replace: '[POST_COUNT]', _post_count | replace: '[PAGE_COUNT]', _page_count }}</p>
-    <div class="pagination__menu">
+    <div class="pagination_menu">
       <ul class="menu menu--nowrap">
         {%- assign _max_show = 5 -%}
         {%- assign _max_show_modulo_two = _max_show | modulo: 2 -%}
@@ -61,9 +61,9 @@
           {%- else -%}
             {%- if _n0 and _n1 -%}
               {%- if page > 1 and page < _n0 -%}
-                {%- if page == 2 -%}<li><span class="pagination__omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
+                {%- if page == 2 -%}<li><span class="pagination_omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
               {%- elsif page > _n1 and page < _length -%}
-                {%- if page == _length_mimus_one -%}<li><span class="pagination__omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
+                {%- if page == _length_mimus_one -%}<li><span class="pagination_omit"><i class="fas fa-ellipsis-h"></i></span></li>{%- endif -%}
               {%- else -%}
                 {%- include snippets/prepend-baseurl.html path=site.paginate_path -%}
                 {%- assign _href = __return -%}

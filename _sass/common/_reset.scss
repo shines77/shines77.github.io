@@ -28,10 +28,11 @@ html {
   @media print {
     font-size: map-get($base, font-size-root-sm);
   }
+  // Added by shines77
+  background: $background-color;
 }
 
 body {
-  background: $background-color;
   padding: 0;
   margin: 0;
   font: map-get($base, font-weight) #{map-get($base, font-size)}/#{map-get($base, line-height)} map-get($base, font-family);
@@ -46,6 +47,7 @@ body {
   }
   // Added by shines77
   overflow: scroll;
+  background: $background-color;
 }
 
 @include block-elements() {

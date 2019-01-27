@@ -1,19 +1,19 @@
 .article-list {
   min-height: 80%;
-  .item__meta {
+  .item_meta {
     padding: 0 map-get($spacers, 3) 0 0;
     font-family: map-get($base, font-family-code);
     font-size: map-get($base, font-size-sm);
     white-space: nowrap;
   }
   &.gird--sm {
-    .card__header {
+    .card_header {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
   }
 }
-.article-list__group-header {
+.article-list_group-header {
   margin-top: map-get($spacers, 3);
 }
