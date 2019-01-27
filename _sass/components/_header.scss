@@ -86,7 +86,8 @@
   width: 100%;
   height: map-get($layout, header-height);
   opacity: 1.0;
-  z-index: 65535;
+  z-index: map-get($z-indexes, navbar);
+  /* Modified by shines77, 2019-01-28 */
   //animation: fade-in .3s;
   position: fixed !important;
 }
@@ -98,7 +99,7 @@
   width: 100%;
   height: map-get($layout, header-height);
   opacity: 1.0;
-  z-index: 65535;
+  z-index: map-get($z-indexes, navbar);
   position: -webkit-sticky !important;
   position: -moz-sticky !important;
   position: -ms-sticky !important;

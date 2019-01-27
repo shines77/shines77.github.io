@@ -59,23 +59,69 @@ $base: (
 
   border-radius-lg:       .8rem,
   border-radius:          .4rem,
-  border-radius-sm:       .2rem
+  border-radius-sm:       .2rem,
+
+  /* Added by shines77, 2019-01-28 */
+
+  font-size-code:         0.75rem,
+  line-height-code:       1.6,
+
+  // navbar
+  font-size-navbar-logo:            1rem,
+  font-size-navbar-menu:            1rem,
+
+  // sidebar
+  font-size-sidebar-title:          1rem,
+  font-size-sidebar-menu:           1rem,
+  font-size-sidebar-submenu:        1rem,
+
+  // articles
+  font-size-articles-title:         1rem,
+  font-size-articles-date:          1rem,
+  font-size-articles-content:       1rem,
+  font-size-articles-button:        1rem,
+
+  // categories
+  font-size-category-title:         1rem,
+  font-size-category-date:          1rem,
+
+  // archive
+  font-size-archive-title:          1rem,
+  font-size-archive-year:           1rem,
+  font-size-archive-date:           1rem,
+
+  // tags
+  font-size-tag-text:               1rem,
+  font-size-tag-total:              1rem,
+
+  // article
+  font-size-article-title:          1rem,
+  font-size-article-date:           1rem,
+
+  font-size-article-content-body:   1rem,
+  line-height-article-content-body: 2.0,
+
+  font-size-article-content-code:   0.75rem,
+  line-height-article-content-code: 1.6,
+
+  font-size-footer-body:            1rem,
 );
 
 $spacers: (
-  0:                      0,
-  1:                      map-get($base, spacer) * .25,
-  2:                      map-get($base, spacer) * .5,
-  3:                      map-get($base, spacer),
-  4:                      map-get($base, spacer) * 1.5,
-  5:                      map-get($base, spacer) * 3
+  0: 0,
+  1: map-get($base, spacer) * .25,
+  2: map-get($base, spacer) * .5,
+  3: map-get($base, spacer),
+  4: map-get($base, spacer) * 1.5,
+  5: map-get($base, spacer) * 3
 );
 
 $z-indexes: (
-  actions: 996,
-  mask: 997,
-  sidebar: 998,
-  modal: 999
+  navbar: 65531,
+  actions: 65532,
+  mask: 65533,
+  sidebar: 65534,
+  modal: 65535
 );
 
 $layout: (
@@ -92,9 +138,9 @@ $layout: (
 // 0       500      1024      -
 
 $responsive: (
-  sm:                      0,
-  md:                      500px,
-  lg:                      1024px
+  sm: 0,
+  md: 500px,
+  lg: 1024px
 );
 
 $animation: (
