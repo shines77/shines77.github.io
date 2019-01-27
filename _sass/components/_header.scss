@@ -13,20 +13,20 @@
   }
 }
 
-.header--dark {
-  @extend .text--dark;
+.header-dark {
+  @extend .text-dark;
   background: $header-background;
-  .navigation_item--active {
+  .navigation_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
     }
   }
 }
 
-.header--light {
-  @extend .text--light;
+.header-light {
+  @extend .text-light;
   background: rgba(#fff, 1.0);
-  .navigation_item--active {
+  .navigation_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
     }
@@ -149,7 +149,7 @@
     }
   }
 }
-.navigation_item--active {
+.navigation_item-active {
   a {
     @include link-colors($main-color-1, $main-color-1);
   }

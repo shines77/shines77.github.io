@@ -3,11 +3,11 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var template =
-      '<div class="swiper gallery__swiper">' +
-        '<div class="swiper__wrapper">' +
+      '<div class="swiper gallery_swiper">' +
+        '<div class="swiper_wrapper">' +
         '</div>' +
-        '<div class="swiper__button swiper__button--prev fas fa-chevron-left"></div>' +
-        '<div class="swiper__button swiper__button--next fas fa-chevron-right"></div>' +
+        '<div class="swiper_button swiper_button-prev fas fa-chevron-left"></div>' +
+        '<div class="swiper_button swiper_button-next fas fa-chevron-right"></div>' +
       '</div>';
     function setState($item, zoom, translate) {
       $item.css('transform', 'scale(' + zoom + ') translate(' + translate.x +  'px,' + translate.y + 'px)');
@@ -37,15 +37,15 @@
     Gallery.prototype.init = function() {
       var i, item, items = this.items, size, self = this, touchstartFingerCount = 0;
       this.$root.append(template);
-      this.$swiper = this.$root.find('.gallery__swiper');
-      this.$swiperWrapper = this.$root.find('.swiper__wrapper');
+      this.$swiper = this.$root.find('.gallery_swiper');
+      this.$swiperWrapper = this.$root.find('.swiper_wrapper');
       this.contentWidth = this.$swiperWrapper && this.$swiperWrapper.width();
       this.contentHeight = this.$swiperWrapper && this.$swiperWrapper.height();
       for (i = 0; i < items.length; i++) {
         item = items[i];
         size = this._calculateImageSize(item.w, item.h);
         this.$items.push($(
-          '<div class="swiper__slide">' +
+          '<div class="swiper_slide">' +
             '<div class="gallery-item">' +
               '<div class="gallery-item_content">' +
                 '<img src="' + item.src + '" style="width:' + size.w + 'px;height:' + size.h +  'px"/>' +

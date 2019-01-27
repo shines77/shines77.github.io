@@ -36,7 +36,7 @@
   window.Lazyload.js(SOURCES.jquery, function() {
     var $tags = $('.js-tags');
     var $articleTags = $tags.find('button');
-    var $tagShowAll = $tags.find('.tag-button--all');
+    var $tagShowAll = $tags.find('.tag-button-all');
     var $result = $('.js-result');
     var $sections = $result.find('section');
     var sectionArticles = [];

@@ -7,17 +7,17 @@ article_header:
   align: center
   height: 80vh
 ---
-<div class="layout--landing">
+<div class="layout-landing">
   <div class="heros">
   {%- for _section in page.data.sections -%}
     {%- include snippets/get-nav-url.html path=_section.background_image.src -%}
     {%- assign _url = __return -%}
     {%- if _section.theme == 'light' -%}
-      <section class="hero hero--center hero--light" id="hero-{{ forloop.index }}"
+      <section class="hero hero-center hero-light" id="hero-{{ forloop.index }}"
     {%- elsif _section.theme == 'dark' -%}
-      <section class="hero hero--center hero--dark" id="hero-{{ forloop.index }}"
+      <section class="hero hero-center hero-dark" id="hero-{{ forloop.index }}"
     {%- else -%}
-      <section class="hero hero--center" id="hero-{{ forloop.index }}"
+      <section class="hero hero-center" id="hero-{{ forloop.index }}"
     {%- endif -%}
     {%- if _section.background_color -%}
         style="background-image: url({{ _url }}); background-color: {{ _section.background_color }};">
@@ -39,7 +39,7 @@ article_header:
                 {%- include snippets/get-nav-url.html path=_action.url -%}
                 {%- assign _url = __return -%}
                 {%- assign _type = _action.type | default: 'outline-info' -%}
-                <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                <li><a class="button button-{{ _type }} button-pill button-lg" href="{{ _url }}">{{ _action.text }}</a></li>
               {%- endfor -%}
               </ul>
             {%- endif -%}
@@ -48,8 +48,8 @@ article_header:
 
           {%- if _section.children -%}
             {%- assign _size = _section.children | size  -%}
-            <div class="grid--container">
-              <div class="grid grid--p-3">
+            <div class="grid-container">
+              <div class="grid grid-p-3">
 
                 {%- for child in _section.children -%}
 
@@ -65,7 +65,7 @@ article_header:
                     {%- assign _cell_lg_col = 12 | divided_by: _size -%}
                   {%- endif -%}
 
-                  <div class="cell cell--12 cell--md-{{ _cell_md_col }} cell--lg-{{ _cell_lg_col }} ">
+                  <div class="cell cell-12 cell-md-{{ _cell_md_col }} cell-lg-{{ _cell_lg_col }} ">
 
                     <div class="mb-5">
                       <h4>{{ child.title }}</h4>
@@ -80,7 +80,7 @@ article_header:
                             {%- include snippets/get-nav-url.html path=_action.url -%}
                             {%- assign _url = __return -%}
                             {%- assign _type = _action.type | default: 'outline-info' -%}
-                            <li><a class="button button--{{ _type }} button--pill button--lg" href="{{ _url }}">{{ _action.text }}</a></li>
+                            <li><a class="button button-{{ _type }} button-pill button-lg" href="{{ _url }}">{{ _action.text }}</a></li>
                           {%- endfor -%}
                         </ul>
                       {%- endif -%}
@@ -150,7 +150,7 @@ article_header:
                   <a href="{{ _section_image_url }}">
             {%- endif -%}
                     {%- if _section.image.full_width == true -%}
-                      <img class="hero_cover hero_cover--full-width" src="{{ _section_image_src }}"/>
+                      <img class="hero_cover hero_cover-full-width" src="{{ _section_image_src }}"/>
                     {%- else -%}
                       <img class="hero_cover" src="{{ _section_image_src }}"/>
                     {%- endif -%}

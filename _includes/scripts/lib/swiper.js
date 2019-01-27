@@ -15,17 +15,17 @@
       }
 
       function init() {
-        $swiperWrapper = $root.find('.swiper__wrapper');
-        $swiperSlides = $root.find('.swiper__slide');
-        $swiperButtonPrev = $root.find('.swiper__button--prev');
-        $swiperButtonNext = $root.find('.swiper__button--next');
-        animation && $swiperWrapper.addClass('swiper__wrapper--animation');
+        $swiperWrapper = $root.find('.swiper_wrapper');
+        $swiperSlides = $root.find('.swiper_slide');
+        $swiperButtonPrev = $root.find('.swiper_button-prev');
+        $swiperButtonNext = $root.find('.swiper_button-next');
+        animation && $swiperWrapper.addClass('swiper_wrapper-animation');
         calc(true);
       }
 
       function preCalc() {
         rootWidth = $root.width();
-        count = $swiperWrapper.children('.swiper__slide').length;
+        count = $swiperWrapper.children('.swiper_slide').length;
         if (count < 2) {
           $swiperButtonPrev.addClass('d-none');
           $swiperButtonNext.addClass('d-none');
@@ -40,8 +40,8 @@
           needPreCalc && preCalc();
           var _animation = (params && params.animation !== undefined) ? params.animation : animation;
           if (preAnimation === undefined || preAnimation !== _animation) {
-            preAnimation = _animation ? $swiperWrapper.addClass('swiper__wrapper--animation') :
-              $swiperWrapper.removeClass('swiper__wrapper--animation');
+            preAnimation = _animation ? $swiperWrapper.addClass('swiper_wrapper-animation') :
+              $swiperWrapper.removeClass('swiper_wrapper-animation');
           }
           if (preIndex !== curIndex) {
             ($preSwiperSlide = $swiperSlides.eq(preIndex)).removeClass('active');

@@ -1,12 +1,12 @@
 body,
 html,
 .root,
-.layout--page {
+.layout-page {
   min-height: 100%;
 }
 
-.layout--page {
-  &.layout--page--sidebar {
+.layout-page {
+  &.layout-page-sidebar {
     .page_viewport,
     .page_grid {
       height: 100%;
@@ -55,7 +55,7 @@ html,
   }
 }
 
-.page_main--immersive {
+.page_main-immersive {
   .page_header {
     position: relative;
     top: 0px;
@@ -125,7 +125,7 @@ html,
   @include modal(map-get($z-indexes, mask));
   cursor: pointer;
 }
-.layout--page--sidebar {
+.layout-page-sidebar {
   .page_main {
     @include overflow(auto);
     @media print {
@@ -169,17 +169,17 @@ html,
       @include transform(translate(0));
     }
     .page_mask {
-      @include modal--show();
+      @include modal-show();
     }
   }
 }
 
-.hero--light {
+.hero-light {
   .article_info {
     color: $text-color-theme-light;
   }
 }
-.hero--dark {
+.hero-dark {
   .article_info {
     color: $text-color-theme-dark;
   }

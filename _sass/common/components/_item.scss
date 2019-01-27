@@ -119,7 +119,7 @@ a > .item_header, a.item_header, .item_header > a {
   }
 }
 
-.items--divided {
+.items-divided {
   & > .item {
     &:not(:first-child) {
       padding-top: map-get($spacers, 4);

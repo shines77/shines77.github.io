@@ -32,19 +32,19 @@
 
 }
 
-.hero--center {
+.hero-center {
   text-align: center;
   .menu {
-    @extend .menu--center;
+    @extend .menu-center;
   }
 }
 
-.hero--light {
-  @extend .text--light;
+.hero-light {
+  @extend .text-light;
 }
 
-.hero--dark {
-  @extend .text--dark;
+.hero-dark {
+  @extend .text-dark;
 }
 
 .hero_content {

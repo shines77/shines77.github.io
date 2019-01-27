@@ -29,9 +29,9 @@
   }
 }
 
-.text--light {
+.text-light {
   @include text-light();
 }
-.text--dark {
+.text-dark {
   @include text-dark();
 }

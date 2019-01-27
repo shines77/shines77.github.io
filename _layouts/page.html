@@ -24,11 +24,11 @@ layout: base
 {%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
 {%- if page.sidebar -%}
-<div class="layout--page layout--page--sidebar clearfix js-page-root">
+<div class="layout-page layout-page-sidebar clearfix js-page-root">
   <div class="page_mask d-print-none js-page-mask js-sidebar-hide"></div>
   <div class="page_viewport">
     <div class="page_actions d-print-none">
-      <div class="button button--circle button--lg box-shadow-2 sidebar-button js-sidebar-show">
+      <div class="button button-circle button-lg box-shadow-2 sidebar-button js-sidebar-show">
         <i class="fas fa-bars icon--show"></i>
       </div>
     </div>
@@ -40,12 +40,12 @@ layout: base
       </div>
 
 {%- else -%}
-<div class="layout--page js-page-root">
+<div class="layout-page js-page-root">
 {%- endif -%}
 
     {%- assign _page_main_class = 'page_main js-page-main' -%}
     {%- if _page_mode == 'immersive' -%}
-      {%- assign _page_main_class = _page_main_class | append: ' page_main--immersive' -%}
+      {%- assign _page_main_class = _page_main_class | append: ' page_main-immersive' -%}
     {%- endif -%}
     {%- unless page.sidebar -%}
       {%- assign _page_main_class = _page_main_class | append: ' page_viewport' -%}
@@ -60,7 +60,7 @@ layout: base
         {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
       {%- endif -%}
     {%- endif -%}
-    <div class="{{ _page_main_class }} cell cell--auto">
+    <div class="{{ _page_main_class }} cell cell-auto">
 
       <div class="page_main-inner">
 
@@ -117,23 +117,23 @@ layout: base
               {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
             {%- endif -%}
 
-            <div class="article_header--overlay">
+            <div class="article_header-overlay">
 
             {%- if _article_header_theme == 'light' -%}
               {%- if _article_header_align == 'center' -%}
-                <div class="hero hero--center hero--light overlay" style="{{ _header_style }}">
+                <div class="hero hero-center hero-light overlay" style="{{ _header_style }}">
               {%- else -%}
-                <div class="hero hero--light overlay" style="{{ _header_style }}">
+                <div class="hero hero-light overlay" style="{{ _header_style }}">
               {%- endif -%}
             {%- elsif _article_header_theme == 'dark' -%}
               {%- if _article_header_align == 'center' -%}
-                <div class="hero hero--center hero--dark overlay" style="{{ _header_style }}">
+                <div class="hero hero-center hero-dark overlay" style="{{ _header_style }}">
               {%- else -%}
-                <div class="hero hero--dark overlay" style="{{ _header_style }}">
+                <div class="hero hero-dark overlay" style="{{ _header_style }}">
               {%- endif -%}
             {%- else -%}
               {%- if _article_header_align == 'center' -%}
-                <div class="hero hero--center overlay" style="{{ _header_style }}">
+                <div class="hero hero-center overlay" style="{{ _header_style }}">
               {%- else -%}
                 <div class="hero overlay" style="{{ _header_style }}">
               {%- endif -%}
@@ -153,7 +153,7 @@ layout: base
                           {%- include snippets/get-nav-url.html path=_action.url -%}
                           {%- assign _url = __return -%}
                           {%- assign _type = _action.type | default: 'info' -%}
-                          <li><a class="button button--{{ _type }} button--rounded button--xl" href="{{ _url }}">{{ _action.text }}</a></li>
+                          <li><a class="button button-{{ _type }} button-rounded button-xl" href="{{ _url }}">{{ _action.text }}</a></li>
                         {%- endfor -%}
                       </ul>
                     {%- endif -%}
@@ -167,7 +167,7 @@ layout: base
             {%- if page.article_header.image.src -%}
               {%- include snippets/get-nav-url.html path=page.article_header.image.src -%}
               {%- assign _header_image_src = __return -%}
-              <img class="article_header--cover" src="{{ _header_image_src }}"></img>
+              <img class="article_header-cover" src="{{ _header_image_src }}"></img>
             {%- endif -%}
           {%- endif -%}
 
@@ -176,7 +176,7 @@ layout: base
         {%- if _full_width == false -%}
           <div class ="main">
         {%- endif -%}
-            <div class="grid grid--reverse">
+            <div class="grid grid-reverse">
 
               <div class="col-aside d-print-none js-col-aside">
                 {%- if page.aside -%}
@@ -186,7 +186,7 @@ layout: base
                 {%- endif -%}
               </div>
 
-              <div class="col-main cell cell--auto">
+              <div class="col-main cell cell-auto">
                 {%- include main/top/custom.html -%}
                 {%- if _page_type == 'article' -%}
                   <article itemscope itemtype="http://schema.org/Article">
@@ -233,7 +233,7 @@ layout: base
   <div class="modal d-print-none js-page-gallery-modal"><div class="gallery"></div></div>
 {%- endif -%}
 {%- if _header != false -%}
-  <div class="modal modal--overflow page_search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
+  <div class="modal modal-overflow page_search-modal d-print-none js-page-search-modal">{%- include search.html -%}</div>
 {%- endif -%}
 </div>
 

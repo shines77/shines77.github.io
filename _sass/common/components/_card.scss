@@ -46,7 +46,7 @@
       text-decoration: none !important;
     }
   }
-  & > .overlay, & > .overlay--top {
+  & > .overlay, & > .overlay-top {
     top: 0;
     bottom: auto;
     border-top-left-radius: inherit;
@@ -54,7 +54,7 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  & > .overlay--bottom {
+  & > .overlay-bottom {
     top: auto;
     bottom: 0;
     border-top-left-radius: 0;
@@ -62,21 +62,21 @@
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
   }
-  & > .overlay--full {
+  & > .overlay-full {
     top: 0;
     bottom: 0;
   }
-  & > .overlay, & > .overlay--dark {
-    @extend .text--dark;
+  & > .overlay, & > .overlay-dark {
+    @extend .text-dark;
     background-color: rgba(#000, .4);
   }
-  & > .overlay--light {
-    @extend .text--light;
+  & > .overlay-light {
+    @extend .text-light;
     background: rgba(#fff, .4);
   }
 }
 
-.card--clickable {
+.card-clickable {
   cursor: pointer;
   @include hover() {
     @include box-shadow(2);
@@ -89,7 +89,7 @@
   @include transition(map-get($clickable, transition));
 }
 
-.card--flat {
+.card-flat {
   @include box-shadow(0);
   .card_image {
     & > img {

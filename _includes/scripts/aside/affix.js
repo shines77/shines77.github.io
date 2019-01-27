@@ -5,7 +5,7 @@
     var $pageAside = $('.js-page-aside');
     var affix;
     var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasSidebar = $('.js-page-root').hasClass('layout-page-sidebar');
 
     affix = $pageAside.affix({
       offsetBottom: $pageFooter.outerHeight(),

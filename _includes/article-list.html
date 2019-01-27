@@ -14,14 +14,14 @@
 {%- endif -%}
 
 {%- if include.type == 'item' -%}
-<div class="article-list items items--divided">
+<div class="article-list items items-divided">
 {%- elsif include.type == 'brief' -%}
 <div class="article-list items">
 {%- elsif include.type == 'grid' -%}
   {%- if include.size == 'sm' -%}
-  <div class="article-list grid gird--sm grid--p-3">
+  <div class="article-list grid gird-sm grid-p-3">
   {%- else -%}
-  <div class="article-list grid grid--p-3">
+  <div class="article-list grid grid-p-3">
   {%- endif -%}
 {%- endif -%}
 
@@ -46,9 +46,9 @@
           {%- assign _article_cover = __return -%}
           <div class="item_image">
           {%- if include.cover_size == 'lg' -%}
-            <img class="image image--lg" src="{{ _article_cover }}" />
+            <img class="image image-lg" src="{{ _article_cover }}" />
           {%- elsif include.cover_size == 'sm' -%}
-            <img class="image image--sm" src="{{ _article_cover }}" />
+            <img class="image image-sm" src="{{ _article_cover }}" />
           {%- else -%}
             <img class="image" src="{{ _article_cover }}" />
           {%- endif -%}
@@ -114,12 +114,12 @@
 
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
-        <div class="cell cell--12 cell--md-4 cell--lg-3">
-          <div class="card card--flat">
+        <div class="cell cell-12 cell-md-4 cell-lg-3">
+          <div class="card card-flat">
             {%- if _article.cover -%}
               <div class="card_image">
                 <img class="image" src="{{ _article_cover }}" />
-                <div class="overlay overlay--bottom">
+                <div class="overlay overlay-bottom">
                   <header>
                     <a href="{{ _article_url }}"><h2 class="card_header">{{ _article.title }}</h2></a>
                   </header>
@@ -129,8 +129,8 @@
             </div>
         </div>
       {%- else -%}
-        <div class="cell cell--12 cell--md-6 cell--lg-4">
-          <div class="card card--flat">
+        <div class="cell cell-12 cell-md-6 cell-lg-4">
+          <div class="card card-flat">
             {%- if _article.cover -%}
               <div class="card_image"><img src="{{ _article_cover }}" /></div>
             {%- endif -%}

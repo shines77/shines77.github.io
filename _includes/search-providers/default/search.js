@@ -49,11 +49,11 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   }
 
   var renderHeader = memorize(function(header) {
-    return $('<p class="search-result__header">' + header + '</p>');
+    return $('<p class="search-result_header">' + header + '</p>');
   });
 
   var renderItem = function(index, title, url) {
-    return $('<li class="search-result__item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
+    return $('<li class="search-result_item" data-index="' + index + '"><a class="button" href="' + url + '">' + title + '</a></li>');
   };
 
   function render(data) {
@@ -77,11 +77,11 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   function clear() {
     $result.html(null);
-    $resultItems = $('.search-result__item'); activeIndex = 0;
+    $resultItems = $('.search-result_item'); activeIndex = 0;
   }
   function onInputNotEmpty(val) {
     $result.html(render(searchByQuery(val)));
-    $resultItems = $('.search-result__item'); activeIndex = 0;
+    $resultItems = $('.search-result_item'); activeIndex = 0;
     $resultItems.eq(0).addClass('active');
   }
 
@@ -120,7 +120,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     }
   });
 
-  $result.on('mouseover', '.search-result__item > a', function() {
+  $result.on('mouseover', '.search-result_item > a', function() {
     var itemIndex = $(this).parent().data('index');
     itemIndex >= 0 && (lastActiveIndex = activeIndex, activeIndex = itemIndex, updateResultItems());
   });

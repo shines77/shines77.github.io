@@ -1,6 +1,6 @@
-.layout--archive {
+.layout-archive {
   min-height: 80%;
-  & > .layout--archive_result {
+  & > .layout-archive_result {
     min-height: 80%;
     margin: map-get($spacers, 4) 0;
   }
