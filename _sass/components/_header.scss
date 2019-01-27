@@ -16,7 +16,7 @@
 .header-dark {
   @extend .text-dark;
   background: $header-background;
-  .navigation_item-active {
+  .navbar_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
     }
@@ -26,7 +26,7 @@
 .header-light {
   @extend .text-light;
   background: rgba(#fff, 1.0);
-  .navigation_item-active {
+  .navbar_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
     }
@@ -79,7 +79,8 @@
   }
 }
 
-.nav-bar-fixed {
+/* Added by shines77, 2019-01-28 */
+.navbar-fixed {
   top: 0px;
   left: 0px;
   margin-top: 0px;
@@ -87,18 +88,18 @@
   height: map-get($layout, header-height);
   opacity: 1.0;
   z-index: map-get($z-indexes, navbar);
-  /* Modified by shines77, 2019-01-28 */
   //animation: fade-in .3s;
   position: fixed !important;
 }
 
-.nav-bar-sticky {
+.navbar-sticky {
   top: 0px;
   left: 0px;
   margin-top: 0px;
   width: 100%;
   height: map-get($layout, header-height);
   opacity: 1.0;
+  /* Added by shines77, 2019-01-28 */
   z-index: map-get($z-indexes, navbar);
   position: -webkit-sticky !important;
   position: -moz-sticky !important;
@@ -107,11 +108,11 @@
   position: sticky !important;
 }
 
-.navigation_logo {
+.navbar_logo {
   fill: $main-color-2;
 }
 
-.navigation {
+.navbar {
   @include overflow(auto, "x");
   & > ul {
     height: map-get($layout, header-height);
@@ -134,7 +135,7 @@
   }
 }
 
-.navigation_item {
+.navbar_item {
   &::after {
     display: block;
     margin-bottom: -5px;
@@ -150,7 +151,7 @@
     }
   }
 }
-.navigation_item-active {
+.navbar_item-active {
   a {
     @include link-colors($main-color-1, $main-color-1);
   }
@@ -159,11 +160,11 @@
   }
 }
 
-.navigation_icon {
+.navbar_icon {
   color: $main-color-2;
 }
 
-.navigation_spacing {
+.navbar_spacing {
   margin: 2px 8px 0px -8px;
   padding: 1px 1px 0px -1px;
   float: left;

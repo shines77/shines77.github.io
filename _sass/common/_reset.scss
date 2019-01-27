@@ -28,7 +28,7 @@ html {
   @media print {
     font-size: map-get($base, font-size-root-sm);
   }
-  // Added by shines77
+  /* Added by shines77, 2019-01-28 */
   background: $background-color;
 }
 
@@ -45,7 +45,7 @@ body {
   ::selection {
     background: $select-color;
   }
-  // Added by shines77
+  /* Added by shines77, 2019-01-28 */
   overflow: scroll;
   background: $background-color;
 }

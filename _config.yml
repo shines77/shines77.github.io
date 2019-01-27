@@ -58,7 +58,7 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 repository: shines77/jekyll-theme-text
 repository_tree: master
 
-navigation:
+navbar:
   icon: true # false (default), true
   text_spacing: false # false (default), true
   spacing_line: false # false (default), true

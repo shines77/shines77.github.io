@@ -21,9 +21,9 @@
      */
     function registerScrollEvent () {
         var that = this;
-        var navbarId = 'nav-bar';
+        var navbarId = 'navbar';
         if(Util.OS() == 'ios') {
-            navbarId = 'nav-bar';
+            navbarId = 'navbar';
         }
 
         $(`#${navbarId}`).css('top', that.barTop + 'px');
