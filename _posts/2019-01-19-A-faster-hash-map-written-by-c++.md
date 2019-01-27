@@ -1,5 +1,5 @@
 ---
-title: C++高性能HashMap实现（二）-- 常用查找算法
+title: C++高性能HashMap（二）—— 常用查找算法
 categories: ['c++']
 tags: ['C++', 'C#', 'Java', 'HashMap', 'HashTable', '哈希表']
 key: page-fast-hash-map
