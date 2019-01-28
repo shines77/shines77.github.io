@@ -7,7 +7,7 @@
     var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
     var toc;
     var tocDisabled = false;
-    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasSidebar = $('.js-page-root').hasClass('layout-page-sidebar');
     var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
 
     function disabled() {

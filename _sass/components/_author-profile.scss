@@ -8,18 +8,18 @@
     text-align: center;
   }
 }
-.author-profile__avatar {
+.author-profile_avatar {
   width: 5rem;
   margin-top: map-get($spacers, 2);
   border-radius: 50%;
 }
-.author-profile__name {
+.author-profile_name {
   font-size: map-get($base, font-size-lg);
   font-weight: map-get($base, font-weight-bold);
   a {
     @include link-colors($text-color, $main-color-1);
   }
 }
-.author-profile__links {
+.author-profile_links {
   @include overflow(auto);
 }

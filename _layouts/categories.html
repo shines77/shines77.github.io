@@ -1,7 +1,7 @@
 ---
 layout: page
 titles:
-  en      : &EN       Category
+  en      : &EN       Categories
   en-GB   : *EN
   en-US   : *EN
   en-CA   : *EN
@@ -17,9 +17,9 @@ titles:
   ko-KR   : *KO
 ---
 
-<div class="layout--archive js-all">
+<div class="layout-archive js-all">
   {%- include tags.html -%}
-  <div class="js-result layout--archive__result d-none">
+  <div class="js-result layout-archive_result d-none">
     {%- include article-list.html articles=site.posts type='brief' show_info=true reverse=true group_by='year' -%}
   </div>
 </div>

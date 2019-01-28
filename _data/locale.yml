@@ -1,22 +1,26 @@
 ## => Engish
 ########################
 en: &EN
-  SUBSCRIBE               : "Subscribe"
-  READMORE                : "Read more"
-  SEARCH                  : "Search"
-  CANCEL                  : "Cancel"
-  VIEWS                   : "views"
-  LAST_UPDATED            : "Last updated"
-  PREVIOUS                : "PREVIOUS"
-  NEXT                    : "NEXT"
-  ARTICLE_DATE_FORMAT     : "%b %d, %Y"
-  ARTICLE_LIST_DATE_FORMAT: "%b %d"
-  STATISTICS              : "[POST_COUNT] post articles, [PAGE_COUNT] pages."
-  LICENSE_ANNOUNCE        : "This work is licensed under a [LICENSE] license."
-  POST_ON_GITHUB          : "Edit on Github"
-  FOLLOW_ME               : "Follow me on [NAME]."
-  EMAIL_ME                : "Send me Email."
-  COPYRIGHT_DATES         : "2019"
+  SUBSCRIBE                 : "Subscribe"
+  READMORE                  : "Read more"
+  SEARCH                    : "Search"
+  CANCEL                    : "Cancel"
+  VIEWS                     : "views"
+  LAST_UPDATED              : "Last updated"
+  PREVIOUS                  : "PREVIOUS"
+  NEXT                      : "NEXT"
+  YEAR                      : ""
+  ARTICLE_DATE_FORMAT       : "%b %d, %Y"
+  ARTICLE_LIST_DATE_FORMAT  : "%b %d"
+  STATISTICS                : "[POST_COUNT] post articles, [PAGE_COUNT] pages."
+  LICENSE_ANNOUNCE          : "This work is licensed under a [LICENSE] license."
+  POST_ON_GITHUB            : "Edit on Github"
+  FOLLOW_ME                 : "Follow me on [NAME]."
+  EMAIL_ME                  : "Send me Email."
+  COPYRIGHT_DATES           : "2019"
+  COPYRIGHT_DESCRIPTION     : "[AUTHOR_NAME]'s site."
+  SPECIAL_THANKS_FORMAT     : 'Special thanks to the original author <a href="[ORIGINAL_URL]" title="[ORIGINAL_DESCRIPTION]" target="_blank">[ORIGINAL_AUTHOR]</a> of the theme,<br/>and the last modified author <a href="[LAST_URL]" title="[LAST_DESCRIPTION]" target="_blank">[LAST_AUTHOR]</a>.'
+  SOURCE_SITE_FORMAT        : 'You can find the <a href="[SITE_URL]" title="[SITE_DESCRIPTION]" target="_blank">source code</a> for this site on [HOSTED_SITE]'
 
 en-GB:
   <<: *EN
@@ -30,22 +34,26 @@ en-AU:
 ## => Simplified Chinese
 ########################
 zh-Hans: &ZH_HANS
-  SUBSCRIBE               : "订阅"
-  READMORE                : "阅读更多"
-  SEARCH                  : "搜索"
-  CANCEL                  : "取消"
-  VIEWS                   : "阅读"
-  LAST_UPDATED            : "更新于"
-  PREVIOUS                : "上一篇"
-  NEXT                    : "下一篇"
-  ARTICLE_DATE_FORMAT     : "%Y年 %m月%d日"
-  ARTICLE_LIST_DATE_FORMAT: "%m月%d日"
-  STATISTICS              : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
-  LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 许可协议。"
-  POST_ON_GITHUB          : "在 Github 上修改"
-  FOLLOW_ME               : "在 [NAME] 上关注我。"
-  EMAIL_ME                : "给我发邮件。"
-  COPYRIGHT_DATES         : "2019"
+  SUBSCRIBE                 : "订阅"
+  READMORE                  : "阅读全文"
+  SEARCH                    : "搜索"
+  CANCEL                    : "取消"
+  VIEWS                     : "阅读"
+  LAST_UPDATED              : "更新于"
+  PREVIOUS                  : "上一篇"
+  NEXT                      : "下一篇"
+  YEAR                      : "年"
+  ARTICLE_DATE_FORMAT       : "%Y 年 %-m 月 %-d 日"
+  ARTICLE_LIST_DATE_FORMAT  : "%-m 月 %-d 日"
+  STATISTICS                : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
+  LICENSE_ANNOUNCE          : "本文遵守 [LICENSE] 许可协议。"
+  POST_ON_GITHUB            : "在 Github 上修改"
+  FOLLOW_ME                 : "在 [NAME] 上关注我。"
+  EMAIL_ME                  : "给我发邮件。"
+  COPYRIGHT_DATES           : "2019"
+  COPYRIGHT_DESCRIPTION     : "[AUTHOR_NAME]的网站"
+  SPECIAL_THANKS_FORMAT     : '特别感谢本主题的原作者: <a href="[ORIGINAL_URL]" title="[ORIGINAL_DESCRIPTION]" target="_blank">[ORIGINAL_AUTHOR]</a>, 最后修改: <a href="[LAST_URL]" title="[LAST_DESCRIPTION]" target="_blank">[LAST_AUTHOR]</a>.'
+  SOURCE_SITE_FORMAT        : '您可以在 [HOSTED_SITE] 上找到 <a href="[SITE_URL]" title="[SITE_DESCRIPTION]" target="_blank">本站的源代码</a>'
 
 zh:
   <<: *ZH_HANS
@@ -57,22 +65,26 @@ zh-SG:
 ## => Traditional Chinese
 ########################
 zh-Hant: &ZH_HANT
-  SUBSCRIBE               : "訂閱"
-  READMORE                : "閱讀更多"
-  SEARCH                  : "搜索"
-  CANCEL                  : "取消"
-  VIEWS                   : "閱讀"
-  LAST_UPDATED            : "更新於"
-  PREVIOUS                : "上一篇"
-  NEXT                    : "下一篇"
-  ARTICLE_DATE_FORMAT     : "%Y年 %m月%d日"
-  ARTICLE_LIST_DATE_FORMAT: "%m月%d日"
-  STATISTICS              : "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
-  LICENSE_ANNOUNCE        : "本文遵守 [LICENSE] 許可協議。"
-  POST_ON_GITHUB          : "在 Github 上修改"
-  FOLLOW_ME               : "在 [NAME] 上關注我。"
-  EMAIL_ME                : "給我發郵件。"
-  COPYRIGHT_DATES         : "2019"
+  SUBSCRIBE                 : "訂閱"
+  READMORE                  : "閱讀更多"
+  SEARCH                    : "搜索"
+  CANCEL                    : "取消"
+  VIEWS                     : "閱讀"
+  LAST_UPDATED              : "更新於"
+  PREVIOUS                  : "上一篇"
+  NEXT                      : "下一篇"
+  YEAR                      : "年"
+  ARTICLE_DATE_FORMAT       : "%Y年 %m月%d日"
+  ARTICLE_LIST_DATE_FORMAT  : "%m月%d日"
+  STATISTICS                : "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
+  LICENSE_ANNOUNCE          : "本文遵守 [LICENSE] 許可協議。"
+  POST_ON_GITHUB            : "在 Github 上修改"
+  FOLLOW_ME                 : "在 [NAME] 上關注我。"
+  EMAIL_ME                  : "給我發郵件。"
+  COPYRIGHT_DATES           : "2019"
+  COPYRIGHT_DESCRIPTION     : "[AUTHOR_NAME]的網站"
+  SPECIAL_THANKS_FORMAT     : '特別感謝本主題的原作者: <a href="[SITE_URL]" title="[SITE_DESCRIPTION]" target="_blank">[ORIGINAL_AUTHOR]</a>, 最後修改: <a href="[LAST_URL]" title="[LAST_DESCRIPTION]" target="_blank">[LAST_AUTHOR]</a>.'
+  SOURCE_SITE_FORMAT        : '您可以在 [HOSTED_SITE] 上找到 <a href="[SITE_URL]" title="[SITE_DESCRIPTION]" target="_blank">本站的源代碼</a>'
 
 zh-TW:
   <<: *ZH_HANT
@@ -82,22 +94,26 @@ zh-HK:
 ## => Korean
 ########################
 ko: &KO
-  SUBSCRIBE               : "구독하기"
-  READMORE                : "더보기"
-  SEARCH                  : "검색"
-  CANCEL                  : "취소"
-  VIEWS                   : "조회"
-  LAST_UPDATED            : "마지막 수정"
-  PREVIOUS                : "이전"
-  NEXT                    : "다음"
-  ARTICLE_DATE_FORMAT     : "%Y년 %m월 %d일"
-  ARTICLE_LIST_DATE_FORMAT: "%m월 %d일"
-  STATISTICS              : "전체 글 [POST_COUNT]개, [PAGE_COUNT] 페이지"
-  LICENSE_ANNOUNCE        : "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
-  POST_ON_GITHUB          : "Github에서 확인하기"
-  FOLLOW_ME               : "[NAME]에서 팔로우하기"
-  EMAIL_ME                : "이메일 보내기"
-  COPYRIGHT_DATES         : "2019"
+  SUBSCRIBE                 : "구독하기"
+  READMORE                  : "더보기"
+  SEARCH                    : "검색"
+  CANCEL                    : "취소"
+  VIEWS                     : "조회"
+  LAST_UPDATED              : "마지막 수정"
+  PREVIOUS                  : "이전"
+  NEXT                      : "다음"
+  YEAR                      : "년"
+  ARTICLE_DATE_FORMAT       : "%Y년 %m월 %d일"
+  ARTICLE_LIST_DATE_FORMAT  : "%m월 %d일"
+  STATISTICS                : "전체 글 [POST_COUNT]개, [PAGE_COUNT] 페이지"
+  LICENSE_ANNOUNCE          : "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
+  POST_ON_GITHUB            : "Github에서 확인하기"
+  FOLLOW_ME                 : "[NAME]에서 팔로우하기"
+  EMAIL_ME                  : "이메일 보내기"
+  COPYRIGHT_DATES           : "2019"
+  COPYRIGHT_DESCRIPTION     : "[AUTHOR_NAME]의 사이트"
+  SPECIAL_THANKS_FORMAT     : '주제의 원본 저자 <a href="[ORIGINAL_URL]" title="[ORIGINAL_DESCRIPTION]" target="_blank">[ORIGINAL_AUTHOR]</a> 및 마지막으로 수정 된 저자 <a href="[LAST_URL]" title ="[LAST_DESCRIPTION]" target="_blank">[LAST_AUTHOR]</a>.'
+  SOURCE_SITE_FORMAT        : '[HOSTED_SITE] 에서 <a href="[SITE_URL]" title="[SITE_DESCRIPTION]" target="_blank">이 사이트의 소스 코드</a> 를 찾을 수 있습니다.'
 
 ko-KR:
   <<: *KO

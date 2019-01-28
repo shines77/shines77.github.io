@@ -80,7 +80,7 @@ ul.toc {
   }
 }
 
-ul.toc--ellipsis {
+ul.toc-ellipsis {
   & > li {
     @include overflow(hidden);
     text-overflow: ellipsis;
@@ -88,7 +88,7 @@ ul.toc--ellipsis {
   }
 }
 
-ul.toc--navigator {
+ul.toc-navigator {
   & > li {
     &.active {
       a {

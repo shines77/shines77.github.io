@@ -1,15 +1,15 @@
-.article__footer {
+.article_footer {
   margin: map-get($spacers, 4) 0;
   font-size: map-get($base, font-size-sm);
 }
 
-.article__license, .article__subscribe {
+.article_license, .article_subscribe {
   a {
     @include link-colors($text-color, $main-color-1);
   }
 }
 
-.article__license {
+.article_license {
   color: $text-color-l;
   img {
     height: map-get($base, font-size) * 1.6;

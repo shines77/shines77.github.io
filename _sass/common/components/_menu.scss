@@ -42,7 +42,7 @@
   @include align-items(center);
 }
 
-.menu--vertical {
+.menu-vertical {
   @include menu-direction("vertical");
   @include align-items(normal);
   & > li {
@@ -50,18 +50,18 @@
   }
 }
 
-.menu--inline {
+.menu-inline {
   @include inline-flex();
 }
 
-.menu--center {
+.menu-center {
   @include justify-content(center);
 }
 
-.menu--nowrap {
+.menu-nowrap {
   @include flex-wrap(nowrap);
 }
 
-.menu--grow {
+.menu-grow {
   @include flex-grow(1);
 }

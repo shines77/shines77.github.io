@@ -32,22 +32,22 @@
 
 }
 
-.hero--center {
+.hero-center {
   text-align: center;
   .menu {
-    @extend .menu--center;
+    @extend .menu-center;
   }
 }
 
-.hero--light {
-  @extend .text--light;
+.hero-light {
+  @extend .text-light;
 }
 
-.hero--dark {
-  @extend .text--dark;
+.hero-dark {
+  @extend .text-dark;
 }
 
-.hero__content {
+.hero_content {
   margin: map-get($spacers, 5);
   @include media-breakpoint-down(lg) {
     margin: map-get($spacers, 5) map-get($spacers, 4);

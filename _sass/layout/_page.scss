@@ -1,26 +1,28 @@
 body,
 html,
 .root,
-.layout--page {
-  height: 100%;
+.layout-page {
+  min-height: 100%;
 }
 
-.layout--page {
-  &.layout--page--sidebar {
-    .page__viewport,
-    .page__grid {
+.layout-page {
+  &.layout-page-sidebar {
+    .page_viewport,
+    .page_grid {
       height: 100%;
     }
     @include media-breakpoint-down(lg) {
-      .page__main {
+      .page_main {
         @include overflow(unset);
       }
     }
   }
 }
 
-.page__main {
-  height: 100%;
+.page_main {
+  /* Modified by shines77, 2019-01-28 */
+  //height: 100%;
+  min-height: 100%;
   color: $text-color;
   background-color: $background-color;
 
@@ -34,14 +36,42 @@ html,
   }
 }
 
-.page__main-inner {
+.page_main-inner {
   position: relative;
   @include flexbox();
   @include flex-direction(column);
   min-height: 100%;
+
+  .page_header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: map-get($layout, header-height);
+    opacity: 1.0;
+  }
+  .hero_content {
+    padding-top: map-get($layout, header-height);
+  }
 }
 
-.page__content {
+.page_main-immersive {
+  .page_header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: map-get($layout, header-height);
+    opacity: 1.0;
+  }
+  .hero_content {
+    padding-top: map-get($layout, header-height);
+  }
+}
+
+.page_content {
   @include flex(1);
   width: 100%;
   margin: 0 auto;
@@ -50,22 +80,22 @@ html,
   }
 }
 .hide-footer {
-  .page__content {
+  .page_content {
     padding-bottom: 0;
   }
 }
 
-.page__comments {
+.page_comments {
   margin: map-get($spacers, 4) 0;
 }
 
-.page__aside {
+.page_aside {
   .toc-aside {
     padding: map-get($spacers, 5) 0 map-get($spacers, 3) map-get($spacers, 5);
   }
 }
 
-.page__actions {
+.page_actions {
   position: fixed;
   bottom: map-get($spacers, 5);
   left: map-get($spacers, 3);
@@ -73,12 +103,14 @@ html,
   display: none;
 }
 
-.page__sidebar {
+.page_sidebar {
   z-index: map-get($z-indexes, sidebar);
   display: block;
   width: 80%;
   max-width: map-get($layout, sidebar-width);
-  height: 100%;
+  /* Modified by shines77, 2019-01-28 */
+  //height: 100%;
+  min-height: 100%;
   background-color: $background-color;
   @include split-line(right);
   @include transition(transform map-get($animation, duration));
@@ -91,12 +123,12 @@ html,
   @include clickable($text-color-d, rgba($main-color-3, .75));
 }
 
-.page__mask {
+.page_mask {
   @include modal(map-get($z-indexes, mask));
   cursor: pointer;
 }
-.layout--page--sidebar {
-  .page__main {
+.layout-page-sidebar {
+  .page_main {
     @include overflow(auto);
     @media print {
       @include overflow(unset);
@@ -122,45 +154,36 @@ html,
 }
 
 @include media-breakpoint-down(lg) {
-  .page__sidebar {
+  .page_sidebar {
     position: fixed;
     @include transform(translate(- map-get($layout, sidebar-width), 0));
   }
 
-  .page__actions {
+  .page_actions {
     display: block;
   }
 
   .show-sidebar {
-    .page__actions {
+    .page_actions {
       visibility: hidden;
     }
-    .page__sidebar {
+    .page_sidebar {
       @include transform(translate(0));
     }
-    .page__mask {
-      @include modal--show();
+    .page_mask {
+      @include modal-show();
     }
   }
 }
 
-.hero--light {
-  .article__info {
+.hero-light {
+  .article_info {
     color: $text-color-theme-light;
   }
 }
-.hero--dark {
-  .article__info {
-    color: $text-color-theme-dark;
-  }
-}
 
-.page__main--immersive {
-  .page__header {
-    position: absolute;
-    width: 100%;
-  }
-  .hero__content {
-    padding-top: map-get($layout, header-height);
+.hero-dark {
+  .article_info {
+    color: $text-color-theme-dark;
   }
 }

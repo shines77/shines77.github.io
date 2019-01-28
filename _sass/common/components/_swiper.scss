@@ -3,46 +3,46 @@
   @include overflow(hidden);
 }
 
-.swiper__wrapper, .swiper__slide {
+.swiper_wrapper, .swiper_slide {
   width: 100%;
   height: 100%;
 }
 
-.swiper__wrapper {
+.swiper_wrapper {
   @include flexbox();
 }
 
-.swiper__wrapper--animation {
+.swiper_wrapper-animation {
   @include transition(transform map-get($animation, duration) map-get($animation, timing-function));
 }
 
-.swiper__slide {
+.swiper_slide {
   @include flex-shrink(0);
   & > img {
     max-width: 100%;
   }
 }
 
-.swiper__button {
+.swiper_button {
   position: absolute;
   top: 50%;
-  @extend .button, .button--circle;
+  @extend .button, .button-circle;
   @include transform(translate(0, -50%));
   @include clickable($text-color-d, rgba($main-color-3, .4));
 }
 
-.swiper--light .swiper__button {
+.swiper-light .swiper_button {
   @include clickable($text-color-theme-light, rgba($main-color-theme-dark, .4));
 }
 
-.swiper--dark .swiper__button {
+.swiper-dark .swiper_button {
   @include clickable($text-color-theme-dark, rgba($main-color-theme-light, .4));
 }
 
-.swiper__button--prev {
+.swiper_button-prev {
   left: 10px;
 }
 
-.swiper__button--next {
+.swiper_button-next {
   right: 10px;
 }

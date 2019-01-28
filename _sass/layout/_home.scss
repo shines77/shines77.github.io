@@ -1,12 +1,12 @@
-.layout--home {
+.layout-home {
   .pagination {
     margin: map-get($spacers, 4) 0;
   }
-  .pagination__menu {
+  .pagination_menu {
     max-width: 100%;
     @include overflow(auto);
   }
-  .pagination__omit {
+  .pagination_omit {
     color: $text-color-l;
   }
   .items {

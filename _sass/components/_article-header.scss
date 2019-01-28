@@ -1,4 +1,4 @@
-.article__header {
+.article_header {
   margin-top: map-get($spacers, 5);
   margin-bottom: map-get($spacers, 4);
   @include media-breakpoint-down(md) {
@@ -18,7 +18,7 @@
   }
 }
 
-.article__header--overlay {
+.article_header-overlay {
   .overlay {
     min-height: 36rem;
     padding-top: map-get($spacers, 5) * 2;
@@ -29,7 +29,7 @@
       padding-bottom: map-get($spacers, 5);
     }
   }
-  .overlay__excerpt {
+  .overlay_excerpt {
     font-size: map-get($base, font-size-h3-xl);
     @include media-breakpoint-down(lg) {
       font-size: map-get($base, font-size-h3-lg);
@@ -40,11 +40,11 @@
     font-weight: map-get($base, font-weight-bold);
   }
 
-  .article__header {
+  .article_header {
     margin-top: 0;
   }
 }
 
-.article__header--cover {
+.article_header-cover {
   width: 100%;
 }

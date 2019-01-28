@@ -4,7 +4,7 @@
     $(function() {
       var $this ,$scroll;
       var $articleContent = $('.js-article-content');
-      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var hasSidebar = $('.js-page-root').hasClass('layout-page-sidebar');
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';
       $scroll = $(scroll);
 

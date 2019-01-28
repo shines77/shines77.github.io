@@ -5,14 +5,14 @@
 ///
 
 // main colors
-$main-color-1:     #ff9500;
 $text-color-1:     rgba(#fff, .8);
+$main-color-1:     #ff9500;
 
-$main-color-2:     #ff006a;
 $text-color-2:     rgba(#fff, .8);
+$main-color-2:     #ff006a;
 
-$main-color-3:     #202020;
 $text-color-3:     rgba(#fff, .8);
+$main-color-3:     #202020;
 
 $main-color-theme-light: rgba(#000, .8);
 $main-color-theme-dark:  rgba(#fff, .8);
@@ -21,17 +21,17 @@ $main-color-theme-dark:  rgba(#fff, .8);
 $background-color: #121212;
 
 // text colors
-$text-color-theme-light-d: #000;
 $text-color-theme-light:   #222;
 $text-color-theme-light-l: #888;
+$text-color-theme-light-d: #000;
 
-$text-color-theme-dark-d:  rgba(#fff, .8);
 $text-color-theme-dark:    rgba(#fff, .7);
 $text-color-theme-dark-l:  rgba(#fff, .5);
+$text-color-theme-dark-d:  rgba(#fff, .8);
 
-$text-color-d:     $text-color-theme-dark-d;
 $text-color:       $text-color-theme-dark;
 $text-color-l:     $text-color-theme-dark-l;
+$text-color-d:     $text-color-theme-dark-d;
 
 $text-background-color: rgba(#fff, .05);
 
@@ -50,23 +50,23 @@ $mask-color:       rgba(#000, .9);
 $select-color:     rgba($main-color-1, .5);
 
 // function colors
-$green:           #5baa34;
-$blue:            #1c7cd4;
-$yellow:          #c9771f;
-$red:             #da3d45;
+$green:             #5baa34;
+$blue:              #1c7cd4;
+$yellow:            #c9771f;
+$red:               #da3d45;
 $text-color-function: rgba(#fff, .8);
 
 // logo colors
-$mail-color:       #0072c5;
-$weibo-color:      #e6162d;
-$facebook-color:   #4267b2;
-$google-plus-color:#ea4335;
-$twitter-color:    #1da1f2;
-$douban-color:     #42bd56;
-$github-color:     #000;
-$linkedin-color:   #1074af;
-$npm-color:        #fff;
-$telegram-color:   #32afed;
+$mail-color:        #0072c5;
+$weibo-color:       #e6162d;
+$facebook-color:    #4267b2;
+$google-plus-color: #ea4335;
+$twitter-color:     #1da1f2;
+$douban-color:      #42bd56;
+$github-color:      #000;
+$linkedin-color:    #1074af;
+$npm-color:         #fff;
+$telegram-color:    #32afed;
 
 // highlight colors
-@import "skins/highlight/tomorrow-night";
+@import "themes/highlight/tomorrow-night";

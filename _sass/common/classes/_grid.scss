@@ -24,7 +24,7 @@ $grid-columns: 12;
 
 @mixin make-grid-cell($columns, $breakpoint) {
   @include media-breakpoint-up($breakpoint) {
-    .cell--#{breakpoint-infix($breakpoint)}#{$columns} {
+    .cell-#{breakpoint-infix($breakpoint)}#{$columns} {
       @include make-cell($columns);
     }
   }
@@ -45,7 +45,7 @@ $grid-columns: 12;
   }
 }
 
-.grid--reverse {
+.grid-reverse {
   flex-direction: row-reverse;
 }
 
@@ -58,14 +58,14 @@ $grid-columns: 12;
     @each $direction in $directions {
       @each $spacer in $spacers {
         @if $direction == "" {
-          .grid--#{$type}-#{$spacer} {
+          .grid-#{$type}-#{$spacer} {
             @include make-spacing("m", "", $spacer, true);
             .cell {
               @include make-spacing($type, "", $spacer);
             }
           }
         } @else {
-          .grid--#{$type}#{$direction}-#{$spacer} {
+          .grid-#{$type}#{$direction}-#{$spacer} {
             @include make-spacing("m", $direction, $spacer, true);
             .cell {
               @include make-spacing($type, $direction, $spacer);

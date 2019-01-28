@@ -1,50 +1,50 @@
 $base: (
-  font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif),
+  font-family:            (-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, Tahoma, "Microsoft YaHei", "微软雅黑", SimSun, STSong, "宋体", STXihei, "华文细黑", "华文宋体"),
   font-family-code:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
 
   font-size-root:         16px,
   font-size-root-sm:      14px,
 
-  font-size-xl:           1.5rem,
-  font-size-lg:           1.25rem,
-  font-size:              1rem,
-  font-size-sm:           .85rem,
-  font-size-xs:           .7rem,
+  font-size-xl:           1.2rem,
+  font-size-lg:           1rem,
+  font-size:              0.8rem,
+  font-size-sm:           0.68rem,
+  font-size-xs:           0.56rem,
 
-  font-size-h1-xl:        3.5rem,
-  font-size-h2-xl:        2.5rem,
-  font-size-h3-xl:        2rem,
-  font-size-h4-xl:        1.75rem,
-  font-size-h5-xl:        1.5rem,
-  font-size-h6-xl:        1.5rem,
+  font-size-h1-xl:        2.30rem,
+  font-size-h2-xl:        2.10rem,
+  font-size-h3-xl:        1.9rem,
+  font-size-h4-xl:        1.5rem,
+  font-size-h5-xl:        1.3rem,
+  font-size-h6-xl:        1.1rem,
 
-  font-size-h1-lg:        3rem,
-  font-size-h2-lg:        2rem,
-  font-size-h3-lg:        1.75rem,
-  font-size-h4-lg:        1.5rem,
-  font-size-h5-lg:        1.25rem,
-  font-size-h6-lg:        1.25rem,
+  font-size-h1-lg:        2.10rem,
+  font-size-h2-lg:        1.80rem,
+  font-size-h3-lg:        1.46rem,
+  font-size-h4-lg:        1.25rem,
+  font-size-h5-lg:        1.1rem,
+  font-size-h6-lg:        1rem,
 
-  font-size-h1:           2.5rem,
-  font-size-h2:           1.9rem,
-  font-size-h3:           1.5rem,
-  font-size-h4:           1.2rem,
-  font-size-h5:           1rem,
-  font-size-h6:           1rem,
+  font-size-h1:           1.66rem,
+  font-size-h2:           1.44rem,
+  font-size-h3:           1.24rem,
+  font-size-h4:           1rem,
+  font-size-h5:           0.92rem,
+  font-size-h6:           0.85rem,
 
-  font-size-h1-sm:        2rem,
-  font-size-h2-sm:        1.5rem,
-  font-size-h3-sm:        1.35rem,
-  font-size-h4-sm:        1.15rem,
-  font-size-h5-sm:        1rem,
-  font-size-h6-sm:        1rem,
+  font-size-h1-sm:        1.6rem,
+  font-size-h2-sm:        1.3rem,
+  font-size-h3-sm:        1.15rem,
+  font-size-h4-sm:        1rem,
+  font-size-h5-sm:        0.9rem,
+  font-size-h6-sm:        0.8rem,
 
-  font-size-h1-xs:        1.05rem,
-  font-size-h2-xs:        1rem,
-  font-size-h3-xs:        .95rem,
-  font-size-h4-xs:        .9rem,
-  font-size-h5-xs:        .85rem,
-  font-size-h6-xs:        .85rem,
+  font-size-h1-xs:        0.90rem,
+  font-size-h2-xs:        0.86rem,
+  font-size-h3-xs:        0.82rem,
+  font-size-h4-xs:        0.78rem,
+  font-size-h5-xs:        0.74rem,
+  font-size-h6-xs:        0.7rem,
 
   font-weight:            400,
   font-weight-bold:       700,
@@ -55,27 +55,74 @@ $base: (
   line-height-sm:         1.4,
   line-height-xs:         1.2,
 
-  spacer:                 1rem,
+  spacer:                 0.8rem,
 
   border-radius-lg:       .8rem,
   border-radius:          .4rem,
-  border-radius-sm:       .2rem
+  border-radius-sm:       .2rem,
+
+  /* Added by shines77, 2019-01-28 */
+
+  font-size-code:         0.75rem,
+  line-height-code:       1.6,
+
+  // navbar
+  font-size-navbar-logo:            1rem,
+  font-size-navbar-menu:            1rem,
+
+  // sidebar
+  font-size-sidebar-title:          1rem,
+  font-size-sidebar-menu:           1rem,
+  font-size-sidebar-submenu:        1rem,
+
+  // articles
+  font-size-articles-title:         1rem,
+  font-size-articles-date:          1rem,
+  font-size-articles-content:       1rem,
+  font-size-articles-button:        1rem,
+
+  // categories
+  font-size-category-title:         1rem,
+  font-size-category-date:          1rem,
+
+  // archive
+  font-size-archive-title:          1rem,
+  font-size-archive-year:           1rem,
+  font-size-archive-date:           1rem,
+
+  // tags
+  font-size-tag-text:               1rem,
+  font-size-tag-total:              1rem,
+
+  // article
+  font-size-article-title:          1rem,
+  font-size-article-date:           1rem,
+
+  font-size-article-content-body:   1rem,
+  line-height-article-content-body: 2.0,
+
+  font-size-article-content-code:   0.75rem,
+  line-height-article-content-code: 1.6,
+
+  font-size-footer:                 0.875rem,
+  line-height-footer:               1.6,
 );
 
 $spacers: (
-  0:                      0,
-  1:                      map-get($base, spacer) * .25,
-  2:                      map-get($base, spacer) * .5,
-  3:                      map-get($base, spacer),
-  4:                      map-get($base, spacer) * 1.5,
-  5:                      map-get($base, spacer) * 3
+  0: 0,
+  1: map-get($base, spacer) * .25,
+  2: map-get($base, spacer) * .5,
+  3: map-get($base, spacer),
+  4: map-get($base, spacer) * 1.5,
+  5: map-get($base, spacer) * 3
 );
 
 $z-indexes: (
-  actions: 996,
-  mask: 997,
-  sidebar: 998,
-  modal: 999
+  navbar: 65531,
+  actions: 65532,
+  mask: 65533,
+  sidebar: 65534,
+  modal: 65535
 );
 
 $layout: (
@@ -92,9 +139,9 @@ $layout: (
 // 0       500      1024      -
 
 $responsive: (
-  sm:                      0,
-  md:                      500px,
-  lg:                      1024px
+  sm: 0,
+  md: 500px,
+  lg: 1024px
 );
 
 $animation: (

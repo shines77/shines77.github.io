@@ -13,27 +13,27 @@
   }
 }
 
-.header--dark {
-  @extend .text--dark;
-  background: rgba(#000, .15);
-  .navigation__item--active {
+.header-dark {
+  @extend .text-dark;
+  background: $header-background;
+  .navbar_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-dark);
     }
   }
 }
 
-.header--light {
-  @extend .text--light;
-  background: rgba(#fff, .15);
-  .navigation__item--active {
+.header-light {
+  @extend .text-light;
+  background: rgba(#fff, 1.0);
+  .navbar_item-active {
     &::after {
       @include split-line(bottom, 4px, $text-color-theme-light);
     }
   }
 }
 
-.header__title {
+.header_title {
   @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
@@ -45,7 +45,7 @@
     height: map-get($layout, header-height-sm);
     margin-right: 0;
   }
-  & > .header__brand {
+  & > .header_brand {
     @include flex(1);
   }
   & > .search-button {
@@ -57,7 +57,7 @@
   }
 }
 
-.header__brand {
+.header_brand {
   @include flexbox();
   @include align-items(center);
   & > svg {
@@ -79,7 +79,40 @@
   }
 }
 
-.navigation {
+/* Added by shines77, 2019-01-28 */
+.navbar-fixed {
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: map-get($layout, header-height);
+  opacity: 1.0;
+  z-index: map-get($z-indexes, navbar);
+  //animation: fade-in .3s;
+  position: fixed !important;
+}
+
+.navbar-sticky {
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: map-get($layout, header-height);
+  opacity: 1.0;
+  /* Added by shines77, 2019-01-28 */
+  z-index: map-get($z-indexes, navbar);
+  position: -webkit-sticky !important;
+  position: -moz-sticky !important;
+  position: -ms-sticky !important;
+  position: -o-sticky !important;
+  position: sticky !important;
+}
+
+.navbar_logo {
+  fill: $main-color-2;
+}
+
+.navbar {
   @include overflow(auto, "x");
   & > ul {
     height: map-get($layout, header-height);
@@ -102,26 +135,38 @@
   }
 }
 
-.navigation__item {
+.navbar_item {
   &::after {
     display: block;
-    margin-bottom: -4px;
+    margin-bottom: -5px;
     content: "";
-    @include split-line(bottom, 4px, transparent);
+    @include split-line(bottom, 2px, transparent);
+  }
+
+  & > a {
+    display: inline-block;
+    font-size: map-get($base, font-size-h4);
+    @include media-breakpoint-down(md) {
+      font-size: map-get($base, font-size-h4-small);
+    }
   }
 }
-.navigation__item--active {
+.navbar_item-active {
   a {
     @include link-colors($main-color-1, $main-color-1);
   }
   &::after {
-    @include split-line(bottom, 4px, $main-color-1);
+    @include split-line(bottom, 2px, $main-color-1);
   }
 }
 
-.navigation__spacing {
+.navbar_icon {
+  color: $main-color-2;
+}
+
+.navbar_spacing {
   margin: 2px 8px 0px -8px;
-  padding: 1px 1px 0px 1px;
+  padding: 1px 1px 0px -1px;
   float: left;
   border: 1px;
   width: 1px;

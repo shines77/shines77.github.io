@@ -17,11 +17,26 @@ markdown    : kramdown
 highlighter : rouge
 permalink   : date
 
+## => Site Settings
+##############################
+title   : 郭子的博客
+# this means to ignore newlines until "Language & timezone"
+description: "专注 C/C++ 高性能编程"
+  
+url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
+baseurl : / # does not include hostname
+
+## => Your GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: shines77/jekyll-theme-text
+repository_tree: master
+
 ## => Author and Social
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : 郭子
+  name      : 郭子 # Your name or nicename
+  nicename  : shines77 # Your nicename
   url       : https://shines77.github.io
   avatar    : # path or url of avatar image
   bio       : I am an amazing person.
@@ -32,20 +47,13 @@ author:
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name/
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name/
-  github    : https://github.com/shines77/ # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : https://github.com/shines77 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
 
-## => Site Settings
+## => Theme settings
 ##############################
-title   : 郭子的博客
-description: > # this means to ignore newlines until "Language & timezone"
-  专注 C/C++ 高性能编程
-
-url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl : / # does not include hostname
-
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
 ## => Language and Timezone
@@ -53,16 +61,16 @@ highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-nig
 lang: zh-CN # the language of your site, default as "en"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
-## => GitHub Repository (if the site is hosted by GitHub)
-##############################
-repository: shines77/jekyll-theme-text
-repository_tree: master
+navbar:
+  icon: true # false (default), true
+  text_spacing: false # false (default), true
+  spacing_line: false # false (default), true
 
 ##
 ## The post's date is in the future.
 ## See: https://stackoverflow.com/questions/30625044/jekyll-post-not-generated
 ##
-future: true
+future: true # false (default), true
 
 source:      .
 destination: ./_site
@@ -105,6 +113,31 @@ license: CC-BY-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0"
 toc:
   selectors: # "h1,h2,h3" (default)
 
+## => Copyright author information
+##############################
+# The original author information display on the page footer copyright.
+original_author: # (Please don't need to modify here)
+  name          : "Qi Tian" # The full name of original author.
+  nicename      : kitian616 # The nicename of original author.
+  url           : https://tianqi.name/jekyll-TeXt-theme # The site url of the original author, e.g. https://your_domain_name/your_path
+  description   : "TeXt is a super customizable theme for Jekyll."
+
+# The last modified author information display on the page footer copyright.
+last_modified_author: # (Please don't need to modify here)
+  name          : "Guo XiongHui" # The full name of last modified author.
+  nicename      : shines77  # The nicename of last modified author.
+  url           : https://github.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
+  description   : "TeXt is a super customizable theme for Jekyll, modified by shines77."
+
+# The source code information display on the page footer copyright.
+source_code:
+  hosted_site   : "GitHub" # "GitHub" (default), The hosted site for your repository, e.g. "GitHub", "GitLab", "Bitbucket" or "GiTee"
+  name          : "Guo XiongHui" # Your full name
+  nicename      : shines77 # Your nicename
+  repo_username : shines77 # Your github username or other git site's username
+  repo_url      : https://github.com/shines77/shines77.github.io # The repository url of the source code, e.g. https://github.com/user_name/repository_name
+  description   : "TeXt is a super customizable theme for Jekyll."
+
 ## => Plugins
 ##############################
 plugins:
@@ -134,9 +167,14 @@ chart: # false (default), true
 paginate: 8
 paginate_path: /page:num # don't change this unless for special need
 
+## => Font Awesome
+font_awesome:
+  # Get the newest version from https://fontawesome.com
+  url: https://use.fontawesome.com/releases/v5.6.3/css/all.css
+
 ## => Sources
 ##############################
-# sources: # bootcdn (default), unpkg
+sources: bootcdn # bootcdn (default), unpkg
 
 ## => Sharing
 ##############################
@@ -219,6 +257,7 @@ exclude:
   - jekyll-theme-text.gemspec
   - package-lock.json
   - package.json
+  - /favicon-old.ico
   - /docs
   - /node_modules
   - /screenshots

@@ -4,7 +4,7 @@
   @include flex-direction(column);
 }
 
-.gallery__swiper {
+.gallery_swiper {
   @include flex(1);
 }
 
@@ -16,6 +16,6 @@
   overflow: hidden;
 }
 
-.gallery-item__main {
+.gallery-item_main {
   display: block;
 }
