@@ -10,7 +10,7 @@
     {%- include snippets/get-locale-string.html key='EMAIL_ME' -%}
     {%- if _author.email -%}
       <li title="{{ __return }}">
-      <a class="button button-circle mail-button" itemprop="email" href="mailto:{{ _author.email }}" target="_blank">
+      <a class="button button-circle mail-button" itemprop="email" href="mailto:{{ _author.email }}">
         <i class="fas fa-envelope"></i>
       </a>
     {%- endif -%}
