@@ -1,0 +1,12 @@
+{%- include snippets/get-lang.html -%}
+{%- assign _lang = __return -%}
+{%- assign _local_license = site.data.licenses[_lang] -%}
+{%- assign _local_license_en = site.data.licenses.en -%}
+{%- if _local_license == nil -%}
+ {%- assign _local_license = _local_license_en -%}
+{%- endif -%}
+{%- if _local_license[include.key] -%}
+  {%- assign __return = _local_license[include.key] -%}
+{%- else -%}
+  {%- assign __return = _local_license_en[include.key] -%}
+{%- endif -%}

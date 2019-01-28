@@ -35,12 +35,12 @@ default:
     show_date: true
     show_tags: true
     show_author_profile: false
-    show_subscribe: false
+    show_subscribe: true
     full_width: false
-    sharing: false
+    sharing: true
     comment: true
-    license: false
-    pageview: false
+    license: true
+    pageview: true
     search: default
 
 sources:

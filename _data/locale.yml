@@ -13,7 +13,7 @@ en: &EN
   ARTICLE_DATE_FORMAT       : "%b %d, %Y"
   ARTICLE_LIST_DATE_FORMAT  : "%b %d"
   STATISTICS                : "[POST_COUNT] post articles, [PAGE_COUNT] pages."
-  LICENSE_ANNOUNCE          : "This work is licensed under a [LICENSE] license."
+  LICENSE_ANNOUNCE          : 'This work is licensed under a [LICENSE] license agreement. Reprint, use, republish, but be sure to keep the article signed: [AUTHOR_NAME] (with link: <a href="[AUTHOR_SITE]">[AUTHOR_SITE]</a>), and not for commercial purposes, modified based on this article. Subsequent works must be published under the same license. If you have any questions, please <a href="emailto:[EMAIL]">contact me ([EMAIL])</a> .'  
   POST_ON_GITHUB            : "Edit on Github"
   FOLLOW_ME                 : "Follow me on [NAME]."
   EMAIL_ME                  : "Send me Email."
@@ -46,7 +46,7 @@ zh-Hans: &ZH_HANS
   ARTICLE_DATE_FORMAT       : "%Y 年 %-m 月 %-d 日"
   ARTICLE_LIST_DATE_FORMAT  : "%-m 月 %-d 日"
   STATISTICS                : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
-  LICENSE_ANNOUNCE          : "本文遵守 [LICENSE] 许可协议。"
+  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 许可协议。欢迎转载、使用、重新发布，但务必保留文章署名：[AUTHOR_NAME]（包含链接：<a href="[AUTHOR_SITE]">[AUTHOR_SITE]</a>），且不得用于商业目的，基于本文修改后的作品务必以相同的许可发布。如有任何疑问，请 <a href="emailto:[EMAIL]">与我联系（[EMAIL]）</a>。'
   POST_ON_GITHUB            : "在 Github 上修改"
   FOLLOW_ME                 : "在 [NAME] 上关注我。"
   EMAIL_ME                  : "给我发邮件。"
@@ -77,7 +77,7 @@ zh-Hant: &ZH_HANT
   ARTICLE_DATE_FORMAT       : "%Y年 %m月%d日"
   ARTICLE_LIST_DATE_FORMAT  : "%m月%d日"
   STATISTICS                : "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
-  LICENSE_ANNOUNCE          : "本文遵守 [LICENSE] 許可協議。"
+  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 許可協議。歡迎轉載、使用、重新發布，但務必保留文章署名：[AUTHOR_NAME]（包含鏈接：<a href="[AUTHOR_SITE]"> [AUTHOR_SITE] </a>），且不得用於商業目的，基於本文修改後的作品務必以相同的許可發布。如有任何疑問，請 <a href="emailto:[EMAIL]">與我聯繫（[EMAIL]）</a>。'
   POST_ON_GITHUB            : "在 Github 上修改"
   FOLLOW_ME                 : "在 [NAME] 上關注我。"
   EMAIL_ME                  : "給我發郵件。"
@@ -106,7 +106,7 @@ ko: &KO
   ARTICLE_DATE_FORMAT       : "%Y년 %m월 %d일"
   ARTICLE_LIST_DATE_FORMAT  : "%m월 %d일"
   STATISTICS                : "전체 글 [POST_COUNT]개, [PAGE_COUNT] 페이지"
-  LICENSE_ANNOUNCE          : "이 글의 저작권은 [LICENSE] 라이센스를 따릅니다."
+  LICENSE_ANNOUNCE          : '이 글의 저작권은 [LICENSE] 라이센스를 따릅니다. 재 인쇄, 사용, 재 게시해야하지만이 기사를 기반으로 수정 된 상업적 목적이 아닌 [AUTHOR_NAME] (링크가있는 <a href="[AUTHOR_SITE]">[AUTHOR_SITE]</a>) 문서에 계속 서명해야합니다. 후속 저작물은 동일한 라이선스로 배포되어야합니다. 질문이 있으시면 <a href="emailto:[EMAIL]">저에게 연락하십시오 ([EMAIL])</a> .'  
   POST_ON_GITHUB            : "Github에서 확인하기"
   FOLLOW_ME                 : "[NAME]에서 팔로우하기"
   EMAIL_ME                  : "이메일 보내기"

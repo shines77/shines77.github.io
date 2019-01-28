@@ -1,6 +1,6 @@
 .article_footer {
   margin: map-get($spacers, 4) 0;
-  font-size: map-get($base, font-size-sm);
+  font-size: map-get($base, font-size-article-footer);
 }
 
 .article_license, .article_subscribe {
@@ -12,6 +12,6 @@
 .article_license {
   color: $text-color-l;
   img {
-    height: map-get($base, font-size) * 1.6;
+    height: map-get($base, image-height-article-license);
   }
 }

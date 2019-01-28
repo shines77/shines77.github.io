@@ -1,16 +1,85 @@
+
+## => Engish
+########################
+en: &EN
+  CC-BY-4.0         : "Attribution 4.0 International"
+  CC-BY-SA-4.0      : "Attribution-ShareAlike 4.0 International"
+  CC-BY-NC-4.0      : "Attribution-NonCommercial 4.0 International"
+  CC-BY-ND-4.0      : "Attribution-NoDerivatives 4.0 International"
+  CC-BY-NC-SA-4.0   : "Attribution-NonCommercial-ShareAlike 4.0 International"
+
+en-GB:
+  <<: *EN
+en-US:
+  <<: *EN
+en-CA:
+  <<: *EN
+en-AU:
+  <<: *EN
+
+## => Simplified Chinese
+########################
+zh-Hans: &ZH_HANS
+  CC-BY-4.0         : "知识共享署名 4.0 国际  (CC BY 4.0)"
+  CC-BY-SA-4.0      : "知识共享署名-相同方式共享 4.0 国际 (CC BY-SA 4.0)"
+  CC-BY-NC-4.0      : "知识共享署名-非商业性使用共享 4.0 国际 (CC BY-NC 4.0)"
+  CC-BY-ND-4.0      : "知识共享署名-禁止修改 4.0 国际 (CC BY-ND 4.0)"
+  CC-BY-NC-SA-4.0   : "知识共享署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0)"
+
+zh:
+  <<: *ZH_HANS
+zh-CN:
+  <<: *ZH_HANS
+zh-SG:
+  <<: *ZH_HANS
+
+## => Traditional Chinese
+########################
+zh-Hant: &ZH_HANT
+  CC-BY-4.0         : "知識共享姓名標示 4.0 國際 (CC BY 4.0)"
+  CC-BY-SA-4.0      : "知識共享姓名標示-相同方式分享 4.0 國際 (CC BY-SA 4.0)"
+  CC-BY-NC-4.0      : "知識共享姓名標示-非商業性 4.0 國際 (CC BY-NC 4.0)"
+  CC-BY-ND-4.0      : "知識共享姓名標示-禁止改作 4.0 國際 (CC BY-ND 4.0)"
+  CC-BY-NC-SA-4.0   : "知識共享姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0)"
+
+zh-TW:
+  <<: *ZH_HANT
+zh-HK:
+  <<: *ZH_HANT
+
+## => Korean
+########################
+ko: &KO
+  CC-BY-4.0         : "Attribution 4.0 International"
+  CC-BY-SA-4.0      : "Attribution-ShareAlike 4.0 International"
+  CC-BY-NC-4.0      : "Attribution-NonCommercial 4.0 International"
+  CC-BY-ND-4.0      : "Attribution-NoDerivatives 4.0 International"
+  CC-BY-NC-SA-4.0   : "Attribution-NonCommercial-ShareAlike 4.0 International"
+
+ko-KR:
+  <<: *KO
+
 CC-BY-4.0:
   name: Attribution 4.0 International
   url: https://creativecommons.org/licenses/by/4.0/
   image: https://i.creativecommons.org/l/by/4.0/88x31.png
+
 CC-BY-SA-4.0:
   name: Attribution-ShareAlike 4.0 International
   url: https://creativecommons.org/licenses/by-sa/4.0/
   image: https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+
 CC-BY-NC-4.0:
   name: Attribution-NonCommercial 4.0 International
   url: https://creativecommons.org/licenses/by-nc/4.0/
   image: https://i.creativecommons.org/l/by-nc/4.0/88x31.png
+
 CC-BY-ND-4.0:
   name: Attribution-NoDerivatives 4.0 International
   url: https://creativecommons.org/licenses/by-nd/4.0/
   image: https://i.creativecommons.org/l/by-nd/4.0/88x31.png
+
+CC-BY-NC-SA-4.0:
+  name: Attribution-NonCommercial-ShareAlike 4.0 International
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  image: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
