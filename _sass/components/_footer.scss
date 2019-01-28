@@ -13,10 +13,10 @@
     @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
-    font-size: map-get($base, font-size-xs);
+    font-size: map-get($base, font-size-footer);
     text-align: center;
     .menu {
-      line-height: map-get($base, line-height-xs);
+      line-height: map-get($base, line-height-footer);
       & > * {
         &:not(:last-child) {
           @include split-line(right, default, $footer-text-color);

@@ -1,5 +1,5 @@
 .search {
-  @include overflow(scroll);
+  @include overflow(auto);
 }
 
 .search-google-custom-search-engine {
