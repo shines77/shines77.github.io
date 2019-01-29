@@ -46,7 +46,7 @@ baseurl : / # does not include hostname
 
 ## => Your GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: shines77/jekyll-theme-text
+repository: shines77/shines77.github.io
 repository_tree: master
 
 ## => Author and Social
