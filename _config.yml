@@ -17,6 +17,21 @@ markdown    : kramdown
 highlighter : rouge
 permalink   : date
 
+## => Language and Timezone
+##############################
+lang: en # the language of your site, default as "en", e.g. "en", "zh-CN", "zh-TW"
+timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
+
+## => Theme settings
+##############################
+site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+
+navbar:
+  show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
+  text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
+  spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
+
 ## => Site Settings
 ##############################
 title   : 郭子的博客
@@ -51,21 +66,6 @@ author:
   github    : shines77 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-
-## => Theme settings
-##############################
-site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-
-## => Language and Timezone
-##############################
-lang: zh-CN # the language of your site, default as "en"
-timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
-
-navbar:
-  icon: true # false (default), true
-  text_spacing: false # false (default), true
-  spacing_line: false # false (default), true
 
 ##
 ## The post's date is in the future.
