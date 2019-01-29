@@ -19,7 +19,7 @@ permalink   : date
 
 ## => Language and Timezone
 ##############################
-lang: en # the language of your site, default as "en", e.g. "en", "zh-CN", "zh-TW"
+lang: zh-CN # the language of your site, default as "en", e.g. "en", "zh-CN", "zh-TW"
 timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 ## => Theme settings
@@ -50,8 +50,8 @@ repository_tree: master
 ##############################
 author:
   type      : # "person" (default), "organization"
-  fullname  : "郭雄辉" # Your full-name
   name      : 郭子 # Your name or nicename
+  fullname  : "郭雄辉" # Your full-name
   nicename  : shines77 # Your nicename
   url       : https://shines77.github.io
   avatar    : # path or url of avatar image
@@ -79,14 +79,13 @@ destination: ./_site
 ## => Paths
 ##############################
 paths:
-  root     : # title link url, "/" (default)
-  home     : # home layout url, "/" (default)
-  category : # "/category.html" (default)
-  archive  : # "/archive.html" (default)
-  tags     : # "/tags.html" (default)
-  about    : # "/about.html" (default)
-  github   : # "/github.html" (default)
-  rss      : # "/feed.xml" (default)
+  root        : # title link url, "/" (default)
+  home        : # home layout url, "/" (default)
+  categories  : # "/categories.html" (default)
+  archive     : # "/archive.html" (default)
+  tags        : # "/tags.html" (default)
+  about       : # "/about.html" (default)
+  rss         : # "/feed.xml" (default)
 
 ## -> Posts
 ##############################

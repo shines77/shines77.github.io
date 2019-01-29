@@ -5,7 +5,6 @@
 {%- assign _license_name = __return -%}
 
 {%- if include.license -%}
-
   {%- assign _license_link = '<a itemprop="license" rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", include.license.url | replace: "[NAME]", _license_name -%}
   <div class="license">
     <p>

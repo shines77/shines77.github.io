@@ -119,6 +119,7 @@ html,
     padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4) map-get($spacers, 4);
   }
 }
+
 .sidebar-button {
   @include clickable($text-color-d, rgba($main-color-3, .75));
 }
@@ -127,6 +128,7 @@ html,
   @include modal(map-get($z-indexes, mask));
   cursor: pointer;
 }
+
 .layout-page-sidebar {
   .page_main {
     @include overflow(auto);

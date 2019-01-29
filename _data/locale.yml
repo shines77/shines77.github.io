@@ -13,7 +13,7 @@ en: &EN
   ARTICLE_DATE_FORMAT       : "%b %d, %Y"
   ARTICLE_LIST_DATE_FORMAT  : "%b %d"
   STATISTICS                : "[POST_COUNT] post articles, [PAGE_COUNT] pages."
-  LICENSE_ANNOUNCE          : 'This work is licensed under a [LICENSE] license agreement. Reprint, use, republish, but be sure to keep the article signed: [AUTHOR_NAME] (with link: <a href="[AUTHOR_SITE]" target="_blank">[AUTHOR_SITE]</a>), and not for commercial purposes, modified based on this article. Subsequent works must be published under the same license. If you have any questions, please <a href="mailto:[EMAIL]">contact me ([EMAIL])</a> .'  
+  LICENSE_ANNOUNCE          : 'This work is licensed under a [LICENSE] agreement. Reprint, use, republish, but be sure to keep the article signed: [AUTHOR_NAME] (with link: <a href="[AUTHOR_SITE]" target="_blank">[AUTHOR_SITE]</a>), and not for commercial purposes, modified based on this article. Subsequent works must be published under the same license. If you have any questions, please <a href="mailto:[EMAIL]">contact me ([EMAIL])</a> .'  
   POST_ON_GITHUB            : "Edit on Github"
   FOLLOW_ME                 : "Follow me on [NAME]."
   EMAIL_ME                  : "Send me Email."

@@ -12,6 +12,7 @@
 .article_license {
   color: $text-color-l;
   img {
-    height: map-get($base, image-height-article-license);
+    width: map-get($base, article-license-image-wdith);
+    height: map-get($base, article-license-image-height);
   }
 }
