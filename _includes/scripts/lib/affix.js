@@ -1,5 +1,10 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
+  var isAlwaysOnTop = window.TEXT_VARIABLES.site.header.always_on_top;
+  var nHeaderHeight = 0;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    nHeaderHeight = (isAlwaysOnTop ? $('#header').height() : 0);
+  });
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
       var $root = this, $window = $(window), $scrollTarget, $scroll,
@@ -41,7 +46,7 @@
         if (curState !== 'fixed') {
           $root.addClass('fixed').css({
             left: rootLeft + 'px',
-            top: 0
+            top: nHeaderHeight + 'px'
           });
           curState = 'fixed';
         }
@@ -56,7 +61,7 @@
         }
       }
       function setState() {
-        var scrollTop = $scrollTarget.scrollTop();
+        var scrollTop = $scrollTarget.scrollTop() + nHeaderHeight;
         if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
           fixed();
         } else if (scrollTop < rootTop) {

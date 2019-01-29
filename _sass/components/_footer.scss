@@ -34,3 +34,21 @@
     text-align: center;
   }
 }
+
+/* Added by shines77, 2019-01-30 */
+// Add a thin dividing line (0.5-1px) above the footer div.
+.footer_dividing-line {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid $diving-line-color;
+  color: $diving-line-color;
+  background: $diving-line-color;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(1.0);
+}

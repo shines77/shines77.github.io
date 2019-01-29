@@ -14,6 +14,8 @@ $text-color-2:     #fff;
 $main-color-3:     #ff8a64;
 $text-color-3:     #fff;
 
+$main-color-4:       rgba(#e8c6b2, .8);
+
 $main-color-theme-light: rgba(#000, .9);
 $main-color-theme-dark:  rgba(#fff, .9);
 
@@ -41,6 +43,9 @@ $header-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%);
 
 $footer-text-color: $text-color-3;
 $footer-background: linear-gradient(60deg, #ffa650 0%, #ff7b50 100%);
+
+// diving line
+$diving-line-color: $main-color-4;
 
 // border and shadow colors
 $border-color:     mix($main-color-1, $background-color, 50%);

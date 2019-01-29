@@ -24,13 +24,16 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 
 ## => Theme settings
 ##############################
-site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+site_theme: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
-navbar:
-  show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
-  text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
-  spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
+header:
+  always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
+
+  navbar:
+    show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
+    text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
+    spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.  
 
 ## => Site Settings
 ##############################
@@ -112,7 +115,7 @@ license: CC-BY-NC-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-N
 
 ## TOC
 toc:
-  selectors: # "h1,h2,h3" (default)
+  selectors: "h1,h2,h3,h4" # "h1,h2,h3" (default)
 
 ## => Copyright author information
 ##############################

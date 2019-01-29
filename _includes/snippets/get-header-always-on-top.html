@@ -1,0 +1,15 @@
+{%- if page.header.always_on_top == nil -%}
+  {%- if layout.header.always_on_top == nil -%}
+    {%- assign _always_on_top = site.header.always_on_top -%}
+  {%- else -%}
+    {%- assign _always_on_top = page.header.always_on_top -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign _always_on_top = page.header.always_on_top -%}
+{%- endif -%}
+
+{%- if _always_on_top == false -%}
+  {%- assign __return = false -%}
+{%- else -%}
+  {%- assign __return = true -%}
+{%- endif -%}

@@ -7,9 +7,9 @@ $base: (
 
   font-size-xl:           1.2rem,
   font-size-lg:           1rem,
-  font-size:              0.8rem,
-  font-size-sm:           0.68rem,
-  font-size-xs:           0.56rem,
+  font-size:              0.875rem,
+  font-size-sm:           0.8125rem,
+  font-size-xs:           0.75rem,
 
   font-size-h1-xl:        2.30rem,
   font-size-h2-xl:        2.10rem,
@@ -65,7 +65,7 @@ $base: (
 
   // body >> code
   font-family-code:       (Menlo, Monaco, Consolas, Andale Mono, lucida console, Courier New, monospace),
-  font-size-code:         0.75rem,
+  font-size-code:         0.84375rem,
   line-height-code:       1.6,
 
   // header >> logo, size: 28x28
@@ -89,6 +89,10 @@ $base: (
   font-size-articles-content:       1rem,
   font-size-articles-button:        1rem,
 
+  // articles :: item
+  font-size-articles-item-meta:         0.9375rem,
+  font-size-articles-article_content:   0.875rem,
+
   // categories
   font-size-category-title:         1rem,
   font-size-category-date:          1rem,
@@ -111,7 +115,7 @@ $base: (
   line-height-article-content-body: 2.0,
 
   // article >> content >> code
-  font-size-article-content-code:   0.75rem,
+  font-size-article-content-code:   0.84375rem,
   line-height-article-content-code: 1.6,
 
   // article >> footer
@@ -137,7 +141,8 @@ $spacers: (
 );
 
 $z-indexes: (
-  navbar: 65531,
+  header: 65530,
+  header-line: 65531,
   actions: 65532,
   mask: 65533,
   sidebar: 65534,
@@ -145,8 +150,8 @@ $z-indexes: (
 );
 
 $layout: (
-  header-height:          5rem,
-  header-height-small:    3rem,
+  header-height:          4rem,
+  header-height-small:    2.5rem,
   content-max-width:      950px,
   sidebar-width:          250px,
   sidebar-header-height:  3rem,

@@ -4,6 +4,9 @@
 {%- include snippets/get-nav-url.html path="/assets/search.js" -%}
 {%- assign _paths_search_js = __return -%}
 
+{%- include snippets/get-header-always-on-top.html -%}
+{%- assign _header_always_on_top = __return -%}
+
 <script>
   (function() {
     var TEXT_VARIABLES = {
@@ -22,6 +25,9 @@
         mermaid: '{{ _sources.mermaid }}'
       },
       site: {
+        header: {
+          always_on_top: {{ _header_always_on_top }}
+        },
         toc: {
           selectors: '{{ site.toc.selectors | default: site.data.variables.default.toc.selectors }}'
         }

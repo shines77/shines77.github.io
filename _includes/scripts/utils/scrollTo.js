@@ -21,12 +21,12 @@
      */
     function registerScrollEvent () {
         var that = this;
-        var navbarId = 'navbar';
-        if(Util.OS() == 'ios') {
-            navbarId = 'navbar';
+        var headerId = '#header';
+        if (Util.OS() == 'ios') {
+            headerId = '#header';
         }
 
-        $(`#${navbarId}`).css('top', that.barTop + 'px');
+        $(headerId).css('top', that.barTop + 'px');
         if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
             that.isStickyBar = true;
         } else if (/android/i.test(navigator.userAgent)) {
@@ -45,7 +45,7 @@
 
     function filterBarClicked () {
         var that = this;
-        $('body').scrollTo({toT: that.barTop, durTime : 200});
+        $('body').scrollTo({toT: that.barTop, durTime: 200});
     }
 })();
 

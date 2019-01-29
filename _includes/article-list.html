@@ -19,9 +19,9 @@
 <div class="article-list items">
 {%- elsif include.type == 'grid' -%}
   {%- if include.size == 'sm' -%}
-  <div class="article-list grid gird-sm grid-p-3">
+<div class="article-list grid gird-sm grid-p-3">
   {%- else -%}
-  <div class="article-list grid grid-p-3">
+<div class="article-list grid grid-p-3">
   {%- endif -%}
 {%- endif -%}
 
@@ -100,13 +100,13 @@
       {%- endif -%}
       {%- include snippets/get-locale-string.html key='ARTICLE_LIST_DATE_FORMAT' -%}
       <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-tags="{{ _tags }}">
-        <table class="item_content item_table">
+        <table class="item_content item_table_brief">
         <tbody>
           <tr>
           {%- if include.show_info -%}
-            <td class="item_meta_brief_td" width="84px;5.25rem;"><span class="item_meta_brief">{{ _article.date | date: __return }}</span></td>
+            <td class="item_table_brief_td" width="84px;5.25rem;"><span class="item_meta_brief">{{ _article.date | date: __return }}</span></td>
           {%- endif -%}
-          <td class="item_header_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="{{ _article_url }}">{{ _article.title }}</a></td>
+          <td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="{{ _article_url }}">{{ _article.title }}</a></td>
           </tr>
         </tbody>
         </table>
@@ -143,6 +143,6 @@
         </div>
       {%- endif -%}
     {%- endif -%}
-  {%- endfor -%}
 
+  {%- endfor -%}
 </div>
