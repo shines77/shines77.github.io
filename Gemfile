@@ -26,8 +26,16 @@ gem "github-pages", group: :jekyll_plugins
   # gem "jekyll-target-blank", "~> 1.10.0"
 # end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+##
+## See: https://stackoverflow.com/questions/8420414/how-to-add-mac-specific-gems-to-bundle-on-mac-but-not-on-linux
+##
+install_if -> { RUBY_PLATFORM =~ /linux|darwin|ruby|rbx|mri/ } do
+  gem "tzinfo-data"
+end
 
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.1.0" if Gem.win_platform?
+install_if -> { RUBY_PLATFORM =~ /mingw|mswin|jruby|win32/ } do
+  # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] if Gem.win_platform?
+  # Performance-booster for watching directories on Windows
+  gem "wdm", "~> 0.1.0" if Gem.win_platform?
+end
