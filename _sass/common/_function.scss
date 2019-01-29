@@ -13,3 +13,19 @@
   $min: map-get($breakpoints, $name);
   @return if($min != 0, "#{$name}-", "");
 }
+
+@function get-header-height() {
+  @if $always_on_top == false {
+    @return map-get($layout, header-height);
+  } @else {
+    @return map-get($layout, header-height-fixed);
+  }
+}
+
+@function get-header-height-small() {
+  @if $always_on_top == false {
+    @return map-get($layout, header-height-small);
+  } @else {
+    @return map-get($layout, header-height-fixed-small);
+  }
+}

@@ -48,11 +48,11 @@ html,
     left: 0px;
     margin-top: 0px;
     width: 100%;
-    height: map-get($layout, header-height);
+    height: get-header-height();
     opacity: 1.0;
   }
   .hero_content {
-    padding-top: map-get($layout, header-height);
+    padding-top: get-header-height();
   }
 }
 
@@ -63,11 +63,11 @@ html,
     left: 0px;
     margin-top: 0px;
     width: 100%;
-    height: map-get($layout, header-height);
+    height: get-header-height();
     opacity: 1.0;
   }
   .hero_content {
-    padding-top: map-get($layout, header-height);
+    padding-top: get-header-height();
   }
 }
 

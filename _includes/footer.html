@@ -1,5 +1,9 @@
+{%- include snippets/get-header-always-on-top.html -%}
+{%- assign _header_always_on_top = __return -%}
 
+{%- if _header_always_on_top != false -%}
 <div class="footer_dividing-line"></div>
+{%- endif -%}
 <footer class="footer py-4 js-page-footer">
   <div class="main">
     {%- assign _site_author = site.author -%}

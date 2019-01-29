@@ -149,13 +149,19 @@ $z-indexes: (
   modal: 65535
 );
 
+/* Added by shines77, 2019-01-30 */
+// true (default), false. Whether fixed the header area always on the page top.
+$always_on_top: true;
+
 $layout: (
-  header-height:          4rem,
-  header-height-small:    2.5rem,
-  content-max-width:      950px,
-  sidebar-width:          250px,
-  sidebar-header-height:  3rem,
-  aside-width:            220px
+  header-height:              5rem,
+  header-height-small:        3rem,
+  header-height-fixed:        4rem,
+  header-height-fixed-small:  2.5rem,
+  content-max-width:          950px,
+  sidebar-width:              250px,
+  sidebar-header-height:      3rem,
+  aside-width:                220px
 );
 
 //     sm       md       lg

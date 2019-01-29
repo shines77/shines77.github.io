@@ -1,11 +1,19 @@
   {%- include snippets/get-site-theme.html -%}
   {%- assign _site_theme = __return -%}
-  {%- if _site_theme == 'dark' -%}
-    <header id="header" class="header header-dark header-fixed"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
-  {%- elsif _site_theme == 'light' -%}
-    <header id="header" class="header header-light header-fixed"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+  {%- include snippets/get-header-always-on-top.html -%}
+  {%- assign _header_always_on_top = __return -%}
+  {%- if _header_always_on_top == false -%}
+    {%- assign _header_fixed_style = 'header-normal' -%}
   {%- else -%}
-    <header id="header" class="header header-fixed"{% if include.background %} style="background: {{ include.background }};" {% endif %}>
+    {%- assign _header_fixed_style = 'header-fixed' -%}
+  {%- endif -%}
+
+  {%- if _site_theme == 'dark' -%}
+    <header id="header" class="header header-dark {{ _header_fixed_style }}"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+  {%- elsif _site_theme == 'light' -%}
+    <header id="header" class="header header-light {{ _header_fixed_style }}"{% if include.background %} style="background: {{ include.background }};"{% endif %}>
+  {%- else -%}
+    <header id="header" class="header {{ _header_fixed_style }}"{% if include.background %} style="background: {{ include.background }};" {% endif %}>
   {%- endif -%}
       <div class="main">
         <div class="header_title">
@@ -46,4 +54,6 @@
         {%- endif -%}
       </div>
     </header>
+    {%- if _header_always_on_top != false -%}
     <div class="header_dividing-line-fixed"></div>
+    {%- endif -%}

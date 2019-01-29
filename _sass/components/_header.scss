@@ -42,11 +42,11 @@
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
-  height: map-get($layout, header-height);
+  height: get-header-height();
   margin-right: map-get($spacers, 3);
   white-space: nowrap;
   @include media-breakpoint-down(md) {
-    height: map-get($layout, header-height-small);
+    height: get-header-height-small();
     margin-right: 0;
   }
   & > .header_brand {
@@ -84,32 +84,43 @@
 }
 
 /* Added by shines77, 2019-01-28 */
-.header-fixed {
+.header-normal {
+  position: absolute;
   top: 0px;
   left: 0px;
   margin-top: 0px;
   width: 100%;
-  height: map-get($layout, header-height);
+  height: get-header-height();
+  opacity: 1.0;
+}
+
+/* Added by shines77, 2019-01-28 */
+.header-fixed {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: get-header-height();
   opacity: 1.0;
   z-index: map-get($z-indexes, header);
-  //animation: fade-in .3s;
-  position: fixed !important;
 }
 
 /* Added by shines77, 2019-01-28 */
 .header-sticky {
-  top: 0px;
-  left: 0px;
-  margin-top: 0px;
-  width: 100%;
-  height: map-get($layout, header-height);
-  opacity: 1.0;
-  z-index: map-get($z-indexes, header);
   position: -webkit-sticky !important;
   position: -moz-sticky !important;
   position: -ms-sticky !important;
   position: -o-sticky !important;
   position: sticky !important;
+
+  top: 0px;
+  left: 0px;
+  margin-top: 0px;
+  width: 100%;
+  height: get-header-height();
+  opacity: 1.0;
+  z-index: map-get($z-indexes, header);
 }
 
 //
@@ -141,7 +152,7 @@
   position: fixed !important;
   top: 0px;
   left: 0px;
-  margin-top: map-get($layout, header-height);
+  margin-top: get-header-height();
   width: 100%;
   height: 1px;
   border-bottom: 1px solid $diving-line-color;
@@ -154,12 +165,12 @@
   z-index: map-get($z-indexes, header-line);
 }
 
-.header-border {
+.header_border {
   position: relative;
   border-radius: 5px;
 }
 
-.header-border:after {
+.header_border:after {
   content: " ";
   width: 200%;
   height: 200%;
@@ -178,7 +189,7 @@
 .navbar {
   @include overflow(auto, "x");
   & > ul {
-    height: map-get($layout, header-height);
+    height: get-header-height();
     padding-bottom: 0;
     margin: 0;
     @include media-breakpoint-down(md) {
