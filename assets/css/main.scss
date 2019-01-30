@@ -4,7 +4,6 @@
 @charset "utf-8";
 
 @import
-
     "themes/{{ site.site_theme | default: site.data.variables.default.theme }}",
     // "themes/chocolate",
     // "themes/dark",
@@ -51,10 +50,10 @@
     "components/author-links",
     "components/author-profile",
     "components/tags",
+    "components/categories",
     "components/search",
     "components/lightbox",
     "components/extensions",
-
 
     "additional/alert",
     "additional/tag",
@@ -62,10 +61,10 @@
 
     "layout/base",
     "layout/page",
-
     "layout/article",
     "layout/articles",
     "layout/archive",
+    "layout/categories",
     "layout/home",
     "layout/landing",
     "layout/404",

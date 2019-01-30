@@ -43,7 +43,7 @@ zh-Hans: &ZH_HANS
   PREVIOUS                  : "上一篇"
   NEXT                      : "下一篇"
   YEAR                      : "年"
-  ARTICLE_DATE_FORMAT       : "%Y 年 %-m 月 %-d 日"
+  ARTICLE_DATE_FORMAT       : "%Y年%-m月%-d日"
   ARTICLE_LIST_DATE_FORMAT  : "%-m 月 %-d 日"
   STATISTICS                : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
   LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 许可协议。欢迎转载、使用、重新发布，但务必保留文章署名：[AUTHOR_NAME]（包含链接：<a href="[AUTHOR_SITE]" target="_blank">[AUTHOR_SITE]</a>），且不得用于商业目的，基于本文修改后的作品务必以相同的许可发布。如有任何疑问，请 <a href="mailto:[EMAIL]">与我联系（[EMAIL]）</a>。'

@@ -34,9 +34,9 @@
   })();
 
   window.Lazyload.js(SOURCES.jquery, function() {
-    var $tags = $('.js-tags');
-    var $articleTags = $tags.find('button');
-    var $tagShowAll = $tags.find('.tag-button-all');
+    var $categories = $('.js-categories');
+    var $articleCategories = $categories.find('button');
+    var $categoryShowAll = $categories.find('.category-button-all');
     var $result = $('.js-result');
     var $sections = $result.find('section');
     var sectionArticles = [];
@@ -57,13 +57,13 @@
       sectionTopArticleIndex.push(index);
     }
 
-    function searchButtonsByTag(/* raw tag */_tag) {
-      if (!_tag) {
-        return $tagShowAll;
+    function searchButtonsByCategory(/* raw category */_category) {
+      if (!_category) {
+        return $categoryShowAll;
       }
-      var _buttons = $articleTags.filter('[data-encode="' + _tag + '"]');
+      var _buttons = $articleCategories.filter('[data-encode="' + _category + '"]');
       if (_buttons.length === 0) {
-        return $tagShowAll;
+        return $categoryShowAll;
       }
       return _buttons;
     }
@@ -75,20 +75,20 @@
       }
     }
 
-    function tagSelect(/* raw tag */tag, target) {
+    function categorySelect(/* raw category */category, target) {
       var result = {}, $articles;
-      var i, j, k, _tag;
+      var i, j, k, _category;
 
       for (i = 0; i < sectionArticles.length; i++) {
         $articles = sectionArticles[i];
         for (j = 0; j < $articles.length; j++) {
-          if (tag === '' || tag === undefined) {
+          if (category === '' || category === undefined) {
             result[i] || (result[i] = {});
             result[i][j] = true;
           } else {
-            var tags = $articles.eq(j).data('tags').split(',');
-            for (k = 0; k < tags.length; k++) {
-              if (tags[k] === tag) {
+            var categories = $articles.eq(j).data('categories').split(',');
+            for (k = 0; k < categories.length; k++) {
+              if (categories[k] === category) {
                 result[i] || (result[i] = {});
                 result[i][j] = true; break;
               }
@@ -113,21 +113,21 @@
 
       if (target) {
         buttonFocus(target);
-        _tag = target.attr('data-encode');
-        if (_tag === '' || typeof _tag !== 'string') {
+        _category = target.attr('data-encode');
+        if (_category === '' || typeof _category !== 'string') {
           setUrlQuery();
         } else {
-          setUrlQuery('?tag=' + _tag);
+          setUrlQuery('?category=' + _category);
         }
       } else {
-        buttonFocus(searchButtonsByTag(tag));
+        buttonFocus(searchButtonsByCategory(category));
       }
     }
 
-    var query = queryString(), _tag = query.tag;
-    init(); tagSelect(_tag);
-    $tags.on('click', 'button', function() {
-      tagSelect($(this).data('encode'), $(this));
+    var query = queryString(), _category = query.category;
+    init(); categorySelect(_category);
+    $categories.on('click', 'button', function() {
+      categorySelect($(this).data('encode'), $(this));
     });
 
   });

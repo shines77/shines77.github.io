@@ -1,0 +1,7 @@
+.layout-categories {
+  min-height: 80%;
+  & > .layout-categories_result {
+    min-height: 80%;
+    margin: map-get($spacers, 4) 0;
+  }
+}

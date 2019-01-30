@@ -97,14 +97,18 @@ $base: (
   font-size-category-title:         1rem,
   font-size-category-date:          1rem,
 
+  // categories :: button
+  font-size-category-text:          1rem,
+  font-size-category-total:         0.5625rem,
+
   // archive
   font-size-archive-title:          1rem,
   font-size-archive-year:           1rem,
   font-size-archive-date:           1rem,
 
-  // tags
+  // tags :: button
   font-size-tag-text:               1rem,
-  font-size-tag-total:              1rem,
+  font-size-tag-total:              0.5625rem,
 
   // article
   font-size-article-title:          1rem,
