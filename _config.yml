@@ -28,12 +28,12 @@ site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
 header:
-  always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
+  always_on_top: false # true (default), false. Whether fixed the header area always on the page top.
 
   navbar:
     show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
     text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
-    spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.  
+    spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
 
 ## => Site Settings
 ##############################
@@ -53,9 +53,9 @@ repository_tree: master
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : 郭子 # Your name or nicename
+  name      : 郭子 # Your name or nickname
   fullname  : "郭雄辉" # Your full-name
-  nicename  : shines77 # Your nicename
+  nickname  : shines77 # Your nickname
   url       : https://shines77.github.io
   avatar    : # path or url of avatar image
   bio       : I am an amazing person.
@@ -85,7 +85,7 @@ paths:
   root        : # title link url, "/" (default)
   home        : # home layout url, "/" (default)
   categories  : # "/categories.html" (default)
-  archive     : # "/archive.html" (default)
+  archives    : # "/archives.html" (default)
   tags        : # "/tags.html" (default)
   about       : # "/about.html" (default)
   rss         : # "/feed.xml" (default)
@@ -122,25 +122,37 @@ toc:
 # The original author information display on the page footer copyright.
 original_author: # (Please don't need to modify here)
   name          : "Qi Tian" # The full name of original author.
-  nicename      : kitian616 # The nicename of original author.
+  nickname      : kitian616 # The nickname of original author.
+  display_name  : "Qi Tian" # The display name of original author.
   url           : https://tianqi.name/jekyll-TeXt-theme # The site url of the original author, e.g. https://your_domain_name/your_path
-  description   : "TeXt is a super customizable theme for Jekyll."
+  description   : "TeXt is a super customizable theme for Jekyll." # Description
 
-# The last modified author information display on the page footer copyright.
-last_modified_author: # (Please don't need to modify here)
-  name          : "Guo XiongHui" # The full name of last modified author.
-  nicename      : shines77  # The nicename of last modified author.
-  url           : https://github.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
-  description   : "TeXt is a super customizable theme for Jekyll, modified by shines77."
+# The last modified authors information display on the page footer copyright.
+last_modified_authors: # (Please don't need to modify here)
+  - first:
+    name          : "Guo XiongHui" # The full name of last modified author.
+    nickname      : shines77  # The nickname of last modified author.
+    display_name  : shines77 # The display name of last modified author.
+    url           : https://github.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
+    description   : "TeXt is a super customizable theme for Jekyll, modified by shines77." # Description
+
+  # Next modified author(hacker) information
+
+  # - second:  # The Id of next modified author.
+  #   name        : # The fullname of next modified author.
+  #   nickname    : # The nickname of next modified author.
+  #   display_name: # The display name of next modified author.
+  #   url         : # The git repository url of next modified author.
+  #   description : # The description of next modified author.
 
 # The source code information display on the page footer copyright.
 source_code:
   hosted_site   : "GitHub" # "GitHub" (default), The hosted site for your repository, e.g. "GitHub", "GitLab", "Bitbucket" or "GiTee"
   name          : "Guo XiongHui" # Your full name
-  nicename      : shines77 # Your nicename
+  nickname      : shines77 # Your nickname
   repo_username : shines77 # Your github username or other git site's username
   repo_url      : https://github.com/shines77/shines77.github.io # The repository url of the source code, e.g. https://github.com/user_name/repository_name
-  description   : "TeXt is a super customizable theme for Jekyll."
+  description   : "TeXt is a super customizable theme for Jekyll." # Description
 
 ## => Plugins
 ##############################

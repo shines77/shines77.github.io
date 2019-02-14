@@ -3,8 +3,8 @@
 {%- if include.html != false -%}
 
   {%- include snippets/assign.html
-    target=site.data.variables.default.page.show_date
-    source0=layout.show_date source1=include.article.show_date -%}
+      target=site.data.variables.default.page.show_date
+      source0=layout.show_date source1=include.article.show_date -%}
   {%- assign _show_date = __return -%}
   {%- if _show_date and include.article.date -%}
     {%- assign _show_date = true -%}
@@ -13,8 +13,8 @@
   {%- endif -%}
 
   {%- include snippets/assign.html
-    target=site.data.variables.default.page.show_tags
-    source0=layout.show_tags source1=include.article.show_tags -%}
+      target=site.data.variables.default.page.show_tags
+      source0=layout.show_tags source1=include.article.show_tags -%}
   {%- assign _show_tags = __return -%}
   {%- if _show_tags and include.article.tags[0] -%}
     {%- assign _show_tags = true -%}
@@ -24,8 +24,9 @@
 
   {%- assign _show_author = include.article.author -%}
 
-  {%- include snippets/assign.html target=site.data.variables.default.page.pageview
-    source0=layout.pageview source1=page.pageview -%}
+  {%- include snippets/assign.html
+      target=site.data.variables.default.page.pageview
+      source0=layout.pageview source1=page.pageview -%}
   {%- assign _pageview = __return -%}
   {%- if _pageview or include.show_pageview -%}
     {%- assign _pageview = true -%}
@@ -33,14 +34,14 @@
     {%- assign _pageview = false -%}
   {%- endif -%}
 
-  {%- assign _paths_archive = site.paths.archive | default: site.data.variables.default.paths.archive -%}
+  {%- assign _paths_archives = site.paths.archives | default: site.data.variables.default.paths.archives -%}
 
   {%- if _show_tags or _show_author or _show_date or _pageview -%}
     <div class="article_info clearfix">
       {%- if _show_tags -%}
 
         <ul class="left-col menu">
-          {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
+          {%- assign _tag_path = _paths_archives | append: '?tag=' -%}
           {%- include snippets/prepend-baseurl.html path=_tag_path -%}
 
           {%- for _tag in include.article.tags -%}

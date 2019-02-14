@@ -101,7 +101,7 @@ $base: (
   font-size-category-text:          1rem,
   font-size-category-total:         0.5625rem,
 
-  // archive
+  // archives
   font-size-archive-title:          1rem,
   font-size-archive-year:           1rem,
   font-size-archive-date:           1rem,
@@ -152,10 +152,6 @@ $z-indexes: (
   sidebar: 65534,
   modal: 65535
 );
-
-/* Added by shines77, 2019-01-30 */
-// true (default), false. Whether fixed the header area always on the page top.
-$always_on_top: true;
 
 $layout: (
   header-height:              5rem,

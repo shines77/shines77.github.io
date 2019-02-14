@@ -11,7 +11,11 @@
       <a rel="license" href="{{ include.license.url }}">
         <img alt="{{ include.license.name }}" src="{{ include.license.image }}" />
       </a><br/>
-      {{ _license_announce | replace: "[LICENSE]", _license_link | replace: "[AUTHOR_NAME]", site.author.fullname | replace: "[AUTHOR_SITE]", site.author.url | replace: "[EMAIL]", site.author.email }}
+      {%- if site.author.nickname -%}
+        {{ _license_announce | replace: "[LICENSE]", _license_link | replace: "[AUTHOR_NAME]", site.author.fullname | replace: "[AUTHOR_NICKNAME]", site.author.nickname | replace: "[AUTHOR_SITE]", site.author.url | replace: "[EMAIL]", site.author.email }}
+      {%- else -%}
+        {{ _license_announce | replace: "[LICENSE]", _license_link | replace: "[AUTHOR_NAME]", site.author.fullname | replace: " or <b>[AUTHOR_NICKNAME]</b>", "" | replace: "[AUTHOR_SITE]", site.author.url | replace: "[EMAIL]", site.author.email }}
+      {%- endif -%}
     </p>
   </div>
 {%- endif -%}

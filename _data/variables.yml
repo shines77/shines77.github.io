@@ -6,17 +6,27 @@ default:
     root: /
     home: /
     categories: /categories.html
-    archive: /archive.html
+    archives: /archives.html
     tags:  /tags.html
     about: /about.html
     rss:  /feed.xml
   mathjax: true
   mathjax_autoNumber: true
-  mermaid: false
-  chart: false
+  mermaid: true
+  chart: true
   toc:
     selectors: 'h1,h2,h3,h4'
   sources: bootcdn
+
+  future: true
+
+  header:
+    always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
+
+    navbar:
+      show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
+      text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
+      spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
 
   page:
     mode: normal

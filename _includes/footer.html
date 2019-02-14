@@ -29,6 +29,18 @@
     {%- assign _locale_copyright_dates = __return -%}
     <div class="site-info mt-2">
       <div>
+        {%- assign _last_modified_authors_format = '<a href="[AUTHOR_URL]" title="[AUTHOR_DESCRIPTION]" target="_blank">[AUTHOR_NAME]</a>' -%}
+        {%- assign _last_modified_authors_str = '' -%}
+        {%- assign _last_modified_authors = site.last_modified_authors -%}
+        {%- for _modified_author in _last_modified_authors -%}
+          {%- assign _modified_author_str = _last_modified_authors_format -%}
+          {%- assign _modified_author_str = _modified_author_str | replace: '[AUTHOR_URL]', _modified_author.url | replace: '[AUTHOR_DESCRIPTION]', _modified_author.description | replace: '[AUTHOR_NAME]', _modified_author.display_name -%}
+          {%- if forloop.last -%}
+            {%- assign _last_modified_authors_str = _last_modified_authors_str | append: _modified_author_str -%}
+          {%- else -%}
+            {%- assign _last_modified_authors_str = _last_modified_authors_str | append: _modified_author_str | append: ', ' -%}
+          {%- endif -%}
+        {%- endfor -%}
         {%- include snippets/get-locale-string.html key='COPYRIGHT_DATES' -%}
         {%- assign _locale_copyright_dates = __return -%}
         {%- include snippets/get-locale-string.html key='COPYRIGHT_DESCRIPTION' -%}
@@ -42,8 +54,8 @@
         {%- else -%}
           {%- assign __source_hosted_site = "GitHub" -%}
         {%- endif -%}
-        © <a href="{{ site.url }}" title="{{ _locale_copyright_description | replace: '[AUTHOR_NAME]', site.author.name }}">{{ site.author.name }}</a> {{ _locale_copyright_dates }}, Powered by <a href="{{ site.last_modified_author.url }}" title="{{ site.last_modified_author.description }}" target="_blank">TeXt Theme</a> for <a href="http://jekyllrb.com/" title="Jekyll is a simple, blog-aware, static site generator." target="_blank">Jekyll</a>.<br/>
-        {{ _locale_special_thanks_format | replace: '[ORIGINAL_URL]', site.original_author.url | replace: '[ORIGINAL_DESCRIPTION]', site.original_author.description | replace: '[ORIGINAL_AUTHOR]', site.original_author.name | replace: '[LAST_URL]', site.last_modified_author.url | replace: '[LAST_DESCRIPTION]', site.last_modified_author.description | replace: '[LAST_AUTHOR]', site.last_modified_author.nicename }}<br/>
+        © <a href="{{ site.url }}" title="{{ _locale_copyright_description | replace: '[AUTHOR_NAME]', site.author.name }}">{{ site.author.name }}</a> {{ _locale_copyright_dates }}, Powered by <a href="{{ site.last_modified_authors.first.url }}" title="{{ site.last_modified_authors.first.description }}" target="_blank">TeXt Theme</a> for <a href="http://jekyllrb.com/" title="Jekyll is a simple, blog-aware, static site generator." target="_blank">Jekyll</a>.<br/>
+        {{ _locale_special_thanks_format | replace: '[ORIGINAL_URL]', site.original_author.url | replace: '[ORIGINAL_DESCRIPTION]', site.original_author.description | replace: '[ORIGINAL_AUTHOR]', site.original_author.display_name | replace: '[LAST_MODIFIED_AUTHORS]', _last_modified_authors_str }}<br/>
         {{ _locale_source_site_format | replace: '[SITE_URL]', site.source_code.repo_url | replace: '[SITE_DESCRIPTION]', site.source_code.description | replace: '[HOSTED_SITE]', __source_hosted_site }}
       </div>
     </div>

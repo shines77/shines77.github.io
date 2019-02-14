@@ -3,6 +3,10 @@
 ---
 @charset "utf-8";
 
+/* Added by shines77, 2019-01-30 */
+// true (default), false. Whether fixed the header area always on the page top.
+$always_on_top: {{ site.header.always_on_top | default: site.data.variables.default.header.always_on_top }};
+
 @import
     "themes/{{ site.site_theme | default: site.data.variables.default.theme }}",
     // "themes/chocolate",
@@ -63,7 +67,7 @@
     "layout/page",
     "layout/article",
     "layout/articles",
-    "layout/archive",
+    "layout/archives",
     "layout/categories",
     "layout/home",
     "layout/landing",
