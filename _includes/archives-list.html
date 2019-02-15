@@ -47,7 +47,7 @@
       {%- assign _archive_info = _archive | split: ',' -%}
       <li>
         <button type="button" class="button button-rounded archive-button archive-secondary-button" data-encode="{{ _archive_info.first | strip | url_encode }}">
-          <span>[ {{ _archive_info.first | strip }} {{ _locale_year }}]</span> <div class="archive-button-count">{{ _archive_info.last }}</div>
+          <span>[ {{ _archive_info.first | strip }} {{ _locale_year }} ]</span> <div class="archive-button-count">{{ _archive_info.last }}</div>
         </button>
       </li>
     {%- endfor -%}

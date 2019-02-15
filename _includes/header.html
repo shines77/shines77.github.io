@@ -32,6 +32,11 @@
         {%- if site.data.navbar.header -%}
         <nav class="navbar">
           <ul>
+            {%- if site.header.navbar.text_spacing == true -%}
+              {%- assign _text_spacing = '&nbsp;' -%}
+            {%- else -%}
+              {%- assign _text_spacing = '' -%}
+            {%- endif -%}
             {%- for _item in site.data.navbar.header -%}
             {%- include snippets/get-nav-url.html path=_item.url -%}
             {%- assign _nav_url = __return -%}
@@ -39,10 +44,10 @@
             {%- assign _page_url = __return -%}
             {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
             {%- if _nav_url == _page_url or page.nav_key and _item.key and page.nav_key == _item.key -%}
-            <li class="navbar_item navbar_item-active">{%- if site.header.navbar.show_icon -%}{%- if _item.class -%}&nbsp;<span class="navbar_icon"><i class="{{ _item.class }}"></i></span>{%- endif -%}{%- endif -%}&nbsp;<a href="{{ _nav_url }}"{% if _item.target %} target="{{ _item.target }}"{% endif %}>{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a>&nbsp;</li>
+            <li class="navbar_item navbar_item-active">{%- if site.header.navbar.show_icon -%}{%- if _item.class -%}{{ _text_spacing }}<span class="navbar_icon"><i class="{{ _item.class }}"></i></span>{%- endif -%}{%- endif -%}{{ _text_spacing }}<a href="{{ _nav_url }}"{% if _item.target %} target="{{ _item.target }}"{% endif %}>{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a>{{ _text_spacing }}</li>
             {%- if site.header.navbar.spacing_line -%}<div class="navbar_spacing"></div>{%- endif -%}
             {%- else -%}
-            <li class="navbar_item">{%- if site.header.navbar.show_icon -%}{%- if _item.class -%}&nbsp;<span class="navbar_icon"><i class="{{ _item.class }}"></i></span>{%- endif -%}{%- endif -%}&nbsp;<a href="{{ _nav_url }}"{% if _item.target %} target="{{ _item.target }}"{% endif %}>{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a>&nbsp;</li>
+            <li class="navbar_item">{%- if site.header.navbar.show_icon -%}{%- if _item.class -%}{{ _text_spacing }}<span class="navbar_icon"><i class="{{ _item.class }}"></i></span>{%- endif -%}{%- endif -%}{{ _text_spacing }}<a href="{{ _nav_url }}"{% if _item.target %} target="{{ _item.target }}"{% endif %}>{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a>{{ _text_spacing }}</li>
             {%- if site.header.navbar.spacing_line -%}<div class="navbar_spacing"></div>{%- endif -%}
             {%- endif -%}
             {%- endfor -%}

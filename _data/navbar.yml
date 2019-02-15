@@ -89,7 +89,7 @@ header:
     url:      /about.html
     class:    "fa fa-thumbtack"
 
-  - title:    GitHub
-    url:      https://github.com/shines77/jekyll-theme-text
-    target:   _blank
-    class:    "fa fa-cat"
+  #- title:    GitHub
+  #  url:      https://github.com/shines77/jekyll-theme-text
+  #  target:   _blank
+  #  class:    "fa fa-cat"
