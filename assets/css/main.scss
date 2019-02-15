@@ -35,7 +35,8 @@ $always_on_top: {{ site.header.always_on_top | default: site.data.variables.defa
     "common/components/hero",
     "common/components/menu",
     "common/components/modal",
-    "common/components/toc",
+    "common/components/sidebar",
+    "common/components/aside",
     "common/components/item",
     "common/components/swiper",
 

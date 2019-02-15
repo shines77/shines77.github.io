@@ -7,9 +7,9 @@
   }
   .main {
     @include flexbox();
-    @include media-breakpoint-down(md) {
-      @include flex-direction(column);
-    }
+    //@include media-breakpoint-down(md) {
+    //  @include flex-direction(column);
+    //}
   }
 }
 
@@ -188,6 +188,10 @@
 
 .navbar {
   @include overflow(auto, "x");
+  @include flexbox();
+  @include media-breakpoint-down(md) {
+    @include flex-direction(column);
+  }
   & > ul {
     height: get-header-height();
     padding-bottom: 0;
