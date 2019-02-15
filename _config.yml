@@ -33,13 +33,13 @@ header:
   navbar:
     show_icon: false # false (default), true. Whether to display the icon for the text on the navigation bar.
     text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
-    spacing_line: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
+    vertical_divider: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
 
 ## => Site Settings
 ##############################
-title   : 郭子的博客
+title       : "郭子的博客"
 # this means to ignore newlines until "Language & timezone"
-description: "专注 C/C++ 高性能编程"
+description : "专注 C/C++ 高性能编程"
   
 url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : / # does not include hostname

@@ -19,7 +19,7 @@ key: page-fast-hash-map
 
 一般情况下，查找表都是以 `key-value pair`（键值对）的形式出现的。例如：
 
-```cpp
+```csharp
 Map<string, int> map;
 map.insert("张三", 22);
 map.insert("李四", 25);
@@ -39,7 +39,7 @@ if (exists) {
 
 在给定的 `10` 个数字中，我们想知道里面是否存在 `77` 这个数？
 
-```cpp
+```csharp
 Array<int> table = [3, 18, 33, 38, 50, 21, 2, 82, 99, 1];
 bool result = table.isExists(77);   // 我们得到的结果是: 不存在
 ```
@@ -86,7 +86,7 @@ bool result = table.isExists(77);   // 我们得到的结果是: 不存在
 
 伪代码：
 
-```cpp
+```csharp
 class SequenceSearch {
     List<int> list = new List<int>();
 
@@ -104,7 +104,7 @@ class SequenceSearch {
 
 查找成功时的平均查找长度为：（假设每个数据元素匹配 `key` 的概率相等）
 
-```
+```csharp
 ASL = (1 + 2 + 3 + … + n) / n = (n + 1) / 2;
 ```
 
