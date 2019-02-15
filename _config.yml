@@ -28,7 +28,7 @@ site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
 header:
-  always_on_top: false # true (default), false. Whether fixed the header area always on the page top.
+  always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
 
   navbar:
     show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.

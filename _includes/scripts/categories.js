@@ -10,11 +10,11 @@
       pair = queryArr[i].split('=');
       // If first entry with this name
       if (typeof queryObj[pair[0]] === 'undefined') {
-        queryObj[pair[0]] = pair[1];
         // If second entry with this name
+        queryObj[pair[0]] = pair[1];
       } else if (typeof queryObj[pair[0]] === 'string') {
-        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
         // If third or later entry with this name
+        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
       } else {
         queryObj[pair[0]].push(pair[1]);
       }
@@ -23,7 +23,7 @@
   }
 
   var setUrlQuery = (function() {
-    var baseUrl =  window.location.href.split('?')[0];
+    var baseUrl = window.location.href.split('?')[0];
     return function(query) {
       if (typeof query === 'string') {
         window.history.replaceState(null, '', baseUrl + query);
@@ -57,7 +57,7 @@
       sectionTopArticleIndex.push(index);
     }
 
-    function searchButtonsByCategory(/* raw category */_category) {
+    function searchButtonsByCategory(_category) {
       if (!_category) {
         return $categoryShowAll;
       }
@@ -75,7 +75,7 @@
       }
     }
 
-    function categorySelect(/* raw category */category, target) {
+    function categorySelect(category, target) {
       var result = {}, $articles;
       var i, j, k, _category;
 
@@ -86,12 +86,10 @@
             result[i] || (result[i] = {});
             result[i][j] = true;
           } else {
-            var categories = $articles.eq(j).data('categories').split(',');
-            for (k = 0; k < categories.length; k++) {
-              if (categories[k] === category) {
-                result[i] || (result[i] = {});
-                result[i][j] = true; break;
-              }
+            var data_category = $articles.eq(j).data('category');
+            if (category === data_category) {
+              result[i] || (result[i] = {});
+              result[i][j] = true;
             }
           }
         }

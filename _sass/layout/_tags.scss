@@ -1,0 +1,7 @@
+.layout-tags {
+  min-height: 80%;
+  & > .layout-tags_result {
+    min-height: 80%;
+    margin: map-get($spacers, 4) 0;
+  }
+}

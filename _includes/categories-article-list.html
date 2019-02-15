@@ -104,7 +104,7 @@
 
       {%- include snippets/get-locale-string.html key='ARTICLE_DATE_FORMAT' -%}
       {%- assign _article_date_format = __return -%}
-      <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-categories="{{ _categories_encode }}">
+      <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="{{ _categories_encode }}">
         <table class="item_content item_table_brief">
         <tbody>
           <tr>
@@ -116,6 +116,7 @@
         </tbody>
         </table>
       </li>
+      {%- if forloop.last -%}</ul></section>{%- endif -%}
 
     {%- elsif include.type == 'grid' -%}
       {%- if include.size == 'sm' -%}
@@ -151,3 +152,4 @@
 
   {%- endfor -%}
 </div>
+<p>&nbsp;</p>

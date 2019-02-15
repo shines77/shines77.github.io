@@ -10,11 +10,11 @@
       pair = queryArr[i].split('=');
       // If first entry with this name
       if (typeof queryObj[pair[0]] === 'undefined') {
-        queryObj[pair[0]] = pair[1];
         // If second entry with this name
+        queryObj[pair[0]] = pair[1];
       } else if (typeof queryObj[pair[0]] === 'string') {
-        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
         // If third or later entry with this name
+        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
       } else {
         queryObj[pair[0]].push(pair[1]);
       }
@@ -23,7 +23,7 @@
   }
 
   var setUrlQuery = (function() {
-    var baseUrl =  window.location.href.split('?')[0];
+    var baseUrl = window.location.href.split('?')[0];
     return function(query) {
       if (typeof query === 'string') {
         window.history.replaceState(null, '', baseUrl + query);
@@ -57,7 +57,7 @@
       sectionTopArticleIndex.push(index);
     }
 
-    function searchButtonsByTag(/* raw tag */_tag) {
+    function searchButtonsByTag(_tag) {
       if (!_tag) {
         return $tagShowAll;
       }
@@ -67,6 +67,7 @@
       }
       return _buttons;
     }
+    
     function buttonFocus(target) {
       if (target) {
         target.addClass('focus');
@@ -75,7 +76,7 @@
       }
     }
 
-    function tagSelect(/* raw tag */tag, target) {
+    function tagSelect(tag, target) {
       var result = {}, $articles;
       var i, j, k, _tag;
 
@@ -86,9 +87,9 @@
             result[i] || (result[i] = {});
             result[i][j] = true;
           } else {
-            var tags = $articles.eq(j).data('tags').split(',');
-            for (k = 0; k < tags.length; k++) {
-              if (tags[k] === tag) {
+            var data_tags = $articles.eq(j).data('tags').split(',');
+            for (k = 0; k < data_tags.length; k++) {
+              if (data_tags[k] === tag) {
                 result[i] || (result[i] = {});
                 result[i][j] = true; break;
               }

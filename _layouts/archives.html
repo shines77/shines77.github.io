@@ -18,13 +18,14 @@ titles:
 ---
 
 <div class="layout-archives js-all">
+  {%- include archives-list.html articles=site.posts reverse=true -%}
   <div class="js-result layout-archives_result d-none">
-    {%- include article-list.html articles=site.posts type='brief' show_info=true reverse=true group_by='year' -%}
+    {%- include archives-article-list.html articles=site.posts type='brief' show_info=true reverse=true -%}
   </div>
 </div>
 
 <script>
-{% include scripts/archieves.js %}
+{% include scripts/archives.js %}
 </script>
 
 {{ content }}

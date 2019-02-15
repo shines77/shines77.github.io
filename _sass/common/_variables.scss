@@ -55,7 +55,7 @@ $base: (
   line-height-sm:         1.4,
   line-height-xs:         1.2,
 
-  spacer:                 0.8rem,
+  spacer:                 0.9375rem,
 
   border-radius-lg:       .8rem,
   border-radius:          .4rem,
@@ -93,22 +93,26 @@ $base: (
   font-size-articles-item-meta:         0.9375rem,
   font-size-articles-article_content:   0.875rem,
 
-  // categories
-  font-size-category-title:         1rem,
-  font-size-category-date:          1rem,
-
   // categories :: button
   font-size-category-text:          1rem,
   font-size-category-total:         0.5625rem,
+
+  // archives :: button
+  font-size-archive-text:           1rem,
+  font-size-archive-total:          0.5625rem,
+
+  // tags :: button
+  font-size-tag-text:               1rem,
+  font-size-tag-total:              0.5625rem,
+
+  // categories
+  font-size-category-title:         1rem,
+  font-size-category-date:          1rem,
 
   // archives
   font-size-archive-title:          1rem,
   font-size-archive-year:           1rem,
   font-size-archive-date:           1rem,
-
-  // tags :: button
-  font-size-tag-text:               1rem,
-  font-size-tag-total:              0.5625rem,
 
   // article
   font-size-article-title:          1rem,

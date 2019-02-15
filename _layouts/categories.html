@@ -18,6 +18,7 @@ titles:
 ---
 
 <div class="layout-categories js-all">
+  {%- include categories-list.html -%}
   <div class="js-result layout-categories_result d-none">
     {%- include categories-article-list.html articles=site.posts categories=site.categories type='brief' show_info=true reverse=true group_by='year' -%}
   </div>

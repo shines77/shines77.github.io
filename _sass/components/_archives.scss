@@ -1,15 +1,15 @@
-.site-categories {
-  .category-primary-button {
+.site-archives {
+  .archive-primary-button {
     @include clickable($text-color-1, rgba($main-color-1, .55), default, default, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
   }
-  .category-secondary-button {
+  .archive-secondary-button {
     @include clickable($text-color-3, $main-color-3, default, default, $text-color-2, $main-color-2, $text-color-2, $main-color-2);
   }
-  .category-button {
-    & > .category-button-count {
+  .archive-button {
+    & > .archive-button-count {
       display: inline-block;
       margin-left: map-get($spacers, 1);
-      font-size: map-get($base, font-size-category-total);
+      font-size: map-get($base, font-size-archive-total);
       line-height: 1;
       vertical-align: top;
     }

@@ -42,6 +42,12 @@
   @include align-items(center);
 }
 
+.button-menu {
+  @include menu(2, 2);
+  @include menu-direction();
+  @include align-items(center);
+}
+
 .menu-vertical {
   @include menu-direction("vertical");
   @include align-items(normal);

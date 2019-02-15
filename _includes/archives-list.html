@@ -1,0 +1,55 @@
+{%- include snippets/get-locale-string.html key='YEAR' -%}
+{%- assign _locale_year = __return -%}
+
+{%- assign _sorted_list = include.articles -%}
+{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
+{%- if include.reverse -%}
+  {%- assign _sorted_list = _sorted_list | reverse -%}
+{%- endif -%}
+
+{%- assign _article_count = 0 -%}
+{%- assign _article_years = '' -%}
+{%- assign _last_year = '' -%}
+
+{%- for _article in _sorted_list -%}
+  {%- assign _article_year = _article.date | date: '%Y' -%}
+  {%- if _article_year != _last_year -%}
+    {%- assign _article_count = 1 -%}
+    {%- if _last_year != '' -%}
+      {%- if forloop.last -%}
+        {%- assign _article_years = _article_years | append: _article_count -%}
+      {%- else -%}
+        {%- assign _article_years = _article_years | append: _article_count | append: '|' -%}
+      {%- endif -%}
+    {%- endif -%}
+    {%- assign _article_years = _article_years | append: _article_year | append: ',' -%}
+    {%- assign _last_year = _article_year -%}
+  {%- else -%}
+    {%- assign _article_count = _article_count | plus: 1 -%}
+    {%- if forloop.last -%}
+      {%- assign _article_years = _article_years | append: _article_count -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign _archives = _article_years | split: '|' -%}
+
+{%- include snippets/get-locale-string.html key='SHOWALL' -%}
+{%- assign _locale_show_all = __return -%}
+<div class="site-archives js-archives">
+  <ul class="button-menu">
+    <li>
+      <button type="button" class="button button-rounded archive-button archive-primary-button archive-button-all" data-encode="">
+        {{ _locale_show_all }} <div class="archive-button-count">{{ include.articles | size }}</div>
+      </button>
+    </li>
+    {%- for _archive in _archives -%}
+      {%- assign _archive_info = _archive | split: ',' -%}
+      <li>
+        <button type="button" class="button button-rounded archive-button archive-secondary-button" data-encode="{{ _archive_info.first | strip | url_encode }}">
+          <span>[ {{ _archive_info.first | strip }} {{ _locale_year }}]</span> <div class="archive-button-count">{{ _archive_info.last }}</div>
+        </button>
+      </li>
+    {%- endfor -%}
+  </ul>
+</div>

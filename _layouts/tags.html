@@ -17,15 +17,15 @@ titles:
   ko-KR   : *KO
 ---
 
-<div class="layout-archive js-all">
+<div class="layout-tags js-all">
   {%- include tags-list.html -%}
-  <div class="js-result layout-archive_result d-none">
+  <div class="js-result layout-tags_result d-none">
     {%- include article-list.html articles=site.posts type='brief' show_info=true reverse=true group_by='year' -%}
   </div>
 </div>
 
 <script>
-  {%- include scripts/tags.js -%}
+{% include scripts/tags.js %}
 </script>
 
 {{ content }}
