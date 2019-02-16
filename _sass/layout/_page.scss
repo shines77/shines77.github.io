@@ -104,14 +104,14 @@ html,
 }
 
 .page_sidebar {
-  z-index: map-get($z-indexes, sidebar);
-  display: block;
   width: 80%;
   max-width: map-get($layout, sidebar-width);
   /* Modified by shines77, 2019-01-28 */
   //height: 100%;
   min-height: 100%;
   background-color: $background-color;
+  display: block;
+  z-index: map-get($z-indexes, sidebar);
   @include split-line(right);
   @include transition(transform map-get($animation, duration));
   @include overflow(auto);
@@ -140,9 +140,12 @@ html,
 
 .has-aside {
   .col-aside {
-    position: relative;
+    //position: relative;
+    position: absolute;
     display: block;
     width: map-get($layout, aside-width);
+    @include overflow(hidden);
+    background-color: #999;
     & > aside {
       &.fixed {
         position: fixed;

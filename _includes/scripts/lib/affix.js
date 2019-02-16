@@ -1,9 +1,11 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var isAlwaysOnTop = window.TEXT_VARIABLES.site.header.always_on_top;
-  var nHeaderHeight = 0;
+  var headerHeight = 0;
+  var asideMenuLeft = 0;
   window.Lazyload.js(SOURCES.jquery, function() {
-    nHeaderHeight = (isAlwaysOnTop ? $('#header').height() : 0);
+    headerHeight = (isAlwaysOnTop ? $('#header').height() : 0);
+    asideMenuWidth = $('#aside-menu').width();
   });
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
@@ -36,7 +38,7 @@
       function top() {
         if (curState !== 'top') {
           $root.removeClass('fixed').css({
-            left: 0,
+            left: asideMenuWidth + 'px',
             top: 0
           });
           curState = 'top';
@@ -46,7 +48,7 @@
         if (curState !== 'fixed') {
           $root.addClass('fixed').css({
             left: rootLeft + 'px',
-            top: nHeaderHeight + 'px'
+            top: headerHeight + 'px'
           });
           curState = 'fixed';
         }
@@ -54,14 +56,14 @@
       function bottom() {
         if (curState !== 'bottom') {
           $root.removeClass('fixed').css({
-            left: 0,
+            left: asideMenuWidth + 'px',
             top: rootBottomTop + 'px'
           });
           curState = 'bottom';
         }
       }
       function setState() {
-        var scrollTop = $scrollTarget.scrollTop() + nHeaderHeight;
+        var scrollTop = $scrollTarget.scrollTop() + headerHeight;
         if (scrollTop >= rootTop && scrollTop <= scrollBottom) {
           fixed();
         } else if (scrollTop < rootTop) {

@@ -5,24 +5,34 @@ layout: base
 {%- assign _page_type = page.type | default: layout.type | default: site.data.variables.default.page.type -%}
 {%- assign _article_header_type = page.article_header.type | default: layout.article_header.type -%}
 
-{%- include snippets/assign.html target=layout.header source0=page.header -%}
+{%- if _page_type == 'article' -%}
+  {%- assign _page_sidebar = page.sidebar | default: layout.sidebar | default: site.page.article.sidebar.enabled | default: site.data.variables.default.page.article.sidebar.enabled -%}
+  {%- assign _article_aside = page.aside.enabled | default: layout.aside.enabled | default: site.page.article.aside.enabled | default: site.data.variables.default.page.article.aside.enabled -%}
+  {%- assign _article_aside_toc = page.aside.toc | default: layout.aside.toc | default: site.page.article.aside.toc | default: site.data.variables.default.page.article.aside.toc -%}
+{%- else -%}
+  {%- assign _page_sidebar = nil -%}
+  {%- assign _article_aside = nil -%}
+  {%- assign _article_aside_toc = nil -%}
+{%- endif -%}
+
+{%- include snippets/assign.html target = layout.header source0 = page.header -%}
 {%- assign _header = __return -%}
 
-{%- include snippets/assign.html target=layout.footer source0=page.footer -%}
+{%- include snippets/assign.html target = layout.footer source0 = page.footer -%}
 {%- assign _footer = __return -%}
 
-{%- include snippets/assign.html target=layout.lightbox source0=page.lightbox -%}
+{%- include snippets/assign.html target = layout.lightbox source0 = page.lightbox -%}
 {%- assign _lightbox = __return -%}
 
-{%- include snippets/assign.html target = site.data.variables.default.page.full_width source0=layout.full_width source1=page.full_width -%}
+{%- include snippets/assign.html target = site.data.variables.default.page.full_width source0 = layout.full_width source1 = page.full_width -%}
 {%- assign _full_width = __return -%}
 
-{%- include snippets/assign.html target = site.data.variables.default.page.comment source0=layout.comment source1=page.comment -%}
+{%- include snippets/assign.html target = site.data.variables.default.page.comment source0 = layout.comment source1 = page.comment -%}
 {%- assign _comment = __return -%}
 
 {%- assign _article_header_excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
-{%- if page.sidebar -%}
+{%- if _page_sidebar == true -%}
 <div class="layout-page layout-page-sidebar clearfix js-page-root">
   <div class="page_mask d-print-none js-page-mask js-sidebar-hide"></div>
   <div class="page_viewport">
@@ -31,13 +41,10 @@ layout: base
         <i class="fas fa-bars icon--show"></i>
       </div>
     </div>
-
     <div class="grid page_grid">
-
       <div class="page_sidebar d-print-none">
         {%- include sidebar/toc.html -%}
       </div>
-
 {%- else -%}
 <div class="layout-page js-page-root">
 {%- endif -%}
@@ -46,18 +53,11 @@ layout: base
     {%- if _page_mode == 'immersive' -%}
       {%- assign _page_main_class = _page_main_class | append: ' page_main-immersive' -%}
     {%- endif -%}
-    {%- unless page.sidebar -%}
+    {%- unless _page_sidebar -%}
       {%- assign _page_main_class = _page_main_class | append: ' page_viewport' -%}
     {%- endunless -%}
     {%- if _footer == false -%}
       {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
-    {%- endif -%}
-    {%- if page.aside -%}
-      {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
-    {%- else -%}
-      {%- if _full_width -%}
-        {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
-      {%- endif -%}
     {%- endif -%}
     <div class="{{ _page_main_class }} cell cell-auto">
 
@@ -68,16 +68,24 @@ layout: base
         {%- include snippets/get-site-theme.html -%}
         {%- assign _site_theme = __return -%}
         {%- if _site_theme == 'dark' -%}
-          {%- include header.html theme='dark' background=page.header.background -%}
+          {%- include header.html sidebar=_page_sidebar theme='dark' background=page.header.background -%}
         {%- elsif _site_theme == 'light' -%}
-          {%- include header.html theme='light' background=page.header.background -%}
+          {%- include header.html sidebar=_page_sidebar theme='light' background=page.header.background -%}
         {%- else -%}
-          {%- include header.html -%}
+          {%- include header.html sidebar=_page_sidebar -%}
         {%- endif -%}
         </div>
       {%- endif -%}
 
-        <div class="page_content">
+        {%- assign _page_content_class = '' -%}
+        {%- if _article_aside == true -%}
+          {%- assign _page_content_class = _page_content_class | append: ' has-aside' -%}
+        {%- else -%}
+          {%- if _full_width -%}
+            {%- assign _page_content_class = _page_content_class | append: ' full-width' -%}
+          {%- endif -%}
+        {%- endif -%}
+        <div class="page_content{{ _page_content_class }}">
         {%- if _article_header_type == 'overlay' or _article_header_type == 'cover' -%}
 
           {%- if _article_header_type == 'overlay' -%}
@@ -177,8 +185,8 @@ layout: base
         {%- endif -%}
             <div class="grid grid-reverse">
 
-              <div class="col-aside d-print-none js-col-aside">
-                {%- if page.aside -%}
+              <div id="aside-menu" class="col-aside d-print-none js-col-aside">
+                {%- if _article_aside -%}
                   <aside class="page_aside js-page-aside">
                     {%- include aside/toc.html -%}
                   </aside>
@@ -222,7 +230,7 @@ layout: base
         {%- endif -%}
       </div>
     </div> {%- comment -%} end page_main {%- endcomment -%}
-{%- if page.sidebar -%}
+{%- if _page_sidebar -%}
     </div> {%- comment -%} end grid {%- endcomment -%}
   </div> {%- comment -%} end page_viewport {%- endcomment -%}
 {%- endif -%}
@@ -249,16 +257,16 @@ layout: base
 {% include scripts/page.js %}
 </script>
 
-{%- if page.sidebar -%}
+{%- if _page_sidebar == true -%}
 <script>
 {% include scripts/components/sidebar.js %}
 </script>
 {%- endif -%}
 
-{%- if page.aside -%}
+{%- if _article_aside -%}
 <script>
 /* toc must before affix, since affix need to konw toc's height. */
-{%- if page.aside.toc -%}
+{%- if _article_aside_toc -%}
   {% include scripts/aside/toc.js %}
 {%- endif -%}
 {% include scripts/aside/affix.js %}

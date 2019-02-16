@@ -1,11 +1,12 @@
 ---
 layout: page
 type: article
+aside:
+  enabled: true
+  toc: true
 ---
 
-{%- include snippets/assign.html
-  target = site.data.variables.default.page.sharing
-  source0=layout.sharing source1=page.sharing -%}
+{%- include snippets/assign.html target = site.data.variables.default.page.sharing source0 = layout.sharing source1 = page.sharing -%}
 {%- assign _sharing = __return -%}
 
 <div class="layout-article">

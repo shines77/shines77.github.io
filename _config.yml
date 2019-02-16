@@ -17,6 +17,12 @@ markdown    : kramdown
 highlighter : rouge
 permalink   : date
 
+## => Site Settings
+##############################
+title       : "郭子的博客"
+# this means to ignore newlines until "Language & timezone"
+description : "专注 C/C++ 高性能编程"
+  
 ## => Language and Timezone
 ##############################
 lang: zh-CN # the language of your site, default as "en", e.g. "en", "zh-CN", "zh-TW"
@@ -27,20 +33,6 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
-header:
-  always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
-
-  navbar:
-    show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
-    text_spacing: true # false (default), true. Whether to display the spacing between the text on the navigation bar.
-    vertical_divider: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
-
-## => Site Settings
-##############################
-title       : "郭子的博客"
-# this means to ignore newlines until "Language & timezone"
-description : "专注 C/C++ 高性能编程"
-  
 url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : / # does not include hostname
 
@@ -49,10 +41,31 @@ baseurl : / # does not include hostname
 repository: shines77/shines77.github.io
 repository_tree: master
 
+## => UI settings
+##############################
+header:
+  always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
+
+  navbar:
+    show_icon: true # false (default), true. Whether to display the icon for the text on the navigation bar.
+    text_spacing: true # false (default), true. Whether to display the spacing between the text on the navigation bar.
+    vertical_divider: false # false (default), true. Whether to display the vertical divider of the text on the navigation bar.
+
+page:
+  article:
+    sidebar:
+      enabled: false # false (default), true.
+      nav: false # false (default), true.
+      toc: false # false (default), true.
+
+    aside:
+      enabled: true # false (default), true.
+      toc: true # false (default), true.
+
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
+  type      : person # "person" (default), "organization"
   name      : 郭子 # Your name or nickname
   fullname  : "郭雄辉" # Your full-name
   nickname  : shines77 # Your nickname
@@ -115,7 +128,7 @@ license: CC-BY-NC-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-N
 
 ## TOC
 toc:
-  selectors: "h1,h2,h3,h4" # "h1,h2,h3" (default)
+  selectors: "h1,h2,h3,h4" # "h1,h2,h3,h4" (default)
 
 ## => Copyright author information
 ##############################

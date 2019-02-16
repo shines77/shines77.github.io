@@ -1,13 +1,14 @@
 (function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   var isAlwaysOnTop = window.TEXT_VARIABLES.site.header.always_on_top;
-  var nHeaderHeight = 0;
+  var headerHeight = 0;
   window.Lazyload.js(SOURCES.jquery, function() {
-    nHeaderHeight = (isAlwaysOnTop ? $('#header').height() : 0);
+    headerHeight = (isAlwaysOnTop ? $('#header').height() : 0);
   });
   window.Lazyload.js(SOURCES.jquery, function() {
     function toc(options) {
-      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="aside-toc aside-toc-ellipsis"></ul>'), $tocLi, $headings, $activeLast, $activeCur,
+      var $root = this, $window = $(window), $scrollTarget, $scroller, $tocUl = $('<ul class="aside-toc aside-toc-ellipsis"></ul>'), 
+        $tocLi, $headings, $activeLast, $activeCur,
         selectors = 'h1,h2,h3,h4', container = 'body', scrollTarget = window, scroller = 'html, body', disabled = false,
         headingsPos, scrolling = false, hasRendered = false, hasInit = false;
 
@@ -29,7 +30,7 @@
         });
       }
       function setState(element, disabled) {
-        var scrollTop = $scrollTarget.scrollTop() + nHeaderHeight, i;
+        var scrollTop = $scrollTarget.scrollTop() + headerHeight, i;
         if (disabled || !headingsPos || headingsPos.length < 1) { return; }
         if (element) {
           $activeCur = element;

@@ -21,12 +21,12 @@ default:
   future: true
 
   header:
-    always_on_top: true # true (default), false. Whether fixed the header area always on the page top.
+    always_on_top: true
 
     navbar:
-      show_icon: false # false (default), true. Whether to display the icon for the text on the navigation bar.
-      text_spacing: false # false (default), true. Whether to display the spacing between the text on the navigation bar.
-      vertical_divider: false # false (default), true. Whether to display the vertical spacing line of the text on the navigation bar.
+      show_icon: false
+      text_spacing: false
+      vertical_divider: false
 
   page:
     mode: normal
@@ -34,6 +34,14 @@ default:
     article_header:
       align: left
       theme: light
+    article:
+      sidebar:
+        enabled: false
+        nav: false
+        toc: false
+      aside:
+        enabled: false
+        toc: false
     articles:
       show_cover: true
       show_excerpt: false

@@ -1,5 +1,7 @@
 .header {
   background: $header-background;
+  @include flexbox();
+  @include flex-direction(row);
   a {
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
@@ -37,21 +39,62 @@
   fill: $main-color-2;
 }
 
+.header_sidebar {
+  margin: 0;
+  padding: 0;
+  width: map-get($layout, sidebar-width);
+  height: get-header-title-height();
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+    margin-top: 0px;
+    margin-right: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    width: 0px;
+    height: get-header-title-height-md();
+  }
+  display: block;
+  background: #888;
+}
+
+@include media-breakpoint-down(lg) {
+  .header_sidebar {
+    position: fixed;
+    @include transform(translate(- map-get($layout, sidebar-width), 0));
+  }
+
+  .page_actions {
+    display: block;
+  }
+
+  .show-sidebar {
+    .page_actions {
+      visibility: hidden;
+    }
+    .header_sidebar {
+      @include transform(translate(0));
+    }
+    .page_mask {
+      @include modal-show();
+    }
+  }
+}
+
 .header_title {
   @include menu(3, 0);
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
   white-space: nowrap;
-  height: get-header-title-height();
   margin-right: map-get($spacers, 3);
+  height: get-header-title-height();
   @include media-breakpoint-down(md) {
-    height: get-header-title-height-md();
     margin-left: 0;
     margin-top: 5px;
     margin-right: 0;
     margin-bottom: 0px;
     padding: 0;
+    height: get-header-title-height-md();
   }
   & > .header_brand {
     @include flex(1);
