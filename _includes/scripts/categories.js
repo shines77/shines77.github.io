@@ -87,7 +87,8 @@
             result[i][j] = true;
           } else {
             var data_category = $articles.eq(j).data('category');
-            if (category === data_category) {
+            if ((typeof data_category === 'string' && data_category === category) ||
+                (data_category !== undefined && data_category == category)) {
               result[i] || (result[i] = {});
               result[i][j] = true;
             }

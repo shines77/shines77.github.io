@@ -14,7 +14,7 @@
         queryObj[pair[0]] = pair[1];
       } else if (typeof queryObj[pair[0]] === 'string') {
         // If third or later entry with this name
-        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];        
+        queryObj[pair[0]] = [queryObj[pair[0]], pair[1]];
       } else {
         queryObj[pair[0]].push(pair[1]);
       }
@@ -88,7 +88,8 @@
             result[i][j] = true;
           } else {
             var data_archive = $articles.eq(j).data('archive');
-            if (archive === data_archive) {
+            if ((typeof data_archive === 'string' && data_archive === archive) ||
+              (data_archive !== undefined && data_archive == archive)) {
               result[i] || (result[i] = {});
               result[i][j] = true;
             }
