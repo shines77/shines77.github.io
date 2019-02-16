@@ -59,6 +59,13 @@ layout: base
     {%- if _footer == false -%}
       {%- assign _page_main_class = _page_main_class | append: ' hide-footer' -%}
     {%- endif -%}
+    {%- if _article_aside == true -%}
+      {%- assign _page_main_class = _page_main_class | append: ' has-aside' -%}
+    {%- else -%}
+      {%- if _full_width -%}
+        {%- assign _page_main_class = _page_main_class | append: ' full-width' -%}
+      {%- endif -%}
+    {%- endif -%}
     <div class="{{ _page_main_class }} cell cell-auto">
 
       <div class="page_main-inner">
@@ -181,7 +188,7 @@ layout: base
         {%- endif -%}
 
         {%- if _full_width == false -%}
-          <div class ="main">
+          <div id="content-main" class ="main">
         {%- endif -%}
             <div class="grid grid-reverse">
 

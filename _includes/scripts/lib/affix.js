@@ -2,15 +2,44 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   var isAlwaysOnTop = window.TEXT_VARIABLES.site.header.always_on_top;
   var headerHeight = 0;
+  var asideMenuOffsetX = 40;
+  var asideMenuOffsetY = 16;
   var asideMenuLeft = 0;
+  var asideMenuWidth = 0;
+  var $aside_menu;
+  var $article_content;
+  function adjustMenuOffset() {
+    if ($article_content === undefined) {
+      $article_content = $('#content-main');
+    }
+    if ($aside_menu === undefined) {
+      $aside_menu = $('#aside-menu');
+      if ($aside_menu !== undefined) {
+        asideMenuWidth = $aside_menu.width();
+      }
+    }
+    if ($article_content !== undefined) {
+      asideMenuLeft = $article_content.offset().left + $article_content.width();
+      if ($aside_menu !== undefined) {
+        $aside_menu.css({
+          left: asideMenuLeft + asideMenuOffsetX + 'px',
+          top: -asideMenuOffsetY + 'px'
+        });
+      }
+    }
+    return (asideMenuLeft + asideMenuOffsetX);
+  }
   window.Lazyload.js(SOURCES.jquery, function() {
     headerHeight = (isAlwaysOnTop ? $('#header').height() : 0);
-    asideMenuWidth = $('#aside-menu').width();
+    $aside_menu = $('#aside-menu');
+    $article_content = $('#content-main');
+    adjustMenuOffset();
   });
   window.Lazyload.js(SOURCES.jquery, function() {
     function affix(options) {
       var $root = this, $window = $(window), $scrollTarget, $scroll,
-        offsetBottom = 0, scrollTarget = window, scroll = window.document, disabled = false, isOverallScroller = true,
+        offsetBottom = 0, scrollTarget = window, scroll = window.document,
+        disabled = false, isOverallScroller = true,
         rootTop, rootLeft, rootHeight, scrollBottom, rootBottomTop,
         hasInit = false, curState;
 
@@ -27,8 +56,9 @@
       function preCalc() {
         top();
         rootHeight = $root.outerHeight();
-        rootTop = $root.offset().top + (isOverallScroller ? 0 :  $scrollTarget.scrollTop());
+        rootTop = $root.offset().top + (isOverallScroller ? 0 : $scrollTarget.scrollTop());
         rootLeft = $root.offset().left;
+        rootLeft = adjustMenuOffset();
       }
       function calc(needPreCalc) {
         needPreCalc && preCalc();
@@ -38,7 +68,7 @@
       function top() {
         if (curState !== 'top') {
           $root.removeClass('fixed').css({
-            left: asideMenuWidth + 'px',
+            left: 0,
             top: 0
           });
           curState = 'top';
@@ -48,7 +78,7 @@
         if (curState !== 'fixed') {
           $root.addClass('fixed').css({
             left: rootLeft + 'px',
-            top: headerHeight + 'px'
+            top: headerHeight - asideMenuOffsetY + 'px'
           });
           curState = 'fixed';
         }
@@ -56,7 +86,7 @@
       function bottom() {
         if (curState !== 'bottom') {
           $root.removeClass('fixed').css({
-            left: asideMenuWidth + 'px',
+            left: 0,
             top: rootBottomTop + 'px'
           });
           curState = 'bottom';

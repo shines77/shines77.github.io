@@ -140,12 +140,10 @@ html,
 
 .has-aside {
   .col-aside {
-    //position: relative;
     position: absolute;
     display: block;
     width: map-get($layout, aside-width);
     @include overflow(hidden);
-    background-color: #999;
     & > aside {
       &.fixed {
         position: fixed;
