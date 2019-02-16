@@ -7,9 +7,9 @@
   }
   .main {
     @include flexbox();
-    //@include media-breakpoint-down(md) {
-    //  @include flex-direction(column);
-    //}
+    @include media-breakpoint-down(md) {
+      @include flex-direction(column);
+    }
   }
 }
 
@@ -42,12 +42,16 @@
   @include align-items(center);
   @include flex-wrap(nowrap);
   @include flex(1);
-  height: get-header-height();
-  margin-right: map-get($spacers, 3);
   white-space: nowrap;
+  height: get-header-title-height();
+  margin-right: map-get($spacers, 3);
   @include media-breakpoint-down(md) {
-    height: get-header-height-small();
+    height: get-header-title-height-md();
+    margin-left: 0;
+    margin-top: 5px;
     margin-right: 0;
+    margin-bottom: 0px;
+    padding: 0;
   }
   & > .header_brand {
     @include flex(1);
@@ -79,6 +83,11 @@
     font-size: map-get($base, font-size-navbar-title);
     @include media-breakpoint-down(md) {
       font-size: map-get($base, font-size-navbar-title-small);
+      margin-left: 0;
+      margin-top: 3px;
+      margin-right: 0;
+      margin-bottom: 0px;
+      padding: 0;
     }
   }
 }
@@ -91,6 +100,9 @@
   margin-top: 0px;
   width: 100%;
   height: get-header-height();
+  @include media-breakpoint-down(md) {
+    height: get-header-height-md();
+  }
   opacity: 1.0;
 }
 
@@ -102,6 +114,9 @@
   margin-top: 0px;
   width: 100%;
   height: get-header-height();
+  @include media-breakpoint-down(lg) {
+    height: get-header-height-md();
+  }
   opacity: 1.0;
   z-index: map-get($z-indexes, header);
 }
@@ -119,6 +134,9 @@
   margin-top: 0px;
   width: 100%;
   height: get-header-height();
+  @include media-breakpoint-down(lg) {
+    height: get-header-height-md();
+  }
   opacity: 1.0;
   z-index: map-get($z-indexes, header);
 }
@@ -153,6 +171,9 @@
   top: 0px;
   left: 0px;
   margin-top: get-header-height();
+  @include media-breakpoint-down(md) {
+    margin-top: get-header-height-md();
+  }
   width: 100%;
   height: 1px;
   border-bottom: 1px solid $diving-line-color;
@@ -188,22 +209,18 @@
 
 .navbar {
   @include overflow(auto, "x");
-  @include flexbox();
-  @include media-breakpoint-down(md) {
-    @include flex-direction(column);
-  }
   & > ul {
-    height: get-header-height();
-    padding-bottom: 0;
     margin: 0;
+    padding-bottom: 0;
     @include media-breakpoint-down(md) {
+      margin: -16px 0 0 0;
       padding-bottom: 4px;
-      margin: -4px 0 0 0;
     }
     @include menu(3, 2, nowrap);
     @include align-items(center);
+    height: get-navbar-height();
     @include media-breakpoint-down(md) {
-      height: auto;
+      height: get-navbar-height-md();
     }
     .search-button {
       @include media-breakpoint-down(md) {

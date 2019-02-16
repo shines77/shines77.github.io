@@ -212,14 +212,21 @@ $z-indexes: (
 );
 
 $layout: (
-  header-height:              5rem,
-  header-height-small:        3rem,
-  header-height-fixed:        4rem,
-  header-height-fixed-small:  2.5rem,
-  content-max-width:          950px,
-  sidebar-width:              250px,
-  sidebar-header-height:      3rem,
-  aside-width:                220px
+  header-height:                  5rem,
+  header-height-md:               4.5rem,
+  header-height-fixed:            4rem,
+  header-height-fixed-md:         4.5rem,
+
+  header-title-height-md:         auto,
+  header-title-height-fixed-md:   auto,
+
+  header-navbar-height-md:        auto,
+  header-navbar-height-fixed-md:  auto,
+
+  content-max-width:              950px,
+  sidebar-width:                  250px,
+  sidebar-header-height:          3rem,
+  aside-width:                    220px
 );
 
 $animation: (

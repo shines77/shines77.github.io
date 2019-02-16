@@ -22,10 +22,42 @@
   }
 }
 
-@function get-header-height-small() {
+@function get-header-height-md() {
   @if $always_on_top == false {
-    @return map-get($layout, header-height-small);
+    @return map-get($layout, header-height-md);
   } @else {
-    @return map-get($layout, header-height-fixed-small);
+    @return map-get($layout, header-height-fixed-md);
+  }
+}
+
+@function get-header-title-height() {
+  @if $always_on_top == false {
+    @return map-get($layout, header-height);
+  } @else {
+    @return map-get($layout, header-height-fixed);
+  }
+}
+
+@function get-header-title-height-md() {
+  @if $always_on_top == false {
+    @return map-get($layout, header-title-height-md);
+  } @else {
+    @return map-get($layout, header-title-height-fixed-md);
+  }
+}
+
+@function get-navbar-height() {
+  @if $always_on_top == false {
+    @return map-get($layout, header-height);
+  } @else {
+    @return map-get($layout, header-height-fixed);
+  }
+}
+
+@function get-navbar-height-md() {
+  @if $always_on_top == false {
+    @return map-get($layout, navbar-height-md);
+  } @else {
+    @return map-get($layout, navbar-height-fixed-md);
   }
 }
