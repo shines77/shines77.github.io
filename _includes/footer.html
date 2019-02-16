@@ -56,7 +56,8 @@
         {%- endif -%}
         © <a href="{{ site.url }}" title="{{ _locale_copyright_description | replace: '[AUTHOR_NAME]', site.author.name }}">{{ site.author.name }}</a> {{ _locale_copyright_dates }}, Powered by <a href="{{ site.last_modified_authors.first.url }}" title="{{ site.last_modified_authors.first.description }}" target="_blank">TeXt Theme</a> for <a href="http://jekyllrb.com/" title="Jekyll is a simple, blog-aware, static site generator." target="_blank">Jekyll</a>.<br/>
         {{ _locale_special_thanks_format | replace: '[ORIGINAL_URL]', site.original_author.url | replace: '[ORIGINAL_DESCRIPTION]', site.original_author.description | replace: '[ORIGINAL_AUTHOR]', site.original_author.display_name | replace: '[LAST_MODIFIED_AUTHORS]', _last_modified_authors_str }}<br/>
-        {{ _locale_source_site_format | replace: '[SITE_URL]', site.source_code.repo_url | replace: '[SITE_DESCRIPTION]', site.source_code.description | replace: '[HOSTED_SITE]', __source_hosted_site }}
+        {{ _locale_source_site_format | replace: '[SITE_URL]', site.source_code.repo_url | replace: '[SITE_DESCRIPTION]', site.source_code.description | replace: '[HOSTED_SITE]', __source_hosted_site }}<br/>
+        &nbsp;<br/>
       </div>
     </div>
   </div>
