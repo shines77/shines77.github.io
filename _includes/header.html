@@ -30,13 +30,13 @@
           {%- endif -%}
         </div>
         {%- if site.data.navbar.header -%}
+        {%- if site.header.navbar.text_spacing == true -%}
+          {%- assign _text_spacing = '&nbsp;' -%}
+        {%- else -%}
+          {%- assign _text_spacing = '' -%}
+        {%- endif -%}
         <nav class="navbar">
           <ul>
-            {%- if site.header.navbar.text_spacing == true -%}
-              {%- assign _text_spacing = '&nbsp;' -%}
-            {%- else -%}
-              {%- assign _text_spacing = '' -%}
-            {%- endif -%}
             {%- for _item in site.data.navbar.header -%}
             {%- include snippets/get-nav-url.html path=_item.url -%}
             {%- assign _nav_url = __return -%}

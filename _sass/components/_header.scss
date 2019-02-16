@@ -209,14 +209,15 @@
 
 .navbar {
   @include overflow(auto, "x");
+  margin-left: $navbar_left_offset;
   & > ul {
     margin: 0;
     padding-bottom: 0;
     @include media-breakpoint-down(md) {
-      margin: -16px 0 0 0;
-      padding-bottom: 4px;
+      margin: -17px 0 0 0;
+      padding-bottom: 4px 0 0 0;
     }
-    @include menu(3, 2, nowrap);
+    @include navbar-menu(3, 2, 2, nowrap);
     @include align-items(center);
     height: get-navbar-height();
     @include media-breakpoint-down(md) {

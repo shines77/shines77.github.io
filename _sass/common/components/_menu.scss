@@ -36,6 +36,39 @@
   }
 }
 
+@mixin navbar-menu($horizontal-spacer: default, $horizontal-spacer-md: default, $horizontal-item-vertical-spacer: default, $wrap: default) {
+  @if $horizontal-spacer == default {
+    $horizontal-spacer: map-get($menu, horizontal-spacer);
+  }
+  @if $horizontal-spacer-md == default {
+    $horizontal-spacer-md: map-get($menu, horizontal-spacer);
+  }
+  @if $horizontal-item-vertical-spacer == default {
+    $horizontal-item-vertical-spacer: map-get($menu, horizontal-item-vertical-spacer);
+  }
+  @if $wrap == default {
+    $wrap: wrap;
+  }
+  @include flexbox();
+  @include flex-wrap($wrap);
+  margin-top: 0;
+  margin-bottom: 0;
+  & > li {
+    @if $horizontal-item-vertical-spacer {
+      margin-top: map-get($spacers, $horizontal-item-vertical-spacer);
+      margin-bottom: map-get($spacers, $horizontal-item-vertical-spacer);
+    }
+    margin-right: map-get($spacers, $horizontal-spacer);
+    @include media-breakpoint-down(md) {
+      margin-right: map-get($spacers, $horizontal-spacer-md);
+    }
+    list-style-type: none;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .menu {
   @include menu();
   @include menu-direction();

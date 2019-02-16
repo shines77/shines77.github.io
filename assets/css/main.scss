@@ -3,9 +3,18 @@
 ---
 @charset "utf-8";
 
+{%- assign _navbar_text_spacing = site.header.navbar.text_spacing | default: site.data.variables.default.header.navbar.text_spacing -%}
+{%- if _navbar_text_spacing -%}
+  {%- assign _navbar_left_offset = '-2px' -%}
+{%- else -%}
+  {%- assign _navbar_left_offset = '0px' -%}
+{%- endif -%}
+
 /* Added by shines77, 2019-01-30 */
 // true (default), false. Whether fixed the header area always on the page top.
 $always_on_top: {{ site.header.always_on_top | default: site.data.variables.default.header.always_on_top }};
+$navbar_text_spacing: {{ _navbar_text_spacing }};
+$navbar_left_offset: {{ _navbar_left_offset }};
 
 @import
     "themes/{{ site.site_theme | default: site.data.variables.default.theme }}",
