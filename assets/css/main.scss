@@ -3,6 +3,7 @@
 ---
 @charset "utf-8";
 
+/* Added by shines77, 2019-02-16 */
 {%- assign _navbar_text_spacing = site.header.navbar.text_spacing | default: site.data.variables.default.header.navbar.text_spacing -%}
 {%- if _navbar_text_spacing -%}
   {%- assign _navbar_left_offset = '-2px' -%}
