@@ -1,0 +1,10 @@
+
+####################################
+## => Mapping table of categories
+####################################
+categories:
+  c++: "C++"
+  jekyll: "Jekyll"
+  text: "TeXt Theme"
+  wolf: "狼人杀"
+  misc: "生活随笔"

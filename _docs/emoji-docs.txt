@@ -1,0 +1,22 @@
+
+jemoji:
+
+https://github.com/jekyll/jemoji
+
+jemoji format:
+
+<img class="github-emoji" title="bento" alt="bento" src="https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8" height="20" width="20" />
+
+<g-emoji class="g-emoji" alias="date" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c5.png">:date:</g-emoji>
+
+<img src="https://static.segmentfault.com/v-5c4ec07f/global/img/emojis/smile.png" class="emoji" alt="smile" title="smile">
+
+emoji list:
+
+https://segmentfault.com/a/1190000009649780
+https://github.com/liguoqinjim/github_emoji/tree/master/github_all
+https://github.com/caiyongji/emoji-list
+
+git-emoji:
+
+https://anran758.github.io/blog/2017/12/31/Git-emoji%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97-DESKTOP-8U754NN/

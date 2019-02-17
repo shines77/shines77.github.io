@@ -270,6 +270,59 @@ search:
   google:
     custom_search_engine_id: # Google Custom Search Engine ID
 
+########################################################
+# jemoji setting
+#
+# See: https://github.com/jekyll/jemoji
+#
+# command:
+# gem install gemoji
+# bundle exec gemoji extract assets/images/emoji
+#
+########################################################
+emoji:
+  src: "/static/images/icons/emoji"
+
+########################################################
+# jemoji-plus setting
+########################################################
+jemoji-plus:
+  # The emoji's image host url, 'https://github.githubassets.com' (default).
+  # The trailing can't end with '/', and it's can be setting to '' (empty string).
+  host: 'https://github.githubassets.com'
+  # The emoji's image path of above host url, '/images/icons' (default).
+  # If it isn't empty, must start with '/' character, it's can be setting to '' (empty string).
+  path: '/images/icons'
+
+  image:
+    class: 'emoji'    # The emoji's css class name. 'emoji' (default)
+    ext-name: 'png'   # The emoji's image file extension. 'png' (default), 'jpg', 'jpeg', 'svg'
+    width: 20         # The emoji's image width. 20 (default)
+    height: 20        # The emoji's image height. 20 (default)
+
+  format:
+    #
+    # [image-baseurl]: The emoji's image base URL, value = '[jekyll-emoji.host][jekyll-emoji.path]'
+    # [image-filename]: The emoji's image file name, like: '1f371'
+    # [image-extname]: The emoji's image file extension, like: 'png'
+    #
+    # Example:
+    #
+    #   https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8
+    #
+    image-src: '[image-baseurl]/emoji/unicode/[image-filename].[image-extname]?v8'
+
+    #
+    # [emoji-class]: The emoji's css class name, value = [jekyll-emoji.image.class]
+    # [emoji-name]: The emoji's alias name.
+    # [emoji-image-src]: The emoji's image source url, value = [jekyll-emoji.format.image-src]
+    #
+    # Example:
+    #
+    #   <img class="github-emoji" title="bento" alt="bento" src="https://github.githubassets.com/images/icons/emoji/unicode/1f371.png?v8" height="20" width="20" />
+    #
+    emoji-html: '<img class="[emoji-class]" title="[emoji-name]" alt="[emoji-name]" src="[emoji-image-src]" width="[emoji-width]" height="[emoji-height] />'
+
 exclude:
   - CHANGELOG.md
   - HOW_TO_RELEASE.md
