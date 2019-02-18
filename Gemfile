@@ -12,6 +12,8 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
+gem "jemoji-plus", "~> 0.1.11"
+
 # If you have any plugins, put them here!
 # group :jekyll_plugins do
   # gem "github-pages-health-check"

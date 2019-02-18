@@ -14,3 +14,5 @@ bundle exec jekyll serve --incremental
 bundle exec jekyll serve -P 8000
 
 bundle exec jekyll serve -H 0.0.0.0 -P 8080
+
+bundle exec jekyll serve -H 0.0.0.0 -P 4000
