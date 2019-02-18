@@ -177,7 +177,7 @@ plugins:
   - jemoji-plus
   - jekyll-archives
   - jekyll/tagging
-  # - jemoji
+  - jemoji
   # - jekyll-target-blank
 
 ## => Markdown Enhancements
