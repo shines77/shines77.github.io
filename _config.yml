@@ -174,10 +174,11 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-default-layout
-  - jemoji-plus
   - jekyll-archives
-  - jekyll/tagging
+  # - jekyll/tagging
+  - jekyll-tagging
   - jemoji
+  # - jemoji-plus
   # - jekyll-target-blank
 
 ## => Markdown Enhancements
