@@ -49,7 +49,7 @@ zh-Hans: &ZH_HANS
   ARTICLE_DATE_FORMAT       : "%Y年%-m月%-d日"
   ARTICLE_LIST_DATE_FORMAT  : "%-m 月 %-d 日"
   STATISTICS                : "共计 [POST_COUNT] 篇文章，[PAGE_COUNT] 页。"
-  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 许可协议。欢迎转载、使用、重新发布，但务必保留文章署名：<b>[AUTHOR_NAME]</b> or <b>[AUTHOR_NICKNAME]</b>（包含链接：<a href="[AUTHOR_SITE]" target="_blank">[AUTHOR_SITE]</a>），且不得用于商业目的，基于本文修改后的作品务必以相同的许可发布。如有任何疑问，请与我联系：<a href="mailto:[EMAIL]">[EMAIL]</a>。'
+  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 许可协议。欢迎转载、使用、重新发布，但务必保留文章署名：<b>[AUTHOR_NAME]</b> or <b>[AUTHOR_NICKNAME]</b>（包含链接：<a href="[AUTHOR_SITE]" target="_blank">[AUTHOR_SITE]</a>），且不得用于商业目的，基于本文修改后的作品务必以相同的许可发布。如有任何疑问，请与我联系：<a href="mailto:[EMAIL]">[EMAIL]</a> 。'
   EDIT_ON_GITHUB            : "在 Github 上修改"
   FOLLOW_ME                 : "在 [NAME] 上关注我。"
   EMAIL_ME                  : "给我发邮件。"
@@ -81,7 +81,7 @@ zh-Hant: &ZH_HANT
   ARTICLE_DATE_FORMAT       : "%Y年 %m月%d日"
   ARTICLE_LIST_DATE_FORMAT  : "%m月%d日"
   STATISTICS                : "共計 [POST_COUNT] 篇文章，[PAGE_COUNT] 頁。"
-  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 許可協議。歡迎轉載、使用、重新發布，但務必保留文章署名：<b>[AUTHOR_NAME]</b> or <b>[AUTHOR_NICKNAME]</b>（包含鏈接：<a href="[AUTHOR_SITE]" target="_blank"> [AUTHOR_SITE] </a>），且不得用於商業目的，基於本文修改後的作品務必以相同的許可發布。如有任何疑問，請與我聯繫：<a href="mailto:[EMAIL]">[EMAIL]</a>。'
+  LICENSE_ANNOUNCE          : '本文遵守 [LICENSE] 許可協議。歡迎轉載、使用、重新發布，但務必保留文章署名：<b>[AUTHOR_NAME]</b> or <b>[AUTHOR_NICKNAME]</b>（包含鏈接：<a href="[AUTHOR_SITE]" target="_blank"> [AUTHOR_SITE] </a>），且不得用於商業目的，基於本文修改後的作品務必以相同的許可發布。如有任何疑問，請與我聯繫：<a href="mailto:[EMAIL]">[EMAIL]</a> 。'
   EDIT_ON_GITHUB            : "在 Github 上修改"
   FOLLOW_ME                 : "在 [NAME] 上關注我。"
   EMAIL_ME                  : "給我發郵件。"
