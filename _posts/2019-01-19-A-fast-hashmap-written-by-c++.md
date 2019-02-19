@@ -1,15 +1,15 @@
 ---
-title: C++高性能HashMap（二）—— 常用查找算法
+title: "C++ HashMap(二)--常用查找算法"
 categories: ['c++']
 tags: ['C++', 'C#', 'Java', 'HashMap', 'HashTable', '哈希表']
-key: page-fast-hash-map
+key: page-cpp-fast-hashmap
 ---
 
 # 常用查找算法
 
-## 1. 简介
+## 1. 概述
 
-在计算机应用中，查找是非常常用的基本算法，例如编译程序中符号表的查找
+在计算机应用中，查找是非常常用的基本算法，例如：编译程序中符号表的查找。
 
 ## 2. 查找的定义
 
@@ -108,7 +108,7 @@ class SequenceSearch {
 ASL = (1 + 2 + 3 + … + n) / n = (n + 1) / 2;
 ```
 
-ASL = `Average Search Length`
+`ASL` = `Average Search Length`
 
 当查找不成功时，最多需要 `n + 1` 次比较。
 
@@ -118,18 +118,16 @@ ASL = `Average Search Length`
 
 
 
-## X. 参考文章
+## 5. 参考文章
 
-1. [《[Data Structure & Algorithm] 七大查找算法》](http://www.cnblogs.com/maybe2030/p/4715035.html) 摘自 [`Poll的笔记`](http://www.cnblogs.com/maybe2030)
+1. [《`[Data Structure & Algorithm] 七大查找算法`》](http://www.cnblogs.com/maybe2030/p/4715035.html) 摘自 [`Poll的笔记`](http://www.cnblogs.com/maybe2030)
 
     [http://www.cnblogs.com/maybe2030/p/4715035.html](http://www.cnblogs.com/maybe2030/p/4715035.html)
 
-2. [《常用查找算法》](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/) 摘自 [`codingXiaxw's blog`](http://codingxiaxw.cn)
+2. [《`常用查找算法`》](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/) 摘自 [`codingXiaxw's blog`](http://codingxiaxw.cn)
 
     [http://codingxiaxw.cn/2017/01/14/66-leetcode-find/](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/)
 
-3. [《数据结构之查找算法》](http://data.biancheng.net/view/53.html) 摘自 [`biancheng.net`](http://data.biancheng.net)
+3. [《`数据结构之查找算法`》](http://data.biancheng.net/view/53.html) 摘自 [`biancheng.net`](http://data.biancheng.net)
 
     [http://data.biancheng.net/view/53.html](http://data.biancheng.net/view/53.html)
-
-
