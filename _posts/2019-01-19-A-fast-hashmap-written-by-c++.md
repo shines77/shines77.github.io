@@ -114,14 +114,14 @@ ASL = (1 + 2 + 3 + … + n) / n = (n + 1) / 2;
 
 ## 5. 参考文章
 
-1. [《`[Data Structure & Algorithm] 七大查找算法`》](http://www.cnblogs.com/maybe2030/p/4715035.html) 摘自 [`Poll的笔记`](http://www.cnblogs.com/maybe2030)
+1. [《`[Data Structure & Algorithm] 七大查找算法`》](http://www.cnblogs.com/maybe2030/p/4715035.html){:target="_blank"} 摘自 [`Poll的笔记`](http://www.cnblogs.com/maybe2030){:target="_blank"}
 
-    [http://www.cnblogs.com/maybe2030/p/4715035.html](http://www.cnblogs.com/maybe2030/p/4715035.html)
+    [http://www.cnblogs.com/maybe2030/p/4715035.html](http://www.cnblogs.com/maybe2030/p/4715035.html){:target="_blank"}
 
-2. [《`常用查找算法`》](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/) 摘自 [`codingXiaxw's blog`](http://codingxiaxw.cn)
+2. [《`常用查找算法`》](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/){:target="_blank"} 摘自 [`codingXiaxw's blog`](http://codingxiaxw.cn){:target="_blank"}
 
-    [http://codingxiaxw.cn/2017/01/14/66-leetcode-find/](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/)
+    [http://codingxiaxw.cn/2017/01/14/66-leetcode-find/](http://codingxiaxw.cn/2017/01/14/66-leetcode-find/){:target="_blank"}
 
-3. [《`数据结构之查找算法`》](http://data.biancheng.net/view/53.html) 摘自 [`biancheng.net`](http://data.biancheng.net)
+3. [《`数据结构之查找算法`》](http://data.biancheng.net/view/53.html){:target="_blank"} 摘自 [`biancheng.net`](http://data.biancheng.net){:target="_blank"}
 
-    [http://data.biancheng.net/view/53.html](http://data.biancheng.net/view/53.html)
+    [http://data.biancheng.net/view/53.html](http://data.biancheng.net/view/53.html){:target="_blank"}

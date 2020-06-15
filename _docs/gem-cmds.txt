@@ -5,7 +5,7 @@ bundle update
 
 bundle exec jekyll build
 
-bundle exec jekyll build --incremental
+bundle exec jekyll build --incremental --watch
 
 bundle exec jekyll serve
 

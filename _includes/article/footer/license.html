@@ -1,3 +1,6 @@
+{%- include snippets/get-locale-string.html key='COPYRIGHT_NOTICE' -%}
+{%- assign _copyright_notice = __return -%}
+
 {%- include snippets/get-locale-string.html key='LICENSE_ANNOUNCE' -%}
 {%- assign _license_announce = __return -%}
 
@@ -5,12 +8,19 @@
 {%- assign _license_name = __return -%}
 
 {%- if include.license -%}
-  {%- assign _license_link = '<a itemprop="license" rel="license" href="[URL]">[NAME]</a>' | replace: "[URL]", include.license.url | replace: "[NAME]", _license_name -%}
+  {%- if site.image_url -%}
+    {%- assign _base_images_url = site.image_url | replace: "{base_url}", site.baseurl -%}
+  {%- else -%}
+    {%- assign _base_images_url = '/assets/images/' -%}
+  {%- endif -%}
+  {%- assign _license_image = include.license.image | replace: "{base_images_url}", _base_images_url -%}
+  {%- assign _license_link = '<a itemprop="license" rel="license" href="[URL]" target="_blank">[NAME]</a>' | replace: "[URL]", include.license.url | replace: "[NAME]", _license_name -%}
   <div class="license">
     <p>
-      <a rel="license" href="{{ include.license.url }}">
-        <img alt="{{ include.license.name }}" src="{{ include.license.image }}" />
+      <a rel="license" href="{{ include.license.url }}" target="_blank">
+        <img alt="{{ include.license.name }}" src="{{ _license_image }}" />
       </a><br/>
+      {{ _copyright_notice }}
       {%- if site.author.nickname -%}
         {{ _license_announce | replace: "[LICENSE]", _license_link | replace: "[AUTHOR_NAME]", site.author.fullname | replace: "[AUTHOR_NICKNAME]", site.author.nickname | replace: "[AUTHOR_SITE]", site.author.url | replace: "[EMAIL]", site.author.email }}
       {%- else -%}

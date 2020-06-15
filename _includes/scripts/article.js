@@ -2,7 +2,7 @@
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     $(function() {
-      var $this ,$scroll;
+      var $this, $scroll;
       var $articleContent = $('.js-article-content');
       var hasSidebar = $('.js-page-root').hasClass('layout-page-sidebar');
       var scroll = hasSidebar ? '.js-page-main' : 'html, body';

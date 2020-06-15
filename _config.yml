@@ -35,6 +35,7 @@ highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-nig
 
 url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : / # does not include hostname
+image-url: "{base-url}assets/images/"
 
 ## => Your GitHub Repository (if the site is hosted by GitHub)
 ##############################
@@ -175,7 +176,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-default-layout
   - jekyll-archives
-  # - jekyll/tagging
   - jekyll-tagging
   - jemoji
   # - jemoji-plus
