@@ -178,7 +178,7 @@ plugins:
   - jekyll-archives
   - jekyll-tagging
   # - jemoji
-  - html-pipeline-plus
+  # - html-pipeline-plus
   - jemoji-plus
   # - jekyll-target-blank
 
@@ -293,7 +293,7 @@ emoji:
 ########################################################
 # jemoji-plus setting
 ########################################################
-jemoji_plus:
+emoji-plus:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
   # host: 'https://github.githubassets.com'

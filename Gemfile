@@ -12,8 +12,8 @@ source "https://rubygems.org"
 
 gem "github-pages", group: :jekyll_plugins
 
-gem 'html-pipeline-plus', "~> 2.10.7"
-gem "jemoji-plus", "~> 0.1.11"
+# gem 'html-pipeline-plus', "~> 2.10.7"
+gem "jemoji-plus", "~> 0.1.12"
 
 # If you have any plugins, put them here!
 # group :jekyll_plugins do
