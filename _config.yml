@@ -174,12 +174,13 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-default-layout
   - jekyll-archives
-  - jekyll-tagging
-  # - jemoji
+  # - jekyll-tagging
+  - jemoji
   # - html-pipeline-plus
-  - jemoji-plus
+  # - jemoji-plus
   # - jekyll-target-blank
 
 ## => Markdown Enhancements
