@@ -37,12 +37,12 @@ gem "jemoji-plus", "~> 0.1.13"
 ## See: https://stackoverflow.com/questions/8420414/how-to-add-mac-specific-gems-to-bundle-on-mac-but-not-on-linux
 ##
 install_if -> { RUBY_PLATFORM =~ /linux|darwin|ruby|rbx|mri/ } do
-  gem "tzinfo-data"
+  # gem "tzinfo-data"
 end
 
 install_if -> { RUBY_PLATFORM =~ /mingw|mswin|jruby|win32/ } do
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-  gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] if Gem.win_platform?
+  # gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby] if Gem.win_platform?
   # Performance-booster for watching directories on Windows
-  gem "wdm", "~> 0.1.0" if Gem.win_platform?
+  # gem "wdm", "~> 0.1.0" if Gem.win_platform?
 end
