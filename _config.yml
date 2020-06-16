@@ -178,6 +178,7 @@ plugins:
   - jekyll-archives
   - jekyll-tagging
   # - jemoji
+  - html-pipeline-plus
   - jemoji-plus
   # - jekyll-target-blank
 
@@ -189,6 +190,7 @@ gems:
   - jekyll-archives
   - jekyll-tagging
   # - jemoji
+  - html-pipeline-plus
   - jemoji-plus
   # - jekyll-target-blank
 
