@@ -182,18 +182,6 @@ plugins:
   - jemoji-plus
   # - jekyll-target-blank
 
-gems:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-default-layout
-  - jekyll-archives
-  - jekyll-tagging
-  # - jemoji
-  - html-pipeline-plus
-  - jemoji-plus
-  # - jekyll-target-blank
-
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
@@ -305,7 +293,7 @@ emoji:
 ########################################################
 # jemoji-plus setting
 ########################################################
-jekyll_plus:
+jemoji_plus:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
   # host: 'https://github.githubassets.com'
