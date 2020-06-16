@@ -286,17 +286,21 @@ emoji:
   # src: "/static/images/icons/emoji"
   src: "https://github.githubassets.com/images/icons/"
 
+## new emoji URL: https://shines77.gitee.io/emoji-assets/images/icons/
+
 ########################################################
 # jemoji-plus setting
 ########################################################
 jekyll_plus:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
-  host: 'https://github.githubassets.com'
+  # host: 'https://github.githubassets.com'
+  host: 'https://shines77.gitee.io'
 
   # The emoji's image path of above host url, '/images/icons/' (default).
   # If it must start with '/' character, and it's can not be a empty string.
-  path: '/images/icons/'
+  # path: '/images/icons/'
+  path: '/emoji-assets/images/icons/'
 
   image:
     class: 'emoji'    # The emoji's css class name. 'emoji' (default)
