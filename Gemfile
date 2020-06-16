@@ -10,10 +10,14 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # gem "jekyll", "~> 3.8.5"
 
+# Specify your gem's dependencies in jemoji-plus.gemspec
+gemspec
+
 gem "github-pages", group: :jekyll_plugins
 
+gem "jekyll-tagging", "~> 1.0"
 # gem 'html-pipeline-plus', "~> 2.10.7"
-gem "jemoji-plus", "~> 0.1.12"
+gem "jemoji-plus", "~> 0.1.13"
 
 # If you have any plugins, put them here!
 # group :jekyll_plugins do
@@ -26,7 +30,7 @@ gem "jemoji-plus", "~> 0.1.12"
   # gem "jekyll-default-layout"
   # gem "jekyll-archives", "~> 2.0"
   # gem "jekyll-tagging", "~> 1.0"
-  # gem "jekyll-target-blank", "~> 1.10.0"
+  # gem "jekyll-target-blank", "~> 1.1"
 # end
 
 ##

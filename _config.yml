@@ -293,7 +293,7 @@ emoji:
 ########################################################
 # jemoji-plus setting
 ########################################################
-emoji-plus:
+emoji_plus:
   # The emoji's image host url, 'https://github.githubassets.com' (default).
   # The trailing can't end with '/', and it's can be setting to '' (empty string).
   # host: 'https://github.githubassets.com'
