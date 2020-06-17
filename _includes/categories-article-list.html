@@ -83,14 +83,19 @@
 
     {%- elsif include.type == 'brief' -%}
       {%- assign _categories = '' -%}
+      {%- assign _categories_display_name = '' -%}
       {%- assign _categories_encode = '' -%}
       {%- for _category in _article.categories -%}
+        {%- include snippets/get-category-name.html category=_category categories=site.data.categories -%}
+        {%- assign _category_display_name = __return -%}
         {%- assign _category_encode = _category | strip | url_encode -%}
         {%- if forloop.last -%}
           {%- assign _categories = _categories | append: _category -%}
+          {%- assign _categories_display_name = _categories_display_name | append: _category_display_name -%}
           {%- assign _categories_encode = _categories_encode | append: _category_encode -%}
         {%- else -%}
           {%- assign _categories = _categories | append: _category | append: ',' -%}
+          {%- assign _categories_display_name = _categories_display_name | append: _category_display_name | append: ', ' -%}
           {%- assign _categories_encode = _categories_encode | append: _category_encode | append: ',' -%}
         {%- endif -%}
       {%- endfor -%}
@@ -98,7 +103,7 @@
       {%- assign _current_cat = _categories_encode -%}
       {%- if _current_cat != _last_cat_name -%}
         {%- unless forloop.first -%}</ul></section>{%- endunless -%}
-        <section><h2 class="article-list_group-header">[ <a href="./{{ _paths_categories }}?category={{ _categories_encode }}">{{ _categories }}</a> ]</h2><ul class="items">
+        <section><h2 class="article-list_group-header">[ <a href="./{{ _paths_categories }}?category={{ _categories_encode }}">{{ _categories_display_name }}</a> ]</h2><ul class="items">
         {%- assign _last_cat_name = _current_cat -%}
       {%- endif -%}
 

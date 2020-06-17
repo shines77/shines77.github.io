@@ -1,4 +1,3 @@
-{%- assign _categories = site.categories | sort -%}
 {%- include snippets/get-locale-string.html key='SHOWALL' -%}
 {%- assign _locale_show_all = __return -%}
 <div class="site-categories js-categories">
@@ -8,10 +7,14 @@
         {{ _locale_show_all }} <div class="category-button-count">{{ site.posts | size }}</div>
       </button>
     </li>
+    {%- assign _categories = site.categories | sort -%}
     {%- for _category in _categories -%}
+      {%- assign _category_path = _category.first | strip -%}
+      {%- include snippets/get-category-name.html category=_category_path categories=site.data.categories -%}
+      {%- assign _category_name = __return -%}
       <li>
         <button type="button" class="button button-rounded category-button category-secondary-button" data-encode="{{ _category.first | strip | url_encode }}">
-          <span>[ {{ _category.first | strip }} ]</span> <div class="category-button-count">{{ _category.last.size }}</div>
+          <span>[ {{ _category_name }} ]</span> <div class="category-button-count">{{ _category.last.size }}</div>
         </button>
       </li>
     {%- endfor -%}

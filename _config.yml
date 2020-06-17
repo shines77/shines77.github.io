@@ -132,14 +132,14 @@ toc:
   selectors: "h1,h2,h3,h4" # "h1,h2,h3,h4" (default)
 
 ## => Copyright author information
-##############################
+###########################################################################
 # The original author information display on the page footer copyright.
 original_author: # (Please don't need to modify here)
   name          : "Qi Tian" # The full name of original author.
   nickname      : kitian616 # The nickname of original author.
   display_name  : "Qi Tian" # The display name of original author.
   url           : https://tianqi.name/jekyll-TeXt-theme # The site url of the original author, e.g. https://your_domain_name/your_path
-  description   : "TeXt is a super customizable theme for Jekyll." # Description
+  description   : "TeXt is a super customizable theme for Jekyll" # Description
 
 # The last modified authors information display on the page footer copyright.
 last_modified_authors: # (Please don't need to modify here)
@@ -148,7 +148,7 @@ last_modified_authors: # (Please don't need to modify here)
     nickname      : shines77  # The nickname of last modified author.
     display_name  : shines77 # The display name of last modified author.
     url           : https://github.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
-    description   : "TeXt is a super customizable theme for Jekyll, modified by shines77." # Description
+    description   : "TeXt theme for Jekyll, modified by shines77" # Description
 
   # Next modified author(hacker) information
 
@@ -166,7 +166,7 @@ source_code:
   nickname      : shines77 # Your nickname
   repo_username : shines77 # Your github username or other git site's username
   repo_url      : https://github.com/shines77/shines77.github.io # The repository url of the source code, e.g. https://github.com/user_name/repository_name
-  description   : "TeXt is a super customizable theme for Jekyll." # Description
+  description   : "TeXt theme for Jekyll, modified by shines77" # Description
 
 ## => Plugins
 ##############################

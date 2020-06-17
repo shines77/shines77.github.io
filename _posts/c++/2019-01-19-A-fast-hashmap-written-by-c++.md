@@ -1,6 +1,6 @@
 ---
 title: "C++ HashMap(二)--常用查找算法"
-categories: ['c++']
+categories: ['cpp', 'csharp']
 tags: ['C++', 'C#', 'Java', 'HashMap', 'HashTable', '哈希表']
 key: page-cpp-fast-hashmap
 ---

@@ -1,0 +1,15 @@
+{%- assign _category_path = include.category -%}
+
+{%- include snippets/get-locale-string.html key='UNCATEGORIZED' -%}
+{%- assign _locale_uncategorized = __return -%}
+
+{%- if _category_path != nil -%}
+  {%- assign _category_name = include.categories.mapping[_category_path] -%}
+  {%- if _category_name == nil -%}    
+    {%- assign __return = _category_path -%}
+  {%- else -%}
+    {%- assign __return = _category_name -%}
+  {%- endif -%}
+{%- else -%}
+  {%- assign __return = _locale_uncategorized -%}
+{%- endif -%}

@@ -2,8 +2,10 @@
 ####################################
 ## => Mapping table of categories
 ####################################
-categories:
-  c++: "C++"
+# categories:
+mapping:
+  csharp: "C#"
+  cpp: "C++"
   jekyll: "Jekyll"
   text: "TeXt Theme"
   wolf: "狼人杀"
