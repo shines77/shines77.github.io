@@ -4,7 +4,7 @@
 {%- assign _locale_uncategorized = __return -%}
 
 {%- if _category_path != nil -%}
-  {%- assign _category_name = include.categories.mapping[_category_path] -%}
+  {%- assign _category_name = include.categories.root[_category_path].name -%}
   {%- if _category_name == nil -%}    
     {%- assign __return = _category_path -%}
   {%- else -%}

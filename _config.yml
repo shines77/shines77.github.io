@@ -68,7 +68,7 @@ page:
 author:
   type      : person # "person" (default), "organization"
   name      : 郭子 # Your name or nickname
-  fullname  : "郭雄辉" # Your full-name
+  fullname  : "郭子" # Your full-name
   nickname  : shines77 # Your nickname
   url       : https://shines77.github.io
   avatar    : # path or url of avatar image

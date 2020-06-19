@@ -28,6 +28,9 @@
 
   {%- assign _last_cat_name = '' -%}
   {%- assign _paths_categories = site.paths.categories | default: site.data.variables.default.paths.categories -%}
+  {%- include snippets/prepend-baseurl.html path=_paths_categories -%}
+  {%- assign _paths_categories = __return -%}
+
   {%- for _article in _sorted_list -%}
 
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
@@ -103,7 +106,7 @@
       {%- assign _current_cat = _categories_encode -%}
       {%- if _current_cat != _last_cat_name -%}
         {%- unless forloop.first -%}</ul></section>{%- endunless -%}
-        <section><h2 class="article-list_group-header">[ <a href="./{{ _paths_categories }}?category={{ _categories_encode }}">{{ _categories_display_name }}</a> ]</h2><ul class="items">
+        <section><h2 class="article-list_group-header">[ <a href="{{ _paths_categories }}?category={{ _categories_encode }}">{{ _categories_display_name }}</a> ]</h2><ul class="items">
         {%- assign _last_cat_name = _current_cat -%}
       {%- endif -%}
 

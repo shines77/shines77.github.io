@@ -16,3 +16,173 @@ bundle exec jekyll serve -P 8000
 bundle exec jekyll serve -H 0.0.0.0 -P 8080
 
 bundle exec jekyll serve -H 0.0.0.0 -P 4000
+
+
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.cn
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW
+https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ko
+
+
+https://jerryc.me/categories/
+
+<main class="layout_page" id="content-inner">
+<div class="category-content">
+  <div class="category-lists">
+    <div class="category__title">分類 - <span class="category__amount">10</span></div>
+    <div>
+      <ul class="category-list">
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">9</span>
+          <ul class="category-list-child">
+            <li class="category-list-item">
+              <a class="category-list-link" href="/categories/Android/%E7%AC%AC%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A2%BC/">第一行代碼</a><span class="category-list-count">9</span>
+            </li>
+          </ul>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Butterfly%E6%96%87%E6%AA%94/">Butterfly文檔</a><span class="category-list-count">1</span>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">3</span>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">2</span>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">2</span>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">7</span>
+          <ul class="category-list-child">
+            <li class="category-list-item">
+              <a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Hexo/">Hexo</a><span class="category-list-count">4</span>
+            </li>
+            <li class="category-list-item">
+              <a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Windows/">Windows</a><span class="category-list-count">3</span>
+            </li>
+          </ul>
+        </li>
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/%E8%BB%9F%E4%BB%B6%E6%8E%A8%E8%96%A6/">軟件推薦</a><span class="category-list-count">1</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</main>
+
+<article itemscope itemtype="http://schema.org/WebPage">
+<div class="article_header">
+  <header><h1>分类</h1></header>
+</div>
+<meta itemprop="headline" content="分类">
+  <div class="article_info clearfix">
+    <ul class="right-col menu"></ul>
+  </div>
+  <meta itemprop="author" content="郭子"/>
+    <div class="js-article-content">
+      <div class="layout-categories js-all">
+        <div class="site-categories js-categories">
+          <ul class="button-menu">
+          <li>
+            <button type="button" class="button button-rounded category-button category-primary-button category-button-all" data-encode="">
+            显示所有 <div class="category-button-count">6</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button button-rounded category-button category-secondary-button" data-encode="cpp">
+              <span>[ C++ ]</span> <div class="category-button-count">1</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button button-rounded category-button category-secondary-button" data-encode="csharp">
+              <span>[ C# ]</span> <div class="category-button-count">2</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button button-rounded category-button category-secondary-button" data-encode="test">
+              <span>[ test ]</span> <div class="category-button-count">3</div>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="button button-rounded category-button category-secondary-button" data-encode="wolf">
+              <span>[ 狼人杀 ]</span> <div class="category-button-count">1</div>
+            </button>
+          </li>
+          </ul>
+        </div>
+        <div class="js-result layout-categories_result d-none">
+          <div class="article-list items">
+            <section>
+            <h2 class="article-list_group-header">[ <a href=".//categories.html?category=csharp">C#</a> ]</h2>
+            <ul class="items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="csharp">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2019年2月25日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/csharp/2019/02/25/C-MSIL.html">C# 的 MSIL 简介</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            </ul>
+            </section>
+            <section>
+            <h2 class="article-list_group-header">[ <a href=".//categories.html?category=wolf">狼人杀</a> ]</h2>
+            <ul class="items"><li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="wolf">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2019年2月19日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/wolf/2019/02/19/shentu-three-lines-theory.html">狼人杀理论：三行定律概率分析</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            </ul>
+            </section>
+            <section><h2 class="article-list_group-header">[ <a href=".//categories.html?category=cpp,csharp">C++, C#</a> ]</h2>
+            <ul class="items">
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="cpp,csharp">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2019年1月19日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/cpp/csharp/2019/01/19/A-fast-hashmap-written-by-c++.html">C++ HashMap(二)--常用查找算法</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            </ul>
+            </section>
+            <section><h2 class="article-list_group-header">[ <a href=".//categories.html?category=test">test</a> ]</h2>
+            <ul class="items">
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="test">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2019年1月17日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/test/2019/01/17/test-comment.html">Test for comment</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="test">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2018年7月1日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/test/2018/07/01/welcome.html">Welcome</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            <li class="item" itemscope itemtype="http://schema.org/BlogPosting" data-category="test">
+              <table class="item_content item_table_brief">
+              <tbody>
+                <tr><td class="item_table_brief_td" width="120px;7.5rem;"><span class="item_meta_brief">2018年6月1日</span></td><td class="item_table_brief_td" witdh="auto"><a itemprop="headline" class="item_header_brief" href="/test/2018/06/01/header-image.html">Post with Header Image</a></td>
+                </tr>
+              </tbody>
+              </table>
+            </li>
+            </ul>
+            </section>
+          </div>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </meta>
+</meta>
+</article>

@@ -2,11 +2,32 @@
 ####################################
 ## => Mapping table of categories
 ####################################
-# categories:
-mapping:
-  csharp: "C#"
-  cpp: "C++"
-  jekyll: "Jekyll"
-  text: "TeXt Theme"
-  wolf: "狼人杀"
-  misc: "生活随笔"
+#
+# site.data.categories:
+#  
+root:
+  csharp:
+    name: "C#"
+  cpp:
+    name: "C++"
+    child:
+      cpp11:
+        name: "C++11"
+      cpp14:
+        name: "C++14"
+  jekyll:
+    name: "Jekyll"
+  text:
+    name: "TeXt Theme"
+  wolf:
+    name: 狼人杀"
+    child:
+      three:
+        name: "三行定律"
+  misc:
+    name: "随笔"
+    child:
+      life:
+        name: "生活随笔"
+      other:
+        name: "其他随笔"
