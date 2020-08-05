@@ -7,7 +7,7 @@
 #  
 root:
   csharp:
-    name: "C#"
+    name: "CSharp"
   cpp:
     name: "C++"
     child:
