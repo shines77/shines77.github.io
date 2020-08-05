@@ -210,7 +210,8 @@ font_awesome:
   # Get the newest version from https://fontawesome.com
   # url: https://use.fontawesome.com/releases/v5.6.3/css/all.css
   # url: https://cdn.bootcss.com/font-awesome/5.13.0/css/all.css
-  url: /assets/css/font-awesome/5.13.0/all.min.css
+  # Download from https://fa5.dashgame.com/
+  url: /assets/css/font-awesome/5.11.2/all.min.css
 
 ## => Sources
 ##############################
