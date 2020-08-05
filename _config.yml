@@ -127,6 +127,11 @@ excerpt_separator: <!--more-->
 ## license
 license: CC-BY-NC-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0", "CC-BY-NC-SA-4.0"
 
+## license settings
+license_setting:
+  show_image: true  # true (default), false
+  short_intro: true # true (default), false
+
 ## TOC
 toc:
   selectors: "h1,h2,h3,h4" # "h1,h2,h3,h4" (default)
@@ -203,7 +208,8 @@ paginate_path: /page:num # don't change this unless for special need
 ## => Font Awesome
 font_awesome:
   # Get the newest version from https://fontawesome.com
-  url: https://use.fontawesome.com/releases/v5.6.3/css/all.css
+  # url: https://use.fontawesome.com/releases/v5.6.3/css/all.css
+  url: https://cdn.bootcss.com/font-awesome/v5.6.3/css/all.css
 
 ## => Sources
 ##############################

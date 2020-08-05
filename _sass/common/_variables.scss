@@ -155,11 +155,19 @@ $base: (
 
   // article >> content
   font-size-article-content-body:   1rem,
-  line-height-article-content-body: 2.0,
+  line-height-article-content-body: 1.8,
 
   // article >> content >> code
   font-size-article-content-code:   0.9375rem,
   line-height-article-content-code: 1.6,
+
+  // article >> content >> pre
+  font-size-article-content-pre:    1rem,
+  line-height-article-content-pre:  1.8,
+
+  // article >> content >> blockquote
+  font-size-article-content-blockquote:    1.125rem,
+  line-height-article-content-blockquote:  2.0,
 
   // article >> emoji
   emoji-image-width:                1.5rem,
@@ -176,25 +184,6 @@ $base: (
   // footer
   font-size-footer:                 0.875rem,
   line-height-footer:               1.6,
-);
-
-//
-// |   xs   |   sm   |   md   |   lg   |   xl   |
-// | ------ | ------ | ------ | ------ | ------ |
-// 0       576      768      992     1200       -
-//
-
-$responsive: (
-  // Extra small devices (unknown devices, 0px and up)
-  xs: 0,
-  // Small devices (landscape phones, 576px and up)
-  sm: 576px,
-  // Medium devices (tablets, 768px and up)
-  md: 768px,
-  // Large devices (desktops, 992px and up)
-  lg: 992px,
-  // Extra large devices (large desktops, 1200px and up)
-  xl: 1200px
 );
 
 $spacers: (
@@ -231,6 +220,25 @@ $layout: (
   sidebar-width:                  250px,
   sidebar-header-height:          3rem,
   aside-width:                    220px
+);
+
+//
+// |   xs   |   sm   |   md   |   lg   |   xl   |
+// | ------ | ------ | ------ | ------ | ------ |
+// 0       576      768      992     1200       -
+//
+
+$responsive: (
+  // Extra small devices (unknown devices, 0px and up)
+  xs: 0,
+  // Small devices (landscape phones, 576px and up)
+  sm: 576px,
+  // Medium devices (tablets, 768px and up)
+  md: 768px,
+  // Large devices (desktops, 992px and up)
+  lg: 992px,
+  // Extra large devices (large desktops, 1200px and up)
+  xl: 1200px
 );
 
 $animation: (

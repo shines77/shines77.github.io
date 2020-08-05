@@ -1,5 +1,8 @@
 .article_content {
-  line-height: map-get($base, line-height-lg);
+  font-size: map-get($base, font-size-article-content-body);
+  //line-height: map-get($base, line-height-lg); // 1.8
+  line-height: map-get($base, line-height-article-content-body);
+
   word-wrap: break-word;
   @media print {
     line-height: map-get($base, line-height);
@@ -43,8 +46,10 @@
     @include horizontal-rules();
   }
   blockquote {
+    font-size: map-get($base, font-size-article-content-blockquote);
+    line-height: map-get($base, line-height-article-content-blockquote);
+
     padding-left: map-get($spacers, 3);
-    font-size: map-get($base, font-size-sm);
     color: $text-color-l;
     @include split-line(left, 4px, $border-color);
     p {
@@ -72,6 +77,9 @@
     }
   }
   code {
+    font-size: map-get($base, font-size-article-content-code);
+    line-height: map-get($base, line-height-article-content-code);
+
     padding: map-get($spacers, 1) map-get($spacers, 2);
     background-color: $text-background-color;
     border-radius: map-get($base, border-radius);
@@ -83,6 +91,9 @@
   pre {
     @include overflow(auto);
     & > code {
+      font-size: map-get($base, font-size-article-content-pre);
+      line-height: map-get($base, line-height-article-content-pre);
+      
       padding: 0;
       word-wrap: normal;
       background-color: transparent;
