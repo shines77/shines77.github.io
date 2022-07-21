@@ -4,7 +4,7 @@
 ####################################
 #
 # site.data.categories:
-#  
+#
 root:
   csharp:
     name: "CSharp"

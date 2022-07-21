@@ -22,7 +22,7 @@ permalink   : date
 title       : "郭子的博客"
 # this means to ignore newlines until "Language & timezone"
 description : "专注 C/C++ 高性能编程"
-  
+
 ## => Language and Timezone
 ##############################
 lang: zh-CN # the language of your site, default as "en", e.g. "en", "zh-CN", "zh-TW"
@@ -33,13 +33,13 @@ timezone: Asia/Shanghai # see https://en.wikipedia.org/wiki/List_of_tz_database_
 site_theme: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
-url     : https://shines77.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://shines77.gitee.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : / # does not include hostname
 image-url: "{base-url}assets/images/"
 
 ## => Your GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: shines77/shines77.github.io
+repository: shines77/shines77
 repository_tree: master
 
 ## => UI settings
@@ -70,7 +70,7 @@ author:
   name      : 郭子 # Your name or nickname
   fullname  : "郭子" # Your full-name
   nickname  : shines77 # Your nickname
-  url       : https://shines77.github.io
+  url       : https://shines77.gitee.io
   avatar    : # path or url of avatar image
   bio       : I am an amazing person.
   email     : gz_shines@msn.com
@@ -125,7 +125,7 @@ defaults:
 excerpt_separator: <!--more-->
 
 ## license
-license: CC-BY-NC-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0", "CC-BY-NC-SA-4.0"
+license: CC-BY-SA-4.0 # "CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC-BY-ND-4.0", "CC-BY-NC-SA-4.0"
 
 ## license settings
 license_setting:
@@ -149,11 +149,11 @@ original_author: # (Please don't need to modify here)
 # The last modified authors information display on the page footer copyright.
 last_modified_authors: # (Please don't need to modify here)
   - first:
-    name          : "Guo XiongHui" # The full name of last modified author.
+    name          : "XiongHui Guo" # The full name of last modified author.
     nickname      : shines77  # The nickname of last modified author.
     display_name  : shines77 # The display name of last modified author.
-    url           : https://github.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
-    description   : "TeXt theme for Jekyll, modified by shines77" # Description
+    url           : https://gitee.com/shines77/jekyll-theme-text # The site url of the last modified author, e.g. https://your_domain_name/your_path
+    description   : "TeXt theme for Jekyll" # Description
 
   # Next modified author(hacker) information
 
@@ -167,11 +167,11 @@ last_modified_authors: # (Please don't need to modify here)
 # The source code information display on the page footer copyright.
 source_code:
   hosted_site   : "GitHub" # "GitHub" (default), The hosted site for your repository, e.g. "GitHub", "GitLab", "Bitbucket" or "GiTee"
-  name          : "Guo XiongHui" # Your full name
+  name          : "XiongHui Guo" # Your full name
   nickname      : shines77 # Your nickname
   repo_username : shines77 # Your github username or other git site's username
-  repo_url      : https://github.com/shines77/shines77.github.io # The repository url of the source code, e.g. https://github.com/user_name/repository_name
-  description   : "TeXt theme for Jekyll, modified by shines77" # Description
+  repo_url      : https://gitee.com/shines77/shines77 # The repository url of the source code, e.g. https://github.com/user_name/repository_name
+  description   : "TeXt theme for Jekyll" # Description
 
 ## => Plugins
 ##############################
@@ -216,7 +216,7 @@ font_awesome:
   #url: /assets/font-awesome/5.11.2/css/all.min.css
 
   url: https://shines77.gitee.io/font-awesome/5.11.2/css/all.css
-  
+
 
 ## => Sources
 ##############################
